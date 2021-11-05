@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/bottomsheet_calculator"
+    android:gravity="bottom"
+    android:background="@android:color/transparent"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.your.package.LockableBottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_skipCollapsed="true">
+
+    <!--        calculator Background-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cal_pageHeight"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_sheet_background" />
+
+    <!--        calculator-->
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/cal_margin_horizontal"
+        android:layout_marginTop="@dimen/cal_margin_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- show result text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cal_showResult"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cal_resultBlockSize"
+                android:background="@drawable/block_white_space"
+                android:gravity="end"
+                android:paddingTop="@dimen/cal_resultBlockPadding_top"
+                android:paddingEnd="@dimen/cal_resultBlockPadding_end"
+                android:text="@string/cal_initResult"
+                android:textColor="@color/cal_resultTextColor"
+                android:textSize="@dimen/cal_resultTextSize" />
+        </LinearLayout>
+
+        <!-- spacer show sign -->
+        <TextView
+            android:id="@+id/cal_showSign"
+            android:text="@string/cal_initSign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cal_srcSpacer"
+            android:gravity="end"
+            android:paddingEnd="@dimen/cal_resultBlockPadding_end"
+            android:textColor="@color/cal_calSignColor"
+            android:textSize="@dimen/cal_calSignSize" />
+
+        <!-- cal 789+ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cal_btn_7"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num7" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_8"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num8" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_9"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num9" />
+            <!-- spacer -->
+            <TextView
+                android:layout_width="@dimen/cal_srcSpacer"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_add"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button__add" />
+        </LinearLayout>
+
+        <!-- cal 456- -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cal_btn_4"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num4" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_5"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num5" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_6"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num6" />
+            <!-- spacer -->
+            <TextView
+                android:layout_width="@dimen/cal_srcSpacer"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_sub"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button__sub" />
+        </LinearLayout>
+
+        <!-- cal 123* -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cal_btn_1"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num1" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_2"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num2" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_3"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num3" />
+            <!-- spacer -->
+            <TextView
+                android:layout_width="@dimen/cal_srcSpacer"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_mul"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button__mul" />
+        </LinearLayout>
+
+        <!-- cal c0=/ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cal_btn_clear"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_clear" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_0"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button_num0" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_equ"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button__equ" />
+            <!-- spacer -->
+            <TextView
+                android:layout_width="@dimen/cal_srcSpacer"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/cal_btn_div"
+                android:layout_width="@dimen/cal_circleSize"
+                android:layout_height="@dimen/cal_circleSize"
+                android:background="@drawable/cal_button__div" />
+        </LinearLayout>
+
+        <!-- submit button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/cal_submitBtnW"
+                android:layout_height="@dimen/cal_submitBtnH"
+                android:background="@drawable/block_blue_flower2" />
+
+            <Button
+                android:id="@+id/cal_btn_submit"
+                android:layout_width="@dimen/cal_submitBtnW"
+                android:layout_height="@dimen/cal_submitBtnH"
+                android:background="@android:color/transparent"
+                android:text="@string/cal_summitButtonText"
+                android:textColor="@color/cal_submitBtnTextColor"
+                android:textSize="@dimen/cal_summitBtnTextSize" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+<!--    opening page String-->
+    <string name="op_startAppButtonText">start</string>
+
+<!--    login page String-->
+    <string name="login_submitButtonText">log in</string>
+    <string name="login_emailHintText">email</string>
+    <string name="login_passwordHintText">password</string>
+
+<!--    calculator String-->
+    <string name="cal_summitButtonText">確認</string>
+    <string name="cal_msg_resultLengthToLong">計算上限為十位數以內</string>
+    <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
+    <!--    跨頁傳值變數(必>=0)-->
+    <string name="cal_initResult">0.0</string>
+    <string name="cal_initSign"> </string>
+
+
+
+</resources>
