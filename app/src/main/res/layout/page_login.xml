@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     android:id="@+id/loginPage"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@android:color/holo_purple"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginActivity">
 
@@ -48,27 +51,31 @@
 
         <!-- input email-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_TextField_email"
             android:hint="@string/login_emailHintText"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxBackgroundColor="#FFDDDDFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_TextField_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textColor="@android:color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
         <!-- input password-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_TextField_password"
             android:hint="@string/login_passwordHintText"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxBackgroundColor="#FFDDDDFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_TextField_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--        spacer-->
