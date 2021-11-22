@@ -23,16 +23,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:paddingHorizontal="40dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:background="@drawable/app_title_bg" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,30 +50,32 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/login_submitButtonPadding_top"/>
+            android:paddingBottom="@dimen/login_submitButtonPadding_top" />
 
         <!-- input email-->
         <com.google.android.material.textfield.TextInputLayout
-            android:hint="@string/login_emailHintText"
-            android:textColorHint="@android:color/darker_gray"
-            app:boxBackgroundColor="#FFDDDDFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:hint="@string/login_emailHintText"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxBackgroundColor="#FFDDDDFF">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_TextField_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
         <!-- input password-->
         <com.google.android.material.textfield.TextInputLayout
-            android:hint="@string/login_passwordHintText"
-            android:textColorHint="@android:color/darker_gray"
-            app:boxBackgroundColor="#FFDDDDFF"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:hint="@string/login_passwordHintText"
+            android:textColorHint="@android:color/darker_gray"
+            app:boxBackgroundColor="#FFDDDDFF">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_TextField_password"
                 android:layout_width="match_parent"
@@ -82,7 +87,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/login_submitButtonPadding_top"/>
+            android:paddingBottom="@dimen/login_submitButtonPadding_top" />
 
         <!-- login button-->
         <RelativeLayout

@@ -81,20 +81,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        /*debug code
-        float X,Xbar,Y,Ybar;
-        if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
-            X = motionEvent.getX();
-            Y = motionEvent.getY();
-            System.out.println("X = "+X);
-            System.out.println("Y = "+Y);
-        }
-        if(motionEvent.getAction()==MotionEvent.ACTION_UP) {
-            Xbar = motionEvent.getX();
-            Ybar = motionEvent.getY();
-            System.out.println("Xbar = "+Xbar);
-            System.out.println("Ybar = "+Ybar);
-        }*/
         if(view.getId()==R.id.loginPage){
             //解除焦點 getWindow().getDecorView().clearFocus();
             //boolean keyboardIsOpen=imm.isActive();//若返回true，則表示輸入法開啟
