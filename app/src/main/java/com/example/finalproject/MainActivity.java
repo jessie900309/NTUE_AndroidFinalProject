@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view.getId()==R.id.app_start_button){
             Intent intent = new Intent();
             //if 有登入檔 MainPageActivity(main_page.xml)
-            //else LoginActivity(login_page.xml)
-            intent.setClass(MainActivity.this,LoginActivity.class);
+            intent.setClass(MainActivity.this,MainPageActivity.class);
             startActivity(intent);
+            //else LoginActivity(login_page.xml)
+            //intent.setClass(MainActivity.this,LoginActivity.class);
+            //startActivity(intent);
         }
     }
 }

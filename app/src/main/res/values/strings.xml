@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FinalProject</string>
+
 <!--    opening page String-->
     <string name="op_startAppButtonText">start</string>
 
@@ -8,13 +9,26 @@
     <string name="login_emailHintText">email</string>
     <string name="login_passwordHintText">password</string>
 
+<!--    main page String-->
+    <string name="main_menu_1">Account</string>
+    <string name="main_menu_2">Ledger</string>
+    <string name="main_menu_3">Home</string>
+    <string name="main_menu_4">Chart</string>
+    <string name="main_menu_5">Setting</string>
+
+
+
+
+
+<!--    add page String-->
 <!--    calculator String-->
+    <string name="cal_initResult">0.0</string>
+    <string name="cal_initSign"> </string>
     <string name="cal_summitButtonText">確認</string>
     <string name="cal_msg_resultLengthToLong">計算上限為十位數以內</string>
     <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
-    <!--    跨頁傳值變數(必>=0)-->
-    <string name="cal_initResult">0.0</string>
-    <string name="cal_initSign"> </string>
+    <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
+    <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
 
 
 

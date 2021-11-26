@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/bottomsheet_calculator.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/bottomsheet_calculator.xml" value="0.2" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/form_new_note.xml" value="0.136" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/form_new_trace.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/login_page.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/main_page.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/page_login.xml" value="0.2" />
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/page_main.xml" value="0.22546296296296298" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/page_login.xml" value="0.152" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/page_main.xml" value="0.152" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_account.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_chart.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_ledger.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_setting.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_calculator.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/menu/main_bottom_navigation_bar.xml" value="0.16019736842105264" />
       </map>
     </option>
   </component>

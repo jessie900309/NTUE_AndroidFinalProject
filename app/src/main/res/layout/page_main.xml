@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/mainPage"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainPageActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@android:color/holo_purple">
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/mainPage_screen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_normal"
+        app:layout_constraintBottom_toTopOf="@id/MainNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/MainNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_bottom_navigation_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_account"
+        android:title="@string/main_menu_1"
+        android:icon="@drawable/icon_bank"/>
+    <item
+        android:id="@+id/nav_ledger"
+        android:title="@string/main_menu_2"
+        android:icon="@drawable/icon_books"/>
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/main_menu_3"
+        android:icon="@drawable/icon_house"/>
+    <item
+        android:id="@+id/nav_chart"
+        android:title="@string/main_menu_4"
+        android:icon="@drawable/icon_chart"/>
+    <item
+        android:id="@+id/nav_setting"
+        android:title="@string/main_menu_5"
+        android:icon="@drawable/icon_settings"/>
+<!--TODO icon source
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+-->
+</menu>
