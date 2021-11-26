@@ -7,15 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class SubpageLedger extends Fragment {
+public class SubpageNote extends Fragment {
 
-    public SubpageLedger(){
+    public SubpageNote(){
         // require a empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.sub_ledger, container, false);
+        return inflater.inflate(R.layout.sub_note, container, false);
     }
 }

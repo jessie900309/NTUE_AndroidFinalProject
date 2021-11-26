@@ -25,7 +25,7 @@ public class MainPageActivity extends AppCompatActivity implements BottomNavigat
     }
 
     SubpageAccount pageAccount = new SubpageAccount();
-    SubpageLedger pageLedger = new SubpageLedger();
+    SubpageNote pageNote = new SubpageNote();
     SubpageHome pageHome = new SubpageHome();
     SubpageChart pageChart = new SubpageChart();
     SubpageSetting pageSetting = new SubpageSetting();
@@ -33,11 +33,11 @@ public class MainPageActivity extends AppCompatActivity implements BottomNavigat
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.nav_note:
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainPage_screen, pageNote).commit();
+                return true;
             case R.id.nav_account:
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainPage_screen, pageAccount).commit();
-                return true;
-            case R.id.nav_ledger:
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainPage_screen, pageLedger).commit();
                 return true;
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainPage_screen, pageHome).commit();

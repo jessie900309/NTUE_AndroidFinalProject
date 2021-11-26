@@ -10,8 +10,8 @@
     <string name="login_passwordHintText">password</string>
 
 <!--    main page String-->
-    <string name="main_menu_1">Account</string>
-    <string name="main_menu_2">Ledger</string>
+    <string name="main_menu_1">Note</string>
+    <string name="main_menu_2">Account</string>
     <string name="main_menu_3">Home</string>
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>

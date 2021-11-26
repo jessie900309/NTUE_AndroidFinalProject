@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_account"
+        android:id="@+id/nav_note"
         android:title="@string/main_menu_1"
-        android:icon="@drawable/icon_bank"/>
-    <item
-        android:id="@+id/nav_ledger"
-        android:title="@string/main_menu_2"
         android:icon="@drawable/icon_books"/>
+    <item
+        android:id="@+id/nav_account"
+        android:title="@string/main_menu_2"
+        android:icon="@drawable/icon_bank"/>
     <item
         android:id="@+id/nav_home"
         android:title="@string/main_menu_3"
