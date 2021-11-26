@@ -10,6 +10,17 @@
     <dimen name="login_submitButtonTextSize">20sp</dimen>
     <dimen name="login_submitButtonPadding_top">10dp</dimen>
 
+
+<!--    account page Dimens-->
+    <dimen name="account_topPadding">40dp</dimen>
+    <dimen name="account_netAssetsTextSize">30sp</dimen>
+    <dimen name="account_netAssetsTextTextSize">16sp</dimen>
+    <dimen name="account_divideLineSize">3dp</dimen>
+    <dimen name="account_dividePadding">20dp</dimen>
+    <dimen name="account_assetsTextSize">24sp</dimen>
+    <dimen name="account_assetsTextTextSize">16sp</dimen>
+    <dimen name="account_divideLineSmallSize">1.5dp</dimen>
+
 <!--    calculator Dimens-->
     <!--    全局排版-->
     <dimen name="cal_pageHeight">510dp</dimen>

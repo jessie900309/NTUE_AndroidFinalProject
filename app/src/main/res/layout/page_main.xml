@@ -18,17 +18,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/MainNavigation"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="@android:color/black"
+        app:itemRippleColor="@android:color/darker_gray"
+        app:backgroundTint="#caa2de"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/main_bottom_navigation_bar"/>
+
+        <!--    itemRippleColor 點擊渲染顏色-->
+        <!--    backgroundTint 背景顏色-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

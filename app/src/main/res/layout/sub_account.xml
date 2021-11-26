@@ -1,24 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/subpage_account"
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="center"
     android:background="@android:color/holo_purple">
 
+<!--    Background-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:foregroundGravity="center"
         android:src="@drawable/background_normal"/>
 
-    <TextView
+<!--    User Data-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:paddingTop="@dimen/account_topPadding"
+        android:orientation="vertical"
+        android:gravity="center">
+<!--        淨資產-->
+        <TextView
+            android:id="@+id/account_showNetAssets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/account_netAssetsTextSize"
+            android:textColor="@color/PrimartTextColor"
+            android:text="@string/account_initNetAssets"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/account_netAssetsTextTextSize"
+            android:textColor="@color/SecondTextColor"
+            android:text="@string/account_netAssetsText"/>
+<!--        divide line-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_divideLineSize"
+            android:background="@color/SecondTextColor"
+            android:layout_marginHorizontal="@dimen/account_dividePadding"
+            android:layout_marginVertical="@dimen/account_dividePadding"/>
+<!--        資產狀況-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+<!--            總資產-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/account_showAllAssets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/account_assetsTextSize"
+                    android:textColor="@color/PrimartTextColor"
+                    android:text="@string/account_initDataNumber"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/SecondTextColor"
+                    android:text="@string/account_allAssetsText"/>
+            </LinearLayout>
+<!--            負債-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/account_showDebt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/account_assetsTextSize"
+                    android:textColor="@color/PrimartTextColor"
+                    android:text="@string/account_initDataNumber"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/SecondTextColor"
+                    android:text="@string/account_debtText"/>
+            </LinearLayout>
+<!--            初始餘額-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/account_initAssets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/account_assetsTextSize"
+                    android:textColor="@color/PrimartTextColor"
+                    android:text="@string/account_initDataNumber"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/SecondTextColor"
+                    android:text="@string/account_initAssetsText"/>
+            </LinearLayout>
+        </LinearLayout>
+<!--        divide line-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_divideLineSize"
+            android:background="@color/SecondTextColor"
+            android:layout_marginHorizontal="@dimen/account_dividePadding"
+            android:layout_marginVertical="@dimen/account_dividePadding"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/account_accountListText"
+            android:textColor="@color/SecondTextColor"
+            android:layout_marginHorizontal="@dimen/account_dividePadding"
+            android:layout_marginTop="@dimen/account_dividePadding"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_divideLineSmallSize"
+            android:background="@color/SecondTextColor"
+            android:layout_marginHorizontal="@dimen/account_dividePadding"
+            android:layout_marginVertical="@dimen/account_dividePadding"/>
+        <!--        帳戶清單-->
+
+    </LinearLayout>
+
+
+
+
+<!--    FloatingActionButton-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/AccountFloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="@android:color/black"
-        android:text="account" />
+        android:layout_gravity="end|bottom"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/purple_200"
+        app:rippleColor="@android:color/darker_gray"
+        android:layout_margin="20dp" />
 
-</RelativeLayout>
+</FrameLayout>

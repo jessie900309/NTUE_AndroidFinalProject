@@ -2,25 +2,23 @@ package com.example.finalproject;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainPageActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-
-    BottomNavigationView bottomNavigationView;
+public class MainPageActivity extends AppCompatActivity
+        implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page_main);
 
-        bottomNavigationView = findViewById(R.id.MainNavigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
-        bottomNavigationView.setSelectedItemId(R.id.nav_account);
+        ((BottomNavigationView) findViewById(R.id.MainNavigation)).setOnNavigationItemSelectedListener(this);
+        ((BottomNavigationView) findViewById(R.id.MainNavigation)).setSelectedItemId(R.id.nav_home);//初始畫面
 
     }
 
@@ -51,4 +49,6 @@ public class MainPageActivity extends AppCompatActivity implements BottomNavigat
         }
         return false;
     }
+
+
 }
