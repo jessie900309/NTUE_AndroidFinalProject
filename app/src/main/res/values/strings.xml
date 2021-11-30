@@ -29,7 +29,21 @@
     <string name="init_account_bank_text">銀行</string>
     <string name="init_account_card_text">信用卡</string>
 
-<!--    add page String-->
+<!--    setting page-->
+    <string name="setting_basic">基本設定</string>
+    <string name="setting_menuFixedIncomeText">固定收支</string>
+    <string name="setting_menuFixedTransferText">固定轉帳</string>
+    <string name="setting_menuClassificationText">記帳類別</string>
+    <string name="setting_menuMemberText">成員</string>
+    <string name="setting_backup">資料備份</string>
+    <string name="setting_menuUpdateCloud">上傳雲端</string>
+    <string name="setting_menuOutputCSV">匯出CSV檔</string>
+    <string name="setting_menuFindDev">傳送資料給開發者</string>
+    <string name="setting_help">幫助</string>
+    <string name="setting_menuRecommend">建議與希望</string>
+    <string name="setting_menuAboutApp">關於本App</string>
+    <string name="setting_menuAcknowledgments">版權聲明</string>
+
 <!--    calculator String-->
     <string name="cal_initResult">0.0</string>
     <string name="cal_initSign"> </string>

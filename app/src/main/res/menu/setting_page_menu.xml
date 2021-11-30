@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    基本設定-->
+    <item
+        android:title="@string/setting_basic">
+        <menu>
+            <item
+                android:id="@+id/settings_basic_fixedIncome"
+                android:title="@string/setting_menuFixedIncomeText" />
+            <item
+                android:id="@+id/settings_basic_fixedTransfer"
+                android:title="@string/setting_menuFixedTransferText" />
+            <item
+                android:id="@+id/settings_basic_classification"
+                android:title="@string/setting_menuClassificationText" />
+            <item
+                android:id="@+id/settings_basic_member"
+                android:title="@string/setting_menuMemberText" />
+        </menu>
+    </item>
+
+<!--    資料備份-->
+    <item
+        android:title="@string/setting_backup">
+        <menu>
+            <item
+                android:id="@+id/settings_backup_updateCloud"
+                android:title="@string/setting_menuUpdateCloud" />
+            <item
+                android:id="@+id/settings_backup_outputCSV"
+                android:title="@string/setting_menuOutputCSV" />
+            <item
+                android:id="@+id/settings_backup_findDev"
+                android:title="@string/setting_menuFindDev" />
+        </menu>
+    </item>
+
+<!--    幫助-->
+    <item
+        android:title="@string/setting_help">
+        <menu>
+            <item
+                android:id="@+id/setting_help_recommend"
+                android:title="@string/setting_menuRecommend" />
+            <item
+                android:id="@+id/setting_help_aboutApp"
+                android:title="@string/setting_menuAboutApp" />
+            <item
+                android:id="@+id/setting_help_acknowledgments"
+                android:title="@string/setting_menuAcknowledgments" />
+        </menu>
+    </item>
+
+
+</menu>
