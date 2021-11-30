@@ -8,11 +8,15 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-public class SubpageAccount extends Fragment implements View.OnLongClickListener {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class SubpageAccount extends Fragment
+        implements View.OnClickListener,View.OnLongClickListener {
 
     TextView showNetAssets;
     TextView showAllAssets,showDebt,initAssets;
     TextView showAccountMoney,showAccountBank,showAccountCard;
+    FloatingActionButton floatingButton;
 
     //id列表
     // account_showNetAssets
@@ -26,7 +30,10 @@ public class SubpageAccount extends Fragment implements View.OnLongClickListener
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.sub_account, container, false);
+
         //widget
         showNetAssets = view.findViewById(R.id.account_showNetAssets);
         showAllAssets = view.findViewById(R.id.account_showAllAssets);
@@ -35,13 +42,15 @@ public class SubpageAccount extends Fragment implements View.OnLongClickListener
         showAccountMoney = view.findViewById(R.id.account_show_account_money);
         showAccountBank = view.findViewById(R.id.account_show_account_bank);
         showAccountCard = view.findViewById(R.id.account_show_account_card);
+        floatingButton = view.findViewById(R.id.AccountFloatingButton);
+
+        //click
+        floatingButton.setOnClickListener(this);
         //longClick
         initAssets.setOnLongClickListener(this);
 
         //TODO read 資料庫 -> TextView setText()
 
-        //
-        // Inflate the layout for this fragment
         return view;
     }
 
@@ -53,5 +62,14 @@ public class SubpageAccount extends Fragment implements View.OnLongClickListener
             //do nothing
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId()==R.id.AccountFloatingButton){
+            //TODO 新增帳戶
+        } else {
+            //do nothing
+        }
     }
 }
