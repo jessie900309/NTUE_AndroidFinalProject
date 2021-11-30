@@ -17,13 +17,17 @@
     <string name="main_menu_5">Setting</string>
 
 <!--    account page-->
-    <string name="account_initNetAssets">$0.0</string>
+    <string name="account_initCoin">TWD</string>
+    <string name="account_initNetAssets">0.0</string>
     <string name="account_netAssetsText">淨資產</string>
-    <string name="account_initDataNumber">0</string>
+    <string name="account_initDataNumber">0.0</string>
     <string name="account_allAssetsText">總資產</string>
     <string name="account_debtText">負債</string>
     <string name="account_initAssetsText">初始餘額</string>
     <string name="account_accountListText">帳戶清單</string>
+    <string name="init_account_money_text">現金</string>
+    <string name="init_account_bank_text">銀行</string>
+    <string name="init_account_card_text">信用卡</string>
 
 <!--    add page String-->
 <!--    calculator String-->

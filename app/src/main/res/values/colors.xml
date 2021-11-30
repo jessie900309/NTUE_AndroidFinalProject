@@ -13,6 +13,8 @@
     <color name="PrimartTextColor">#FF000000</color>
     <color name="SecondTextColor">#FF888888</color>
 
+    <color name="moneyDecreaseTextColor">#FF930000</color>
+    <color name="moneyIncreaseTextColor">#FF00A600</color>
 
 <!--    calculator Color-->
     <!--    顯示格-->

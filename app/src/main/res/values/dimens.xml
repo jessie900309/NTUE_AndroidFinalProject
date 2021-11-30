@@ -17,9 +17,12 @@
     <dimen name="account_netAssetsTextTextSize">16sp</dimen>
     <dimen name="account_divideLineSize">3dp</dimen>
     <dimen name="account_dividePadding">20dp</dimen>
+    <dimen name="account_divideLineSmallSize">1.5dp</dimen>
     <dimen name="account_assetsTextSize">24sp</dimen>
     <dimen name="account_assetsTextTextSize">16sp</dimen>
-    <dimen name="account_divideLineSmallSize">1.5dp</dimen>
+    <dimen name="account_listItemIconSize">40dp</dimen>
+    <dimen name="account_listItemTextSize">20dp</dimen>
+    <dimen name="account_listItemPadding">10dp</dimen>
 
 <!--    calculator Dimens-->
     <!--    全局排版-->
