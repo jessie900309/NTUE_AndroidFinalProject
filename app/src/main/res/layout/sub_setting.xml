@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/subpage_setting"
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_purple">
@@ -14,115 +12,185 @@
         android:src="@drawable/background_normal"/>
 
     <!-- 選單 -->
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/setting_scrollList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:gravity="start"
-        android:orientation="vertical"
         android:paddingHorizontal="@dimen/page_dividePadding"
-        android:paddingTop="@dimen/subpage_topPadding">
-        <!--        基本設定 Title-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_basic"
-            android:textColor="@color/SecondTextColor"
-            android:textSize="@dimen/setting_itemTextSize" />
+        android:paddingVertical="@dimen/subpage_verticalPadding"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/page_divideLineSmallSize"
-            android:layout_marginVertical="@dimen/page_dividePadding"
-            android:background="@color/SecondTextColor" />
-        <!--        基本設定 sub-->
         <LinearLayout
-            android:id="@+id/settings_basic_fixedIncome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="top"
+            android:gravity="start"
+            android:orientation="vertical">
+            <!--        基本設定 Title-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/setting_basic"
+                android:textColor="@color/SecondTextColor"
+                android:textSize="@dimen/setting_itemTextSize" />
+            <!--        div-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSmallSize"
+                android:layout_marginVertical="@dimen/page_dividePadding"
+                android:background="@color/SecondTextColor" />
+            <!--        基本設定 sub-->
+            <Button
+                android:id="@+id/settings_basic_fixedIncome"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:paddingVertical="@dimen/setting_subItemPadding"
                 android:text="@string/setting_menuFixedIncomeText"
                 android:textColor="@color/PrimartTextColor"
                 android:textSize="@dimen/setting_subItemTextSize" />
-            <ImageView
+
+            <Button
+                android:id="@+id/settings_basic_fixedTransfer"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingVertical="5dp"
-                android:gravity="end"
-                android:src="@drawable/icon_next" />
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuFixedTransferText"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/settings_basic_classification"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuClassificationText"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/settings_basic_member"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuMemberText"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+            <!--        div-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSmallSize"
+                android:layout_marginVertical="@dimen/page_dividePadding"
+                android:background="@color/SecondTextColor" />
+            <!--        資料備份 Title-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_backup"
+                android:textColor="@color/SecondTextColor"
+                android:textSize="@dimen/setting_itemTextSize" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSmallSize"
+                android:layout_marginVertical="@dimen/page_dividePadding"
+                android:background="@color/SecondTextColor" />
+            <!--        資料備份 sub-->
+            <Button
+                android:id="@+id/settings_backup_updateCloud"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuUpdateCloud"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/settings_backup_outputCSV"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuOutputCSV"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/settings_backup_findDev"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuFindDev"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+            <!--        div-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSmallSize"
+                android:layout_marginVertical="@dimen/page_dividePadding"
+                android:background="@color/SecondTextColor" />
+            <!--        幫助 Title-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_help"
+                android:textColor="@color/SecondTextColor"
+                android:textSize="@dimen/setting_itemTextSize" />
+            <!--        div-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSmallSize"
+                android:layout_marginVertical="@dimen/page_dividePadding"
+                android:background="@color/SecondTextColor" />
+            <!--        幫助 sub-->
+            <Button
+                android:id="@+id/setting_help_recommend"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuRecommend"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/setting_help_aboutApp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuAboutApp"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/setting_help_acknowledgments"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuAcknowledgments"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/settings_basic_fixedTransfer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/setting_subItemPadding"
-            android:text="@string/setting_menuFixedTransferText"
-            android:textColor="@color/PrimartTextColor"
-            android:textSize="@dimen/setting_subItemTextSize" />
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/settings_basic_classification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/setting_subItemPadding"
-            android:text="@string/setting_menuClassificationText"
-            android:textColor="@color/PrimartTextColor"
-            android:textSize="@dimen/setting_subItemTextSize" />
-
-        <TextView
-            android:id="@+id/settings_basic_member"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/setting_subItemPadding"
-            android:text="@string/setting_menuMemberText"
-            android:textColor="@color/PrimartTextColor"
-            android:textSize="@dimen/setting_subItemTextSize" />
-
-        <!--        資料備份-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/page_divideLineSmallSize"
-            android:layout_marginVertical="@dimen/page_dividePadding"
-            android:background="@color/SecondTextColor" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_backup"
-            android:textColor="@color/SecondTextColor"
-            android:textSize="@dimen/setting_itemTextSize" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/page_divideLineSmallSize"
-            android:layout_marginVertical="@dimen/page_dividePadding"
-            android:background="@color/SecondTextColor" />
-
-
-
-        <!--        幫助-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/page_divideLineSmallSize"
-            android:background="@color/SecondTextColor"
-            android:layout_marginVertical="@dimen/page_dividePadding"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_help"
-            android:textColor="@color/SecondTextColor"
-            android:textSize="@dimen/setting_itemTextSize" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/page_divideLineSmallSize"
-            android:layout_marginVertical="@dimen/page_dividePadding"
-            android:background="@color/SecondTextColor" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</FrameLayout>

@@ -16,7 +16,7 @@
     <dimen name="page_dividePadding">20dp</dimen>
     <dimen name="page_divideLineSmallSize">1.5dp</dimen>
 
-    <dimen name="subpage_topPadding">40dp</dimen>
+    <dimen name="subpage_verticalPadding">40dp</dimen>
 
 <!--    account page Dimens-->
     <dimen name="account_netAssetsTextSize">30sp</dimen>
@@ -31,7 +31,7 @@
 <!--    setting page Dimens-->
     <dimen name="setting_itemTextSize">16sp</dimen>
     <dimen name="setting_subItemTextSize">20sp</dimen>
-    <dimen name="setting_subItemPadding">5dp</dimen>
+    <dimen name="setting_subItemPadding">0dp</dimen>
 
 <!--    calculator Dimens-->
     <!--    全局排版-->

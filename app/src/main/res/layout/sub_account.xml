@@ -20,11 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:paddingTop="@dimen/subpage_topPadding"
+        android:paddingVertical="@dimen/subpage_verticalPadding"
         android:orientation="vertical"
         android:gravity="center">
-        <!--        淨資產
-        TODO : account_showNetAssets-->
+        <!--        淨資產 -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,8 +57,7 @@
             android:background="@color/SecondTextColor"
             android:layout_marginHorizontal="@dimen/page_dividePadding"
             android:layout_marginVertical="@dimen/page_dividePadding"/>
-        <!--        資產狀況
-        TODO : account_showAllAssets/account_showDebt/account_initAssets-->
+        <!--        資產狀況 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -232,8 +230,7 @@
                     android:text="@string/account_initCoin"
                     android:paddingBottom="@dimen/account_listItemPadding"/>
             </LinearLayout>
-            <!--    account show number
-            TODO  : account_show_account_money/account_show_account_bank/account_show_account_card-->
+            <!--    account show number -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
