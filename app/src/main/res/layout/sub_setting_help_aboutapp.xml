@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <!--    AppBar Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/settingpage_appBarTitleTextColor"
+        android:textSize="@dimen/settingpage_appBarTitleTextSize"
+        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:text="@string/setting_menuAboutApp"/>
+
+    <!--        divide line-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_divideLineSize"
+        android:background="@color/SecondTextColor"
+        android:layout_marginHorizontal="@dimen/page_dividePadding"
+        android:layout_marginBottom="@dimen/page_dividePadding"/>
+
+    <!--    內文-->
+
+
+
+</LinearLayout>

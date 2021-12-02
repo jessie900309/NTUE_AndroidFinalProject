@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <!--    AppBar Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/settingpage_appBarTitleTextColor"
+        android:textSize="@dimen/settingpage_appBarTitleTextSize"
+        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:text="@string/setting_menuAcknowledgments"/>
+
+    <!--        divide line-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_divideLineSize"
+        android:background="@color/SecondTextColor"
+        android:layout_marginHorizontal="@dimen/page_dividePadding"
+        android:layout_marginBottom="@dimen/page_dividePadding"/>
+
+    <!--    內文-->
+
+    <!--    Flaticon TODO id: setting_menuAcknowledgments_IconSourceHyperLink-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="@string/setting_menuAcknowledgments_IconSource"/>
+        <TextView
+            android:id="@+id/setting_menuAcknowledgments_IconSourceHyperLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="@string/setting_menuAcknowledgments_IconSourceName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="."/>
+    </LinearLayout>
+
+    <!--    Copyright-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/settingpage_pageTitleTextColor"
+        android:textSize="@dimen/settingpage_pageTitleTextSize"
+        android:text="@string/setting_menuAcknowledgments_Copyright"/>
+
+    <!--TODO icon source
+<div>Icons made by <a href="" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>    -->
+
+
+
+
+</LinearLayout>

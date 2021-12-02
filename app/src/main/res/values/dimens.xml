@@ -33,7 +33,19 @@
     <dimen name="setting_subItemTextSize">20sp</dimen>
     <dimen name="setting_subItemPadding">0dp</dimen>
 
-<!--    calculator Dimens-->
+    <dimen name="settingpage_appBarTitleTextSize">24sp</dimen>
+    <dimen name="settingpage_appBarTitlePadding">10dp</dimen>
+    <dimen name="settingpage_pagePaddingHorizontal">20dp</dimen>
+
+    <dimen name="settingpage_pageTitleTextSize">16sp</dimen>
+    <dimen name="settingpage_pageTextSize">14sp</dimen>
+    <dimen name="settingpage_pageTextPaddingVertical">10dp</dimen>
+    <dimen name="settingpage_pageButtonTextSize">14sp</dimen>
+
+    <dimen name="settingRecommend_typePadding">10dp</dimen>
+    <dimen name="settingRecommend_textMaxLength">200</dimen>
+
+    <!--    calculator Dimens-->
     <!--    全局排版-->
     <dimen name="cal_pageHeight">510dp</dimen>
     <dimen name="cal_margin_top">20dp</dimen>

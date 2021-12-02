@@ -52,6 +52,7 @@ public class SubpageSetting extends Fragment
             case R.id.setting_help_aboutApp:
                 break;
             case R.id.setting_help_acknowledgments:
+
                 break;
             default:
 

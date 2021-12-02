@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <!--    AppBar Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/settingpage_appBarTitleTextColor"
+        android:textSize="@dimen/settingpage_appBarTitleTextSize"
+        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:text="@string/setting_menuRecommend"/>
+
+    <!--        divide line-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_divideLineSize"
+        android:background="@color/SecondTextColor"
+        android:layout_marginHorizontal="@dimen/page_dividePadding"
+        android:layout_marginBottom="@dimen/page_dividePadding"/>
+
+    <!--    表單-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
+
+        <!--    1. 類型 TODO id: setting_help_recommend_typeRadio-->
+        <!--        settingRecommend_QnAType-->
+        <!--        settingRecommend_recommendType-->
+        <!--        settingRecommend_bugRepoType-->
+        <!--        settingRecommend_otherType-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:text="@string/setting_menuRecommend_typeText"/>
+        <RadioGroup
+            android:id="@+id/setting_help_recommend_typeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/settingRecommend_QnAType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/settingRecommend_typePadding"
+                android:text="@string/settingRecommend_type_QnAText"
+                android:textColor="@color/settingpage_pageTextColor"
+                android:textSize="@dimen/settingpage_pageTextSize" />
+            <RadioButton
+                android:id="@+id/settingRecommend_recommendType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/settingRecommend_typePadding"
+                android:text="@string/settingRecommend_type_recommendText"
+                android:textColor="@color/settingpage_pageTextColor"
+                android:textSize="@dimen/settingpage_pageTextSize"/>
+            <RadioButton
+                android:id="@+id/settingRecommend_bugRepoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/settingRecommend_typePadding"
+                android:text="@string/settingRecommend_type_bugRepoText"
+                android:textColor="@color/settingpage_pageTextColor"
+                android:textSize="@dimen/settingpage_pageTextSize"/>
+            <RadioButton
+                android:id="@+id/settingRecommend_otherType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/settingRecommend_typePadding"
+                android:text="@string/settingRecommend_type_otherText"
+                android:textColor="@color/settingpage_pageTextColor"
+                android:textSize="@dimen/settingpage_pageTextSize"/>
+
+        </RadioGroup>
+        <!--    2. 內文描述 TODO id: settingpage_help_recommendTextInput-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:text="@string/setting_menuRecommend_textText"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="@dimen/settingRecommend_textMaxLength">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/settingpage_help_recommendTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    3. 加入圖片 TODO id: setting_help_recommend_addimage-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:text="@string/setting_menuRecommend_addImageText"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <!--        outline-->
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@android:color/black"/>
+            <!--        image-->
+            <ImageButton
+                android:id="@+id/setting_help_recommend_addimage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_addimage" />
+        </RelativeLayout>
+
+        <!--        divide line-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_divideLineSize"
+            android:background="@android:color/transparent"
+            android:layout_marginHorizontal="@dimen/page_dividePadding"
+            android:layout_marginTop="@dimen/page_dividePadding"/>
+
+        <!--        4. 提交按鈕 TODO id: setting_menuRecommend_submitButton-->
+        <Button
+            android:id="@+id/setting_menuRecommend_submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:textSize="@dimen/settingpage_pageButtonTextSize"
+            android:textColor="@color/settingpage_pageButtonTextColor"
+            android:text="@string/setting_menuRecommend_submitText"/>
+
+    </LinearLayout>
+
+</LinearLayout>

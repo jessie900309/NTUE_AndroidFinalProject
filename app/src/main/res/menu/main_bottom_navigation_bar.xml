@@ -20,7 +20,5 @@
         android:id="@+id/nav_setting"
         android:title="@string/main_menu_5"
         android:icon="@drawable/icon_settings"/>
-<!--TODO icon source
-<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
--->
+
 </menu>

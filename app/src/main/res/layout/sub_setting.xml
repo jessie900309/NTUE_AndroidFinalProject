@@ -97,7 +97,7 @@
                 android:text="@string/setting_backup"
                 android:textColor="@color/SecondTextColor"
                 android:textSize="@dimen/setting_itemTextSize" />
-
+            <!--            div-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/page_divideLineSmallSize"
