@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setting_help_recommendPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/settingpage_pageBackgroundColor">
+    android:background="@color/settingpage_pageBackgroundColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <!--    AppBar Title-->
     <TextView
@@ -33,7 +36,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
 
-        <!--    1. 類型 TODO id: setting_help_recommend_typeRadio-->
+        <!--    1. 類型 -->
         <!--        settingRecommend_QnAType-->
         <!--        settingRecommend_recommendType-->
         <!--        settingRecommend_bugRepoType-->
@@ -41,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
             android:textSize="@dimen/settingpage_pageTitleTextSize"
             android:textColor="@color/settingpage_pageTitleTextColor"
             android:text="@string/setting_menuRecommend_typeText"/>
@@ -83,33 +86,50 @@
                 android:text="@string/settingRecommend_type_otherText"
                 android:textColor="@color/settingpage_pageTextColor"
                 android:textSize="@dimen/settingpage_pageTextSize"/>
-
         </RadioGroup>
-        <!--    2. 內文描述 TODO id: settingpage_help_recommendTextInput-->
+
+        <!--        divide line-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_divideLineSize"
+            android:background="@android:color/transparent"
+            android:layout_marginHorizontal="@dimen/page_dividePadding"
+            android:layout_marginTop="@dimen/page_dividePadding"/>
+
+        <!--    2. 內文描述 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
             android:textSize="@dimen/settingpage_pageTitleTextSize"
             android:textColor="@color/settingpage_pageTitleTextColor"
             android:text="@string/setting_menuRecommend_textText"/>
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="OuO"-->
-<!--            app:counterEnabled="true"-->
-<!--            app:counterMaxLength="@dimen/settingRecommend_textMaxLength">-->
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/settingpage_help_recommendTextInput"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-        <!--    3. 加入圖片 TODO id: setting_help_recommend_addimage-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#FFEEEEEE"
+            android:inputType="textImeMultiLine">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/settingpage_help_recommendTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        divide line-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_divideLineSize"
+            android:background="@android:color/transparent"
+            android:layout_marginHorizontal="@dimen/page_dividePadding"
+            android:layout_marginTop="@dimen/page_dividePadding"/>
+
+        <!--    3. 加入圖片 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/settingpage_pageTextPaddingVertical"
+            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
             android:textSize="@dimen/settingpage_pageTitleTextSize"
             android:textColor="@color/settingpage_pageTitleTextColor"
             android:text="@string/setting_menuRecommend_addImageText"/>
@@ -118,10 +138,10 @@
             android:layout_height="wrap_content"
             android:gravity="center">
             <!--        outline-->
-            <TextView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:background="@android:color/black"/>
+            <!--            <TextView-->
+            <!--                android:layout_width="72dp"-->
+            <!--                android:layout_height="72dp"-->
+            <!--                android:background="@android:color/black"/>-->
             <!--        image-->
             <ImageButton
                 android:id="@+id/setting_help_recommend_addimage"
@@ -131,8 +151,8 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:contentDescription="addImg"
                 android:background="@android:color/white"
+                android:contentDescription="addImg"
                 android:padding="5dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/icon_addimage" />
@@ -146,9 +166,9 @@
             android:layout_marginHorizontal="@dimen/page_dividePadding"
             android:layout_marginTop="@dimen/page_dividePadding"/>
 
-        <!--        4. 提交按鈕 TODO id: setting_menuRecommend_submitButton-->
+        <!--        4. 提交按鈕-->
         <Button
-            android:id="@+id/setting_menuRecommend_submitButton"
+            android:id="@+id/setting_help_recommend_submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/settingpage_pageTextPaddingVertical"

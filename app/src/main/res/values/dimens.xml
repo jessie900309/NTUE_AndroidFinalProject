@@ -38,7 +38,7 @@
     <dimen name="settingpage_pagePaddingHorizontal">20dp</dimen>
     <dimen name="settingpage_pageTitleTextSize">16sp</dimen>
     <dimen name="settingpage_pageTextSize">14sp</dimen>
-    <dimen name="settingpage_pageTextPaddingVertical">10dp</dimen>
+    <dimen name="settingpage_pageTextPaddingVertical">20dp</dimen>
     <dimen name="settingpage_pageButtonTextSize">14sp</dimen>
 
     <dimen name="settingRecommend_typePadding">10dp</dimen>
