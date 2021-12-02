@@ -16,7 +16,7 @@ public class SubpageSettingAcknowledgment extends AppCompatActivity {
         setContentView(R.layout.sub_setting_help_acknowlegment);
 
         TextView textViewHyperLink = (TextView) findViewById(R.id.setting_menuAcknowledgments_IconSourceHyperLink);
-        textViewHyperLink.setText(Html.fromHtml("<a href=\"https://www.flaticon.com/authors/good-ware\">Flaticon</a>"));
+        textViewHyperLink.setText(Html.fromHtml(" <a href=\"https://www.flaticon.com/authors/good-ware\">Flaticon</a> "));
         textViewHyperLink.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

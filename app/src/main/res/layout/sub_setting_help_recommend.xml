@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="top"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/settingpage_pageBackgroundColor">
 
     <!--    AppBar Title-->
     <TextView
@@ -91,17 +93,18 @@
             android:textSize="@dimen/settingpage_pageTitleTextSize"
             android:textColor="@color/settingpage_pageTitleTextColor"
             android:text="@string/setting_menuRecommend_textText"/>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="@dimen/settingRecommend_textMaxLength">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settingpage_help_recommendTextInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="OuO"-->
+<!--            app:counterEnabled="true"-->
+<!--            app:counterMaxLength="@dimen/settingRecommend_textMaxLength">-->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/settingpage_help_recommendTextInput"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
         <!--    3. 加入圖片 TODO id: setting_help_recommend_addimage-->
         <TextView
             android:layout_width="match_parent"
@@ -124,11 +127,11 @@
                 android:id="@+id/setting_help_recommend_addimage"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_margin="1dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:contentDescription="addImg"
                 android:background="@android:color/white"
                 android:padding="5dp"
                 android:scaleType="fitXY"

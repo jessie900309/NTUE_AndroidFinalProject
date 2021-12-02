@@ -9,13 +9,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
     <color name="PrimartTextColor">#FF000000</color>
     <color name="SecondTextColor">#FF888888</color>
 
     <color name="moneyDecreaseTextColor">#FF930000</color>
     <color name="moneyIncreaseTextColor">#FF00A600</color>
 
+    <color name="settingpage_pageBackgroundColor">#FFFFFFFF</color>
     <color name="settingpage_appBarTitleTextColor">#FF5E005E</color>
     <color name="settingpage_pageTitleTextColor">#FF222222</color>
     <color name="settingpage_pageTextColor">#FF555555</color>

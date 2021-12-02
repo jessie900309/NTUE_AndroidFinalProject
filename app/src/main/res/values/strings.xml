@@ -55,8 +55,7 @@
 
     <string name="setting_menuAcknowledgments_Copyright">Copyright © 2021 jessieOuO. All rights reserved.</string>
     <string name="setting_menuAcknowledgments_IconSource">Icons made by </string>
-    <string name="setting_menuAcknowledgments_IconSourceName">Flaticon</string>
-
+    <string name="setting_menuAcknowledgments_IconSourceName"> Flaticon </string>
 
     <!--    calculator String-->
     <string name="cal_initResult">0.0</string>
