@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -23,9 +24,12 @@ public class SubpageSetting extends Fragment
         View view = inflater.inflate(R.layout.sub_setting, container, false);
 
         //widget click
-        int[] listenButtonList = {R.id.settings_basic_fixedIncome, R.id.settings_basic_fixedTransfer, R.id.settings_basic_classification, R.id.settings_basic_member,
-                R.id.settings_backup_updateCloud,R.id.settings_backup_outputCSV,R.id.settings_backup_findDev,
-                R.id.setting_help_recommend,R.id.setting_help_aboutApp,R.id.setting_help_acknowledgments};
+        int[] listenButtonList = {
+                R.id.settings_basic_fixedIncome, R.id.settings_basic_fixedTransfer,
+                R.id.settings_basic_classification, R.id.settings_basic_member,
+                R.id.settings_backup_updateCloud,R.id.settings_backup_outputCSV,
+                R.id.setting_help_recommend,R.id.settings_help_findDev,
+                R.id.setting_help_aboutApp,R.id.setting_help_acknowledgments};
         for(int id:listenButtonList){ ((Button)view.findViewById(id)).setOnClickListener(this); }
 
         return view;
@@ -37,22 +41,14 @@ public class SubpageSetting extends Fragment
         try {
             Intent intent = new Intent();
             switch (view.getId()){
-                case R.id.settings_basic_fixedIncome:
-                    break;
-                case R.id.settings_basic_fixedTransfer:
-                    break;
-                case R.id.settings_basic_classification:
-                    break;
-                case R.id.settings_basic_member:
-                    break;
-                case R.id.settings_backup_updateCloud:
-                    break;
-                case R.id.settings_backup_outputCSV:
-                    break;
-                case R.id.settings_backup_findDev:
-                    break;
+
+                // HELP
                 case R.id.setting_help_recommend:
                     intent.setClass(getActivity(), SubpageSettingRecommend.class);
+                    startActivity(intent);
+                    break;
+                case R.id.settings_help_findDev:
+                    intent.setClass(getActivity(), SubpageSettingFindDev.class);
                     startActivity(intent);
                     break;
                 case R.id.setting_help_aboutApp:
@@ -63,8 +59,20 @@ public class SubpageSetting extends Fragment
                     intent.setClass(getActivity(), SubpageSettingAcknowledgment.class);
                     startActivity(intent);
                     break;
-                default:
 
+                //todo 未開發功能
+
+                case R.id.settings_basic_fixedIncome:
+                case R.id.settings_basic_fixedTransfer:
+                case R.id.settings_basic_classification:
+                case R.id.settings_basic_member:
+                case R.id.settings_backup_updateCloud:
+                case R.id.settings_backup_outputCSV:
+                    intent.setClass(getActivity(), ToolDefaultActivity.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    //do nothing
             }
         } catch (Exception e) {
             System.out.println("\n\n\n"+e+"\n\n\n");

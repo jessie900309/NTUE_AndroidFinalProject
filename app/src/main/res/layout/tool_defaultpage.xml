@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:background="@color/settingpage_pageBackgroundColor" >
+
+    <!--    AppBar Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/settingpage_appBarTitleTextColor"
+        android:textSize="@dimen/settingpage_appBarTitleTextSize"
+        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:text="@string/setting_defaultPageTitle"/>
+
+    <!--        divide line-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_divideLineSize"
+        android:background="@color/SecondTextColor"
+        android:layout_marginHorizontal="@dimen/page_dividePadding"
+        android:layout_marginBottom="@dimen/page_dividePadding"/>
+
+    <!--    內文-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/settingpage_pageTextSize"
+        android:textColor="@color/settingpage_pageTextColor"
+        android:text="@string/setting_defaultPageText"/>
+
+
+</LinearLayout>

@@ -29,6 +29,11 @@
     <string name="init_account_bank_text">銀行</string>
     <string name="init_account_card_text">信用卡</string>
 
+
+
+
+
+
 <!--    setting page-->
     <string name="setting_basic">基本設定</string>
     <string name="setting_menuFixedIncomeText">固定收支</string>
@@ -38,12 +43,39 @@
     <string name="setting_backup">資料備份</string>
     <string name="setting_menuUpdateCloud">上傳雲端</string>
     <string name="setting_menuOutputCSV">匯出CSV檔</string>
-    <string name="setting_menuFindDev">傳送資料給開發者</string>
     <string name="setting_help">幫助</string>
     <string name="setting_menuRecommend">建議與希望</string>
+    <string name="setting_menuFindDev">傳送資料給開發者</string>
     <string name="setting_menuAboutApp">關於本App</string>
     <string name="setting_menuAcknowledgments">版權聲明</string>
 
+    <string name="setting_defaultPageTitle">*ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚</string>
+    <string name="setting_defaultPageText">功能開發中，敬請期待</string>
+
+    <!--    setting classification ex-->
+    <string name="typeNameText_ex_food">飲食</string>
+    <string name="typeNameText_ex_clothes">服裝配件</string>
+    <string name="typeNameText_ex_houserent">房租</string>
+    <string name="typeNameText_ex_trafic">交通</string>
+    <string name="typeNameText_ex_education">教育</string>
+    <string name="typeNameText_ex_game">娛樂</string>
+    <string name="typeNameText_ex_medicine">醫療保健</string>
+    <string name="typeNameText_ex_social">社交應酬</string>
+    <string name="typeNameText_ex_phone">手機網路</string>
+    <string name="typeNameText_ex_invest">投資</string>
+    <string name="typeNameText_ex_daily">日常用品</string>
+    <string name="typeNameText_ex_pet">寵物</string>
+    <string name="typeNameText_ex_car">車車保養</string>
+    <string name="typeNameText_ex_donate">捐款</string>
+
+    <!--    setting classification in-->
+    <string name="typeNameText_in_work">薪水</string>
+    <string name="typeNameText_in_bonus">獎金</string>
+    <string name="typeNameText_in_invest">投資獲利</string>
+    <string name="typeNameText_in_interest">利息</string>
+    <string name="typeNameText_in_donate">他人施捨</string>
+
+    <!--    setting recommend-->
     <string name="setting_menuRecommend_typeText">類型</string>
     <string name="settingRecommend_type_QnAText">諮詢</string>
     <string name="settingRecommend_type_recommendText">建議</string>
@@ -52,11 +84,20 @@
     <string name="setting_menuRecommend_textText">敘述</string>
     <string name="setting_menuRecommend_addImageText">上傳圖片</string>
     <string name="setting_menuRecommend_submitText">提交</string>
-
-    <string name="setting_menuAcknowledgments_Copyright">Copyright © 2021 jessieOuO. All rights reserved.</string>
+    <!--    find dev-->
+    <string name="settingFindDev_getInfo">裝置資訊</string>
+    <string name="settingFindDev_getInfo_msg">無法取得手機資訊</string>
+    <!--    other-->
+    <string name="setting_menuAcknowledgments_CodeSource">*ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚Author&#160;</string>
+    <string name="setting_menuAcknowledgments_GithubName">JessieOuO</string>
+    <string name="setting_menuAcknowledgments_CodeSource_">&#160;✿</string>
     <string name="setting_menuAcknowledgments_IconSource">Icons made by&#160;</string>
-    <string name="setting_menuAcknowledgments_IconSourceName"> Flaticon </string>
+    <string name="setting_menuAcknowledgments_IconSourceName">Flaticon</string>
     <string name="setting_menuAcknowledgments_IconSource_">&#160;.</string>
+    <string name="setting_menuAcknowledgments_Copyright">Copyright © 2021 jessieOuO. All rights reserved.</string>
+
+
+
 
     <!--    calculator String-->
     <string name="cal_initResult">0.0</string>
@@ -66,7 +107,5 @@
     <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
     <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
     <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
-
-
 
 </resources>

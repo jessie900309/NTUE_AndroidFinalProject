@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/setting_help_recommendPage"
+    android:id="@+id/setting_help_findDevPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top"
@@ -19,7 +19,7 @@
         android:textColor="@color/settingpage_appBarTitleTextColor"
         android:textSize="@dimen/settingpage_appBarTitleTextSize"
         android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
-        android:text="@string/setting_menuRecommend"/>
+        android:text="@string/setting_menuFindDev"/>
 
     <!--        divide line-->
     <TextView
@@ -36,62 +36,8 @@
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
 
-        <!--    1. 類型 -->
-        <!--        settingRecommend_QnAType-->
-        <!--        settingRecommend_recommendType-->
-        <!--        settingRecommend_bugRepoType-->
-        <!--        settingRecommend_otherType-->
+        <!--    1. 裝置資訊 -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:text="@string/setting_menuRecommend_typeText"/>
-        <RadioGroup
-            android:id="@+id/setting_help_recommend_typeRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:orientation="horizontal">
-            <RadioButton
-                android:id="@+id/settingRecommend_QnAType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/settingRecommend_typePadding"
-                android:text="@string/settingRecommend_type_QnAText"
-                android:textColor="@color/settingpage_pageTextColor"
-                android:textSize="@dimen/settingpage_pageTextSize" />
-            <RadioButton
-                android:id="@+id/settingRecommend_recommendType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/settingRecommend_typePadding"
-                android:text="@string/settingRecommend_type_recommendText"
-                android:textColor="@color/settingpage_pageTextColor"
-                android:textSize="@dimen/settingpage_pageTextSize"/>
-            <RadioButton
-                android:id="@+id/settingRecommend_bugRepoType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/settingRecommend_typePadding"
-                android:text="@string/settingRecommend_type_bugRepoText"
-                android:textColor="@color/settingpage_pageTextColor"
-                android:textSize="@dimen/settingpage_pageTextSize"/>
-            <RadioButton
-                android:id="@+id/settingRecommend_otherType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/settingRecommend_typePadding"
-                android:text="@string/settingRecommend_type_otherText"
-                android:textColor="@color/settingpage_pageTextColor"
-                android:textSize="@dimen/settingpage_pageTextSize"/>
-        </RadioGroup>
-
-        <!--    // 裝置資訊 -->
-        <TextView
-            android:visibility="gone"
-            android:id="@+id/setting_help_recommend_phoneInfoTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
@@ -99,15 +45,13 @@
             android:textColor="@color/settingpage_pageTitleTextColor"
             android:text="@string/settingFindDev_getInfo"/>
         <TextView
-            android:visibility="gone"
-            android:id="@+id/setting_help_recommend_phoneInfo"
+            android:id="@+id/setting_help_findDev_phoneInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:paddingVertical="5dp"
             android:textSize="@dimen/settingpage_pageTextSize"
             android:textColor="@color/settingpage_pageTextColor" />
-
         <!--        divide line-->
         <TextView
             android:layout_width="match_parent"
@@ -131,7 +75,7 @@
             app:boxBackgroundColor="#FFEEEEEE"
             android:inputType="textImeMultiLine">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/settingpage_help_recommendTextInput"
+                android:id="@+id/settingpage_help_findDevTextInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"/>
@@ -164,7 +108,7 @@
             <!--                android:background="@android:color/black"/>-->
             <!--        image-->
             <ImageButton
-                android:id="@+id/setting_help_recommend_addimage"
+                android:id="@+id/setting_help_findDev_addimage"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="1dp"
@@ -188,7 +132,7 @@
 
         <!--        4. 提交按鈕-->
         <Button
-            android:id="@+id/setting_help_recommend_submitButton"
+            android:id="@+id/setting_help_findDev_submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/settingpage_pageTextPaddingVertical"

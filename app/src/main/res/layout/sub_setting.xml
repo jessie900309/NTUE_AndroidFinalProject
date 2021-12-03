@@ -126,16 +126,6 @@
                 android:textColor="@color/PrimartTextColor"
                 android:textSize="@dimen/setting_subItemTextSize" />
 
-            <Button
-                android:id="@+id/settings_backup_findDev"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:paddingVertical="@dimen/setting_subItemPadding"
-                android:text="@string/setting_menuFindDev"
-                android:textColor="@color/PrimartTextColor"
-                android:textSize="@dimen/setting_subItemTextSize" />
             <!--        div-->
             <TextView
                 android:layout_width="match_parent"
@@ -164,6 +154,17 @@
                 android:gravity="center_vertical"
                 android:paddingVertical="@dimen/setting_subItemPadding"
                 android:text="@string/setting_menuRecommend"
+                android:textColor="@color/PrimartTextColor"
+                android:textSize="@dimen/setting_subItemTextSize" />
+
+            <Button
+                android:id="@+id/settings_help_findDev"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/setting_subItemPadding"
+                android:text="@string/setting_menuFindDev"
                 android:textColor="@color/PrimartTextColor"
                 android:textSize="@dimen/setting_subItemTextSize" />
 

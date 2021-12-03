@@ -168,21 +168,21 @@
                     android:layout_height="0dp"
                     android:paddingEnd="@dimen/account_listItemPadding"
                     android:gravity="center"
-                    android:src="@drawable/icon_money"/>
+                    android:src="@drawable/icon_account_money"/>
                 <ImageView
                     android:layout_weight="1"
                     android:layout_width="@dimen/account_listItemIconSize"
                     android:layout_height="0dp"
                     android:paddingEnd="@dimen/account_listItemPadding"
                     android:gravity="center"
-                    android:src="@drawable/icon_accountbank"/>
+                    android:src="@drawable/icon_account_bank"/>
                 <ImageView
                     android:layout_weight="1"
                     android:layout_width="@dimen/account_listItemIconSize"
                     android:layout_height="0dp"
                     android:paddingEnd="@dimen/account_listItemPadding"
                     android:gravity="center"
-                    android:src="@drawable/icon_card"/>
+                    android:src="@drawable/icon_account_card"/>
             </LinearLayout>
             <!--    List Title-->
             <LinearLayout

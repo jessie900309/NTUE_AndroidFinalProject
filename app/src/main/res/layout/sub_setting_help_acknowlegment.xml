@@ -26,6 +26,57 @@
         android:layout_marginBottom="@dimen/page_dividePadding"/>
 
     <!--    內文-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/app_title_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingVertical="@dimen/op_appTitlePadding"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/op_appTitleTextSize" />
+    </RelativeLayout>
+
+    <!--    Flaticon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="40dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="@string/setting_menuAcknowledgments_CodeSource"/>
+        <TextView
+            android:id="@+id/setting_menuAcknowledgments_GithubHyperLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="@string/setting_menuAcknowledgments_GithubName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:text="@string/setting_menuAcknowledgments_CodeSource_"/>
+    </LinearLayout>
 
     <!--    Flaticon -->
     <LinearLayout

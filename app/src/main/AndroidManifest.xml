@@ -26,13 +26,24 @@
         <activity android:name=".MainPageActivity"
             android:screenOrientation="portrait">
         </activity>
+
+
+        <!--        setting-->
         <activity android:name=".SubpageSettingRecommend"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SubpageSettingFindDev"
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".SubpageSettingAbout"
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".SubpageSettingAcknowledgment"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--        tool-->
+        <activity android:name=".ToolDefaultActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

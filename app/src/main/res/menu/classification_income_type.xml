@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/exTypeGroup"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/in_work"
+            android:title="@string/typeNameText_in_work"
+            android:icon="@drawable/icon_intype_workmoney"/>
+
+        <item
+            android:id="@+id/in_bonus"
+            android:title="@string/typeNameText_in_bonus"
+            android:icon="@drawable/icon_intype_bonus"/>
+
+        <item
+            android:id="@+id/in_invest"
+            android:title="@string/typeNameText_in_invest"
+            android:icon="@drawable/icon_intype_invest"/>
+
+        <item
+            android:id="@+id/in_interest"
+            android:title="@string/typeNameText_in_interest"
+            android:icon="@drawable/icon_intype_interestbank"/>
+
+        <item
+            android:id="@+id/in_donate"
+            android:title="@string/typeNameText_in_donate"
+            android:icon="@drawable/icon_intype_donate"/>
+
+    </group>
+
+</menu>
