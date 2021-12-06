@@ -41,6 +41,31 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
 
+            <!--    0. 日期 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                    android:textSize="@dimen/settingpage_pageTitleTextSize"
+                    android:textColor="@color/settingpage_pageTitleTextColor"
+                    android:text="@string/home_add_dateText"/>
+                <!--                todo pick date-->
+            </LinearLayout>
+            <!--        divide line-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_divideLineSize"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="@dimen/page_dividePadding"
+                android:layout_marginTop="@dimen/page_dividePadding"/>
+
             <!--    1. 類型 -->
             <LinearLayout
                 android:layout_width="match_parent"
