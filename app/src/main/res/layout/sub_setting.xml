@@ -13,7 +13,6 @@
 
     <!-- 選單 -->
     <ScrollView
-        android:id="@+id/setting_scrollList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/page_dividePadding"

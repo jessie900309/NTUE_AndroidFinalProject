@@ -30,6 +30,11 @@
             android:title="@string/typeNameText_in_donate"
             android:icon="@drawable/icon_intype_donate"/>
 
+        <item
+            android:id="@+id/in_other"
+            android:title="@string/typeNameText_in_other"
+            android:icon="@drawable/icon_intype_donate"/>
+
     </group>
 
 </menu>

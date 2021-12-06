@@ -67,7 +67,7 @@ public class SubpageAccount extends Fragment
     @Override
     public void onClick(View view) {
         if(view.getId()==R.id.AccountFloatingButton){
-            //TODO 新增帳戶
+            //TODO 新增帳戶 or 記帳
         } else {
             //do nothing
         }

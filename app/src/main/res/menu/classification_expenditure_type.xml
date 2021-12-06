@@ -75,6 +75,11 @@
             android:title="@string/typeNameText_ex_donate"
             android:icon="@drawable/icon_extype_donate"/>
 
+        <item
+            android:id="@+id/ex_other"
+            android:title="@string/typeNameText_ex_other"
+            android:icon="@drawable/icon_extype_donate"/>
+
     </group>
 
 </menu>

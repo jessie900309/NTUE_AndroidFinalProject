@@ -1,6 +1,5 @@
 package com.example.finalproject;
 
-
 import android.content.Context;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -23,7 +22,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextInputEditText emailInput,passwordInput;
     String emailText,passwordText;
     Button loginButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

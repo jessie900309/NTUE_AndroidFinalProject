@@ -16,7 +16,27 @@
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>
 
-<!--    account page-->
+
+<!--    home page-->
+    <string name="home_add_submitText">記一筆!</string>
+    <string name="home_add_typeText">類型</string>
+    <string name="home_add_incomeText">收入</string>
+    <string name="home_add_expendText">支出</string>
+    <string name="home_add_transText">轉帳</string>
+    <string name="home_add_moneyText">金額</string>
+    <string name="home_add_accountSingleText">帳戶</string>
+    <string name="home_add_classificationText">分類</string>
+    <string name="home_add_memberText">成員</string>
+    <string name="home_add_accountStartText">從帳戶</string>
+    <string name="home_add_accountEndText">到帳戶</string>
+
+    <string name="home_add_init_cal">(計算)</string>
+    <string name="home_add_init_ac">現金</string>
+    <string name="home_add_init_class">其他</string>
+    <string name="home_add_init_member">其他</string>
+
+
+    <!--    account page-->
     <string name="account_initCoin">TWD</string>
     <string name="account_initNetAssets">0.0</string>
     <string name="account_netAssetsText">淨資產</string>
@@ -67,6 +87,7 @@
     <string name="typeNameText_ex_pet">寵物</string>
     <string name="typeNameText_ex_car">車車保養</string>
     <string name="typeNameText_ex_donate">捐款</string>
+    <string name="typeNameText_ex_other">其他</string>
 
     <!--    setting classification in-->
     <string name="typeNameText_in_work">薪水</string>
@@ -74,6 +95,15 @@
     <string name="typeNameText_in_invest">投資獲利</string>
     <string name="typeNameText_in_interest">利息</string>
     <string name="typeNameText_in_donate">他人施捨</string>
+    <string name="typeNameText_in_other">其他</string>
+
+    <!--    setting member-->
+    <string name="memberName_self">自己</string>
+    <string name="memberName_parent">父母</string>
+    <string name="memberName_child">小孩</string>
+    <string name="memberName_all">全員</string>
+    <string name="memberName_woman">老婆♥</string>
+    <string name="memberName_other">其他</string>
 
     <!--    setting recommend-->
     <string name="setting_menuRecommend_typeText">類型</string>

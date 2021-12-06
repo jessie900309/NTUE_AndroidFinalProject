@@ -18,6 +18,13 @@
 
     <dimen name="subpage_verticalPadding">40dp</dimen>
 
+    <dimen name="addImageButtonViewSize">70dp</dimen>
+
+<!--    home page-->
+
+    <dimen name="home_pageTextPaddingVertical">10dp</dimen>
+
+
 <!--    account page Dimens-->
     <dimen name="account_netAssetsTextSize">30sp</dimen>
     <dimen name="account_netAssetsTextTextSize">16sp</dimen>
