@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:id="@+id/memberGroup"
-        android:checkableBehavior="single">
+    <item
+        android:id="@+id/member_self"
+        android:title="@string/memberName_self" />
 
-        <item
-            android:id="@+id/member_self"
-            android:title="@string/memberName_self" />
+    <item
+        android:id="@+id/member_woman"
+        android:title="@string/memberName_woman" />
 
-        <item
-            android:id="@+id/member_woman"
-            android:title="@string/memberName_woman" />
+    <item
+        android:id="@+id/member_parent"
+        android:title="@string/memberName_parent" />
 
-        <item
-            android:id="@+id/member_parent"
-            android:title="@string/memberName_parent" />
+    <item
+        android:id="@+id/member_child"
+        android:title="@string/memberName_child" />
 
-        <item
-            android:id="@+id/member_child"
-            android:title="@string/memberName_child" />
+    <item
+        android:id="@+id/member_all"
+        android:title="@string/memberName_all" />
 
-        <item
-            android:id="@+id/member_all"
-            android:title="@string/memberName_all" />
-
-        <item
-            android:id="@+id/member_other"
-            android:title="@string/memberName_other" />
-
-    </group>
+    <item
+        android:id="@+id/member_other"
+        android:title="@string/memberName_other" />
 
 </menu>

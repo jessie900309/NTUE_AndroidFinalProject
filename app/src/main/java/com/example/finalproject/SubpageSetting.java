@@ -60,7 +60,7 @@ public class SubpageSetting extends Fragment
                     startActivity(intent);
                     break;
 
-                //todo 未開發功能
+                //todo 未開發功能(動態menu&雲端備份)
 
                 case R.id.settings_basic_fixedIncome:
                 case R.id.settings_basic_fixedTransfer:

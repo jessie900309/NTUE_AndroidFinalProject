@@ -227,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/SecondTextColor"
-                    android:text="@string/account_initCoin"
+                    android:text="@string/account_initSubCoin"
                     android:paddingBottom="@dimen/account_listItemPadding"/>
             </LinearLayout>
             <!--    account show number -->

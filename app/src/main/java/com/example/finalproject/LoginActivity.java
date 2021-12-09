@@ -45,8 +45,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             passwordText = passwordInput.getText().toString();
             try {
                 //google
-                System.out.println("\n\n\nemail: "+emailText);
-                System.out.println("pword: "+passwordText);
                 try{
                     //登入
                     //成功Toast

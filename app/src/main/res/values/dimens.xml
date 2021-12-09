@@ -10,6 +10,10 @@
     <dimen name="login_submitButtonTextSize">20sp</dimen>
     <dimen name="login_submitButtonPadding_top">10dp</dimen>
 
+<!--    alertdialog-->
+    <dimen name="alertdialog_titleHeight">60dp</dimen>
+    <dimen name="alertdialog_dialogMargin">0dp</dimen>
+    <dimen name="popup_width">300dp</dimen>
 
 
     <dimen name="page_divideLineSize">3dp</dimen>
@@ -34,6 +38,8 @@
     <dimen name="account_listItemTextSize">20dp</dimen>
     <dimen name="account_listItemPadding">10dp</dimen>
 
+    <dimen name="account_dialogEditTextMarginTop">10dp</dimen>
+    <dimen name="account_dialogEditTextMarginHorizontal">20dp</dimen>
 
 <!--    setting page Dimens-->
     <dimen name="setting_itemTextSize">16sp</dimen>
@@ -50,6 +56,9 @@
 
     <dimen name="settingRecommend_typePadding">10dp</dimen>
     <dimen name="settingRecommend_textMaxLength">200</dimen>
+
+
+
 
     <!--    calculator Dimens-->
     <!--    全局排版-->

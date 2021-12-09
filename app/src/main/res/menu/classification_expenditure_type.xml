@@ -1,85 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:id="@+id/exTypeGroup"
-        android:checkableBehavior="single">
+    <item
+        android:id="@+id/ex_food"
+        android:title="@string/typeNameText_ex_food"
+        android:icon="@drawable/icon_extype_food"/>
 
-        <item
-            android:id="@+id/ex_food"
-            android:title="@string/typeNameText_ex_food"
-            android:icon="@drawable/icon_extype_food"/>
+    <item
+        android:id="@+id/ex_clothes"
+        android:title="@string/typeNameText_ex_clothes"
+        android:icon="@drawable/icon_extype_clothes"/>
 
-        <item
-            android:id="@+id/ex_clothes"
-            android:title="@string/typeNameText_ex_clothes"
-            android:icon="@drawable/icon_extype_clothes"/>
+    <item
+        android:id="@+id/ex_houserent"
+        android:title="@string/typeNameText_ex_houserent"
+        android:icon="@drawable/icon_extype_houserent"/>
 
-        <item
-            android:id="@+id/ex_houserent"
-            android:title="@string/typeNameText_ex_houserent"
-            android:icon="@drawable/icon_extype_houserent"/>
+    <item
+        android:id="@+id/ex_trafic"
+        android:title="@string/typeNameText_ex_trafic"
+        android:icon="@drawable/icon_extype_trafic"/>
 
-        <item
-            android:id="@+id/ex_trafic"
-            android:title="@string/typeNameText_ex_trafic"
-            android:icon="@drawable/icon_extype_trafic"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_education"-->
+<!--        android:title="@string/typeNameText_ex_education"-->
+<!--        android:icon="@drawable/icon_extype_education"/>-->
 
-        <item
-            android:id="@+id/ex_education"
-            android:title="@string/typeNameText_ex_education"
-            android:icon="@drawable/icon_extype_education"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_game"-->
+<!--        android:title="@string/typeNameText_ex_game"-->
+<!--        android:icon="@drawable/icon_extype_game"/>-->
 
-        <item
-            android:id="@+id/ex_game"
-            android:title="@string/typeNameText_ex_game"
-            android:icon="@drawable/icon_extype_game"/>
+    <item
+        android:id="@+id/ex_medicine"
+        android:title="@string/typeNameText_ex_medicine"
+        android:icon="@drawable/icon_extype_medicine"/>
 
-        <item
-            android:id="@+id/ex_medicine"
-            android:title="@string/typeNameText_ex_medicine"
-            android:icon="@drawable/icon_extype_medicine"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_social"-->
+<!--        android:title="@string/typeNameText_ex_social"-->
+<!--        android:icon="@drawable/icon_extype_social"/>-->
 
-        <item
-            android:id="@+id/ex_social"
-            android:title="@string/typeNameText_ex_social"
-            android:icon="@drawable/icon_extype_social"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_smartphone"-->
+<!--        android:title="@string/typeNameText_ex_phone"-->
+<!--        android:icon="@drawable/icon_extype_smartphone"/>-->
 
-        <item
-            android:id="@+id/ex_smartphone"
-            android:title="@string/typeNameText_ex_phone"
-            android:icon="@drawable/icon_extype_smartphone"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_invest"-->
+<!--        android:title="@string/typeNameText_ex_invest"-->
+<!--        android:icon="@drawable/icon_extype_pledge"/>-->
 
-        <item
-            android:id="@+id/ex_invest"
-            android:title="@string/typeNameText_ex_invest"
-            android:icon="@drawable/icon_extype_pledge"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_homeware"-->
+<!--        android:title="@string/typeNameText_ex_daily"-->
+<!--        android:icon="@drawable/icon_extype_homeware"/>-->
 
-        <item
-            android:id="@+id/ex_homeware"
-            android:title="@string/typeNameText_ex_daily"
-            android:icon="@drawable/icon_extype_homeware"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_pet"-->
+<!--        android:title="@string/typeNameText_ex_pet"-->
+<!--        android:icon="@drawable/icon_extype_pet"/>-->
 
-        <item
-            android:id="@+id/ex_pet"
-            android:title="@string/typeNameText_ex_pet"
-            android:icon="@drawable/icon_extype_pet"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_carkeep"-->
+<!--        android:title="@string/typeNameText_ex_car"-->
+<!--        android:icon="@drawable/icon_extype_carkeep"/>-->
 
-        <item
-            android:id="@+id/ex_carkeep"
-            android:title="@string/typeNameText_ex_car"
-            android:icon="@drawable/icon_extype_carkeep"/>
+<!--    <item-->
+<!--        android:id="@+id/ex_donate"-->
+<!--        android:title="@string/typeNameText_ex_donate"-->
+<!--        android:icon="@drawable/icon_extype_donate"/>-->
 
-        <item
-            android:id="@+id/ex_donate"
-            android:title="@string/typeNameText_ex_donate"
-            android:icon="@drawable/icon_extype_donate"/>
-
-        <item
-            android:id="@+id/ex_other"
-            android:title="@string/typeNameText_ex_other"
-            android:icon="@drawable/icon_extype_donate"/>
-
-    </group>
+    <item
+        android:id="@+id/ex_other"
+        android:title="@string/typeNameText_ex_other"
+        android:icon="@drawable/icon_extype_donate"/>
 
 </menu>

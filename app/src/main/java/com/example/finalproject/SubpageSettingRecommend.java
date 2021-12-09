@@ -78,22 +78,25 @@ public class SubpageSettingRecommend extends AppCompatActivity
                 //其他錯誤，重新導向主頁
             }
         } else if(view.getId()==R.id.setting_help_recommend_addimage){
-            Intent intent = new Intent();//開啟Pictures畫面Type設定為image
-            intent.setType("image/*");
-            //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗讓您選取手機內圖檔
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            //取得相片後返回本畫面
-            startActivityForResult(intent, 1);
+            findImage();
         } else if (view.getId()==R.id.setting_help_recommendPage) {
-            //(收起鍵盤) 取消焦點(收起輸入法)
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            closeKeyBoard(view);
         } else {
             //其他錯誤，重新導向主頁
         }
     }
 
     //---------------------------取得圖片---------------------------
+
+    public void findImage(){
+        Intent intent = new Intent();//開啟Pictures畫面Type設定為image
+        intent.setType("image/*");
+        //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗讓您選取手機內圖檔
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        //取得相片後返回本畫面
+        startActivityForResult(intent, 1);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {//當使用者按下確定後
@@ -114,6 +117,7 @@ public class SubpageSettingRecommend extends AppCompatActivity
     }
 
     //----------------------取得RadioGroup選擇----------------------
+
     public void getRecommendType(){
         switch (recommendTypeGroup.getCheckedRadioButtonId()){
             case R.id.settingRecommend_QnAType:
@@ -159,6 +163,13 @@ public class SubpageSettingRecommend extends AppCompatActivity
     }
 
     //---------------------------關閉鍵盤---------------------------
+
+    public void closeKeyBoard(View v){
+        //(收起鍵盤) 取消焦點(收起輸入法)
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+    }
+
     public void autoClickView(View view,float x,float y){
         long downTime = SystemClock.uptimeMillis();
         final MotionEvent downEvent = MotionEvent.obtain(downTime,downTime,MotionEvent.ACTION_DOWN,x,y,0);

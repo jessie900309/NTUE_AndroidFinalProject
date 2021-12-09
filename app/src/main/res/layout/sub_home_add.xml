@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/setting_help_recommendPage"
+    android:id="@+id/home_add_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top"
@@ -45,268 +45,341 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_dateText"/>
-                <!--                todo pick date-->
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_dateText"/>
+                    <Button
+                        android:id="@+id/home_add_date"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_date"/>
+                </LinearLayout>
+                <!--        divide line-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--    1. 類型 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_typeText"/>
+                    <RadioGroup
+                        android:id="@+id/home_add_typeRadio"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/home_add_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="@dimen/settingRecommend_typePadding"
+                            android:text="@string/home_add_incomeText"
+                            android:textColor="@color/settingpage_pageTextColor"
+                            android:textSize="@dimen/settingpage_pageTextSize" />
+                        <RadioButton
+                            android:id="@+id/home_add_expend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="@dimen/settingRecommend_typePadding"
+                            android:text="@string/home_add_expendText"
+                            android:textColor="@color/settingpage_pageTextColor"
+                            android:textSize="@dimen/settingpage_pageTextSize"/>
+                        <RadioButton
+                            android:id="@+id/home_add_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="@dimen/settingRecommend_typePadding"
+                            android:text="@string/home_add_transText"
+                            android:textColor="@color/settingpage_pageTextColor"
+                            android:textSize="@dimen/settingpage_pageTextSize"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <!--        divide line-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_typeText"/>
-                <RadioGroup
-                    android:id="@+id/home_add_typeRadio"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:id="@+id/home_add_income"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingEnd="@dimen/settingRecommend_typePadding"
-                        android:text="@string/home_add_incomeText"
-                        android:textColor="@color/settingpage_pageTextColor"
-                        android:textSize="@dimen/settingpage_pageTextSize" />
-                    <RadioButton
-                        android:id="@+id/home_add_expend"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingEnd="@dimen/settingRecommend_typePadding"
-                        android:text="@string/home_add_expendText"
-                        android:textColor="@color/settingpage_pageTextColor"
-                        android:textSize="@dimen/settingpage_pageTextSize"/>
-                    <RadioButton
-                        android:id="@+id/home_add_trans"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingEnd="@dimen/settingRecommend_typePadding"
-                        android:text="@string/home_add_transText"
-                        android:textColor="@color/settingpage_pageTextColor"
-                        android:textSize="@dimen/settingpage_pageTextSize"/>
-                </RadioGroup>
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--        2. 金額-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_moneyText"/>
+                    <Button
+                        android:id="@+id/home_add_money_cal"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_cal"/>
+                </LinearLayout>
+                <!--        divide line-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_moneyText"/>
-                <!--        home_add_money_cal todo button open calcutor-->
-                <Button
-                    android:id="@+id/home_add_money_cal"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:text="@string/home_add_init_cal"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--        3-1. (收支)帳戶-->
             <LinearLayout
                 android:id="@+id/home_add_accountSingleLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_accountSingleText"/>
+                    <Button
+                        android:id="@+id/home_add_accountSingle"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_ac"/>
+                </LinearLayout>
+                <!--        divide line-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_accountSingleText"/>
-                <!--        home_add_accountSingle todo button open menu-->
-                <Button
-                    android:id="@+id/home_add_accountSingle"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:text="@string/home_add_init_ac"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
-            <!--        3-1. (收支)分類-->
+            <!--        3-1. (收)分類-->
             <LinearLayout
-                android:id="@+id/home_add_classificationLayout"
+                android:id="@+id/home_add_classificationINLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_classificationText"/>
+                    <Button
+                        android:id="@+id/home_add_classificationIN"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_class"/>
+                </LinearLayout>
+                <!--        divide line-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_classificationText"/>
-                <!--        home_add_classification todo button open menu-->
-                <Button
-                    android:id="@+id/home_add_classification"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:text="@string/home_add_init_class"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
+
+            <!--        3-1. (支)分類-->
+            <LinearLayout
+                android:id="@+id/home_add_classificationEXLayout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_classificationText"/>
+                    <Button
+                        android:id="@+id/home_add_classificationEX"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_class"/>
+                </LinearLayout>
+                <!--        divide line-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
+            </LinearLayout>
 
             <!--        3-1. (收支)成員-->
             <LinearLayout
                 android:id="@+id/home_add_memberLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_memberText"/>
+                    <Button
+                        android:id="@+id/home_add_member"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/home_add_init_member"/>
+                </LinearLayout>
+                <!--        divide line-->
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_memberText"/>
-                <!--        home_add_member todo button open menu-->
-                <Button
-                    android:id="@+id/home_add_member"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:text="@string/home_add_init_member"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--        3-2. (轉)帳戶to帳戶-->
             <LinearLayout
                 android:id="@+id/home_add_accountStartLayout"
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_accountStartText"/>
-                <!--        home_add_accountStart todo button open menu-->
-                <Button
-                    android:id="@+id/home_add_accountStart"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/home_add_accountEndLayout"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_accountStartText"/>
+                    <Button
+                        android:id="@+id/home_add_accountStart"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text=""/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
-                    android:text="@string/home_add_accountEndText"/>
-                <!--        home_add_accountEnd todo button open menu-->
-                <Button
-                    android:id="@+id/home_add_accountEnd"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
+                        android:textSize="@dimen/settingpage_pageTitleTextSize"
+                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:text="@string/home_add_accountEndText"/>
+                    <Button
+                        android:id="@+id/home_add_accountEnd"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text=""/>
+                </LinearLayout>
+                <!--        divide line-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/page_divideLineSize"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/page_dividePadding"
+                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--    4. 內文描述 -->
             <LinearLayout
@@ -328,7 +401,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="3"
                     android:layout_height="wrap_content"
-                    app:boxBackgroundColor="#FFEEEEEE"
+                    app:boxBackgroundColor="@color/EditTextBackgroundColor"
                     android:inputType="textImeMultiLine">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/home_add_TextInput"

@@ -16,8 +16,8 @@
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>
 
-
 <!--    home page-->
+
     <string name="home_add_submitText">記一筆!</string>
     <string name="home_add_dateText">日期</string>
     <string name="home_add_typeText">類型</string>
@@ -30,15 +30,26 @@
     <string name="home_add_memberText">成員</string>
     <string name="home_add_accountStartText">從帳戶</string>
     <string name="home_add_accountEndText">到帳戶</string>
-
+    <string name="home_add_init_date">(選擇)</string>
     <string name="home_add_init_cal">(計算)</string>
     <string name="home_add_init_ac">現金</string>
     <string name="home_add_init_class">其他</string>
     <string name="home_add_init_member">其他</string>
+    <string name="home_add_formMsg">輸入有誤 QAQ</string>
 
+    <!--    calculator String-->
+    <string name="cal_initResult">0.0</string>
+    <string name="cal_initSign"> </string>
+    <string name="cal_summitButtonText">確認</string>
+    <string name="cal_msg_resultLengthToLong">計算上限為十位數以內</string>
+    <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
+    <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
+    <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
 
-    <!--    account page-->
+<!--    account page-->
+
     <string name="account_initCoin">TWD</string>
+    <string name="account_initSubCoin">TWD(負債)</string>
     <string name="account_initNetAssets">0.0</string>
     <string name="account_netAssetsText">淨資產</string>
     <string name="account_initDataNumber">0.0</string>
@@ -50,12 +61,12 @@
     <string name="init_account_bank_text">銀行</string>
     <string name="init_account_card_text">信用卡</string>
 
-
-
-
+    <string name="account_editInitAccountNumberText">編輯初始餘額</string>
+    <string name="account_editInitAccountNumber_submitButtonText">確定</string>
 
 
 <!--    setting page-->
+
     <string name="setting_basic">基本設定</string>
     <string name="setting_menuFixedIncomeText">固定收支</string>
     <string name="setting_menuFixedTransferText">固定轉帳</string>
@@ -72,39 +83,6 @@
 
     <string name="setting_defaultPageTitle">*ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚</string>
     <string name="setting_defaultPageText">功能開發中，敬請期待</string>
-
-    <!--    setting classification ex-->
-    <string name="typeNameText_ex_food">飲食</string>
-    <string name="typeNameText_ex_clothes">服裝配件</string>
-    <string name="typeNameText_ex_houserent">房租</string>
-    <string name="typeNameText_ex_trafic">交通</string>
-    <string name="typeNameText_ex_education">教育</string>
-    <string name="typeNameText_ex_game">娛樂</string>
-    <string name="typeNameText_ex_medicine">醫療保健</string>
-    <string name="typeNameText_ex_social">社交應酬</string>
-    <string name="typeNameText_ex_phone">手機網路</string>
-    <string name="typeNameText_ex_invest">投資</string>
-    <string name="typeNameText_ex_daily">日常用品</string>
-    <string name="typeNameText_ex_pet">寵物</string>
-    <string name="typeNameText_ex_car">車車保養</string>
-    <string name="typeNameText_ex_donate">捐款</string>
-    <string name="typeNameText_ex_other">其他</string>
-
-    <!--    setting classification in-->
-    <string name="typeNameText_in_work">薪水</string>
-    <string name="typeNameText_in_bonus">獎金</string>
-    <string name="typeNameText_in_invest">投資獲利</string>
-    <string name="typeNameText_in_interest">利息</string>
-    <string name="typeNameText_in_donate">他人施捨</string>
-    <string name="typeNameText_in_other">其他</string>
-
-    <!--    setting member-->
-    <string name="memberName_self">自己</string>
-    <string name="memberName_parent">父母</string>
-    <string name="memberName_child">小孩</string>
-    <string name="memberName_all">全員</string>
-    <string name="memberName_woman">老婆♥</string>
-    <string name="memberName_other">其他</string>
 
     <!--    setting recommend-->
     <string name="setting_menuRecommend_typeText">類型</string>
@@ -127,16 +105,42 @@
     <string name="setting_menuAcknowledgments_IconSource_">&#160;.</string>
     <string name="setting_menuAcknowledgments_Copyright">Copyright © 2021 jessieOuO. All rights reserved.</string>
 
+<!--    default-->
+
+    <!--    classification ex-->
+    <string name="typeNameText_ex_food">飲食</string>
+    <string name="typeNameText_ex_clothes">服裝配件</string>
+    <string name="typeNameText_ex_houserent">房租</string>
+    <string name="typeNameText_ex_trafic">交通</string>
+    <string name="typeNameText_ex_education">教育</string>
+    <string name="typeNameText_ex_game">娛樂</string>
+    <string name="typeNameText_ex_medicine">醫療保健</string>
+    <string name="typeNameText_ex_social">社交應酬</string>
+    <string name="typeNameText_ex_phone">手機網路</string>
+    <string name="typeNameText_ex_invest">投資</string>
+    <string name="typeNameText_ex_daily">日常用品</string>
+    <string name="typeNameText_ex_pet">寵物</string>
+    <string name="typeNameText_ex_car">車車保養</string>
+    <string name="typeNameText_ex_donate">捐款</string>
+    <string name="typeNameText_ex_other">其他</string>
+
+    <!--    classification in-->
+    <string name="typeNameText_in_work">薪水</string>
+    <string name="typeNameText_in_bonus">獎金</string>
+    <string name="typeNameText_in_invest">投資獲利</string>
+    <string name="typeNameText_in_interest">銀行利息</string>
+    <string name="typeNameText_in_donate">他人施捨</string>
+    <string name="typeNameText_in_other">其他</string>
+
+    <!--    member-->
+    <string name="memberName_self">自己</string>
+    <string name="memberName_parent">父母</string>
+    <string name="memberName_child">小孩</string>
+    <string name="memberName_all">全員</string>
+    <string name="memberName_woman">老婆♥</string>
+    <string name="memberName_other">其他</string>
 
 
 
-    <!--    calculator String-->
-    <string name="cal_initResult">0.0</string>
-    <string name="cal_initSign"> </string>
-    <string name="cal_summitButtonText">確認</string>
-    <string name="cal_msg_resultLengthToLong">計算上限為十位數以內</string>
-    <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
-    <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
-    <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
 
 </resources>
