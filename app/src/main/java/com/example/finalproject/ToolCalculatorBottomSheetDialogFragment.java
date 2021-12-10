@@ -34,6 +34,31 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
     double result = 0.0;
     double lastResult = 0.0;
 
+    //-----------------------跨域傳值-----------------------
+
+    public InterfaceCommunicator interfaceCommunicator;
+
+    public interface InterfaceCommunicator {
+        void sendValue(String value);
+    }
+
+    private SubpageHomeAdd mCallback;
+
+    @Override
+    public void onAttach(Activity activity) {
+        //連結來源Activity取得實作介面
+        super.onAttach(activity);
+        try {
+            mCallback = (SubpageHomeAdd) activity;
+        }
+        catch (ClassCastException e) {
+            System.out.println("\n\n\n"+e+"\n\n\n");
+            System.out.println("MyDialog"+"Activity doesn't implement the ISelectedData interface");
+        }
+    }
+
+    //-----------------------畫面呈現-----------------------
+
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -93,6 +118,8 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
         System.out.println("show :" +nowShowNumber);
         System.out.println("sign :" +nowShowSign);*/
     }
+
+    //-----------------------計算功能-----------------------
 
     //數字鍵
     public void pressNumberButton(double pressNumber){
@@ -221,12 +248,10 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
     //提交
     public void submitValue() {
         try{
+            //檢查結果是否可正常轉換為Double
             double DnowShowNumber = Double.parseDouble(nowShowNumber);
-            //TODO pass value
-//            Bundle bundle = new Bundle();
-//            bundle.putString("calValue",nowShowNumber);
-//            Intent intent = new Intent().putExtras(bundle);
-//            getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
+            //傳遞結果回Activity
+            mCallback.sendValue(nowShowNumber);
             dismiss();
         }catch (Exception e){
             getException(e);

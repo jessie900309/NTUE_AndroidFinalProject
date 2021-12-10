@@ -25,7 +25,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.util.Calendar;
 
 public class SubpageHomeAdd extends AppCompatActivity
-        implements View.OnClickListener, View.OnTouchListener, RadioGroup.OnCheckedChangeListener {
+        implements View.OnClickListener, View.OnTouchListener,
+        RadioGroup.OnCheckedChangeListener,ToolCalculatorBottomSheetDialogFragment.InterfaceCommunicator {
 
     View pageBackground;
     RadioGroup DataTypeGroup;
@@ -65,7 +66,6 @@ public class SubpageHomeAdd extends AppCompatActivity
         calMoneyButton = (Button) findViewById(R.id.home_add_money_cal);
         calMoneyButton.setText("0.0");
         calMoneyButton.setOnClickListener(this);
-
 
         //收入&支出
         accountSingleButton = (Button) findViewById(R.id.home_add_accountSingle);
@@ -237,25 +237,19 @@ public class SubpageHomeAdd extends AppCompatActivity
 
     public void moneyCounter(){
         ToolCalculatorBottomSheetDialogFragment dialog = new ToolCalculatorBottomSheetDialogFragment();
-        //dialog.setTargetFragment(this, 200);
         dialog.show(getSupportFragmentManager(), "dialog");
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == 200) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                try{
-//                    calMoney = data.getExtras().getString("calValue");
-//                }catch (Exception e){
-//                    calMoney = "0.0";
-//                }
-//            }
-//        }
-//        calMoneyButton.setText(calMoney);
-//    }
-
+    @Override
+    public void sendValue(String returnValue) {
+        //實作計算機介面方法(sendValue)以傳遞計算結果
+        try{
+            calMoney = returnValue;
+        }catch (Exception e){
+            calMoney = "0.0";
+        }
+        calMoneyButton.setText(calMoney);
+    }
 
     //---------------------一般菜單選項(收支)------------------------
 
