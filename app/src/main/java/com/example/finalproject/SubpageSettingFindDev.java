@@ -29,7 +29,6 @@ import java.io.FileNotFoundException;
 public class SubpageSettingFindDev extends AppCompatActivity
         implements View.OnTouchListener,View.OnClickListener {
 
-    //ui view
     View pageBackground;
     TextView phoneInfo;
     TextInputEditText findDevInput;

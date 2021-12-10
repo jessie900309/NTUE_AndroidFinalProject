@@ -1,9 +1,7 @@
 package com.example.finalproject;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.MenuItem;
@@ -35,7 +33,7 @@ public class SubpageHomeAdd extends AppCompatActivity
     Button chooseDateButton,calMoneyButton;
     int nowYear,nowMonth,nowDay;
     String datetime,calMoney;
-    Button accountSingleButton,classificationINButton,classificationEXButton,memberButton;
+    Button accountSingleINButton,accountSingleEXButton, classificationINButton,classificationEXButton,memberButton;
     Button accountStartButton,accountEndButton;
 
     @Override
@@ -68,9 +66,12 @@ public class SubpageHomeAdd extends AppCompatActivity
         calMoneyButton.setOnClickListener(this);
 
         //收入&支出
-        accountSingleButton = (Button) findViewById(R.id.home_add_accountSingle);
-        accountSingleButton.setText(getString(R.string.init_account_money_text));
-        accountSingleButton.setOnClickListener(this);
+        accountSingleINButton = (Button) findViewById(R.id.home_add_accountINSingle);
+        accountSingleINButton.setText(getString(R.string.init_account_money_text));
+        accountSingleINButton.setOnClickListener(this);
+        accountSingleEXButton = (Button) findViewById(R.id.home_add_accountEXSingle);
+        accountSingleEXButton.setText(getString(R.string.init_account_money_text));
+        accountSingleEXButton.setOnClickListener(this);
         classificationINButton = (Button) findViewById(R.id.home_add_classificationIN);
         classificationINButton.setText(getString(R.string.typeNameText_in_other));
         classificationINButton.setOnClickListener(this);
@@ -120,8 +121,10 @@ public class SubpageHomeAdd extends AppCompatActivity
             datePicker(view);
         } else if(view.getId()==R.id.home_add_money_cal){//開啟算盤
             moneyCounter();
-        } else if(view.getId()==R.id.home_add_accountSingle){//一般記帳
-            accountPicker();
+        } else if(view.getId()==R.id.home_add_accountINSingle){//一般記帳
+            accountPickerIN();
+        } else if(view.getId()==R.id.home_add_accountEXSingle){//一般記帳
+            accountPickerEX();
         } else if(view.getId()==R.id.home_add_classificationIN){//一般記帳(收)
             classificationPickerIN();
         } else if(view.getId()==R.id.home_add_classificationEX){//一般記帳(支)
@@ -141,7 +144,8 @@ public class SubpageHomeAdd extends AppCompatActivity
 
     public void IncomeFromToSQL(){
         //TODO 存入資料庫
-        //日期 datetime 金額 calMoney
+        //日期 datetime
+        //金額 calMoney
         //textMemo = textMemoInput.getText().toString()
         //accountSingleButton.getText().toString()
         //classificationINButton.getText().toString()
@@ -150,7 +154,8 @@ public class SubpageHomeAdd extends AppCompatActivity
 
     public void ExpendFromToSQL(){
         //TODO 存入資料庫
-        //日期 datetime 金額 calMoney
+        //日期 datetime
+        //金額 calMoney
         //textMemo = textMemoInput.getText().toString()
         //accountSingleButton.getText().toString()
         //classificationEXButton.getText().toString()
@@ -159,7 +164,8 @@ public class SubpageHomeAdd extends AppCompatActivity
 
     public void TransFromToSQL(){
         //TODO 存入資料庫
-        //日期 datetime 金額 calMoney
+        //日期 datetime
+        //金額 calMoney
         //textMemo = textMemoInput.getText().toString();
         //accountStartButton.getText().toString()
         //accountEndButton.getText().toString()
@@ -172,10 +178,10 @@ public class SubpageHomeAdd extends AppCompatActivity
         try{
             double DcalMoney = Double.parseDouble(calMoney);
             if((datetime!="")&&(calMoney!="0.0")&&(DcalMoney>0.0)){
-                System.out.println("checkFrom true");
+                //System.out.println("checkFrom true");
                 return true;
             } else{
-                System.out.println("checkFrom false");
+                //System.out.println("checkFrom false");
                 return false;
             }
         }catch (Exception e){
@@ -184,25 +190,25 @@ public class SubpageHomeAdd extends AppCompatActivity
     }
 
     public boolean checkIncomeFrom(){
-        if((accountSingleButton.getText().toString()!="")
+        if((accountSingleINButton.getText().toString()!="")
         && (classificationINButton.getText().toString()!="")
         && (memberButton.getText().toString()!="")){
-            System.out.println("checkIncomeFrom true");
+            //System.out.println("checkIncomeFrom true");
             return true;
         } else {
-            System.out.println("checkIncomeFrom false");
+            //System.out.println("checkIncomeFrom false");
             return false;
         }
     }
 
     public boolean checkExpendFrom(){
-        if((accountSingleButton.getText().toString()!="")
+        if((accountSingleEXButton.getText().toString()!="")
         && (classificationEXButton.getText().toString()!="")
         && (memberButton.getText().toString()!="")){
-            System.out.println("checkExpendFrom true");
+            //System.out.println("checkExpendFrom true");
             return true;
         } else {
-            System.out.println("checkExpendFrom false");
+            //System.out.println("checkExpendFrom false");
             return false;
         }
     }
@@ -211,10 +217,10 @@ public class SubpageHomeAdd extends AppCompatActivity
         if((accountStartButton.getText().toString()!="")
         && (accountEndButton.getText().toString()!="")
         && (accountStartButton.getText().toString()!=accountEndButton.getText().toString())){
-            System.out.println("checkTransFrom true");
+            //System.out.println("checkTransFrom true");
             return true;
         } else {
-            System.out.println("checkTransFrom false");
+            //System.out.println("checkTransFrom false");
             return false;
         }
     }
@@ -253,20 +259,39 @@ public class SubpageHomeAdd extends AppCompatActivity
 
     //---------------------一般菜單選項(收支)------------------------
 
-    public void accountPicker(){
-        PopupMenu popup = new PopupMenu(this, accountSingleButton);
-        popup.getMenuInflater().inflate(R.menu.list_for_account, popup.getMenu());
+    public void accountPickerIN(){
+        PopupMenu popup = new PopupMenu(this, accountSingleINButton);
+        popup.getMenuInflater().inflate(R.menu.account_income, popup.getMenu());
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.ac_money:
-                        accountSingleButton.setText(getString(R.string.init_account_money_text));
+                    case R.id.inac_money:
+                        accountSingleINButton.setText(getString(R.string.init_account_money_text));
                         break;
-                    case R.id.ac_bank:
-                        accountSingleButton.setText(getString(R.string.init_account_bank_text));
+                    case R.id.inac_bank:
+                        accountSingleINButton.setText(getString(R.string.init_account_bank_text));
                         break;
-                    case R.id.ac_card:
-                        accountSingleButton.setText(getString(R.string.init_account_card_text));
+                }
+                return true;
+            }
+        });
+        popup.show();
+    }
+
+    public void accountPickerEX(){
+        PopupMenu popup = new PopupMenu(this, accountSingleEXButton);
+        popup.getMenuInflater().inflate(R.menu.account_expenditure, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.exac_money:
+                        accountSingleEXButton.setText(getString(R.string.init_account_money_text));
+                        break;
+                    case R.id.exac_bank:
+                        accountSingleEXButton.setText(getString(R.string.init_account_bank_text));
+                        break;
+                    case R.id.exac_card:
+                        accountSingleEXButton.setText(getString(R.string.init_account_card_text));
                         break;
                 }
                 return true;
@@ -434,21 +459,24 @@ public class SubpageHomeAdd extends AppCompatActivity
         getDataType();
         if(radioGroup==DataTypeGroup){
             if (DataTypeGroup.getCheckedRadioButtonId()==R.id.home_add_trans){
-                ((LinearLayout) findViewById(R.id.home_add_accountSingleLayout)).setVisibility(View.GONE);
+                ((LinearLayout) findViewById(R.id.home_add_accountINSingleLayout)).setVisibility(View.GONE);
+                ((LinearLayout) findViewById(R.id.home_add_accountEXSingleLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationINLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationEXLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_memberLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_accountStartLayout)).setVisibility(View.VISIBLE);
             } else if (DataTypeGroup.getCheckedRadioButtonId()==R.id.home_add_income){
-                ((LinearLayout) findViewById(R.id.home_add_accountSingleLayout)).setVisibility(View.VISIBLE);
+                ((LinearLayout) findViewById(R.id.home_add_accountINSingleLayout)).setVisibility(View.VISIBLE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationINLayout)).setVisibility(View.VISIBLE);
                 ((LinearLayout) findViewById(R.id.home_add_memberLayout)).setVisibility(View.VISIBLE);
+                ((LinearLayout) findViewById(R.id.home_add_accountEXSingleLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationEXLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_accountStartLayout)).setVisibility(View.GONE);
             } else if (DataTypeGroup.getCheckedRadioButtonId()==R.id.home_add_expend){
-                ((LinearLayout) findViewById(R.id.home_add_accountSingleLayout)).setVisibility(View.VISIBLE);
+                ((LinearLayout) findViewById(R.id.home_add_accountEXSingleLayout)).setVisibility(View.VISIBLE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationEXLayout)).setVisibility(View.VISIBLE);
                 ((LinearLayout) findViewById(R.id.home_add_memberLayout)).setVisibility(View.VISIBLE);
+                ((LinearLayout) findViewById(R.id.home_add_accountINSingleLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_classificationINLayout)).setVisibility(View.GONE);
                 ((LinearLayout) findViewById(R.id.home_add_accountStartLayout)).setVisibility(View.GONE);
             }

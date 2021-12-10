@@ -32,7 +32,6 @@ import java.io.IOException;
 public class SubpageSettingRecommend extends AppCompatActivity
         implements View.OnTouchListener,View.OnClickListener,RadioGroup.OnCheckedChangeListener {
 
-    //ui view
     View pageBackground;
     RadioGroup recommendTypeGroup;
     TextInputEditText recommendInput;

@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:paddingVertical="@dimen/subpage_verticalPadding"
+        android:paddingVertical="@dimen/mainpageFragmentPadding"
         android:orientation="vertical"
         android:gravity="center">
         <!--        淨資產 -->

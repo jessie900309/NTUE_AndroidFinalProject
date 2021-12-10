@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/settingpage_pageBackgroundColor"
+    android:background="@color/subpageBackgroundColor"
     android:focusable="true"
     android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/settingpage_appBarTitleTextColor"
-        android:textSize="@dimen/settingpage_appBarTitleTextSize"
-        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:textColor="@color/subpageAppBarTitleTextColor"
+        android:textSize="@dimen/subpageAppBarTitleTextSize"
+        android:paddingVertical="@dimen/subpageAppBarTitlePadding"
         android:text="@string/setting_menuFindDev"/>
 
     <!--        divide line-->
@@ -34,27 +34,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
+        android:paddingHorizontal="@dimen/subpagePaddingHorizontal">
 
         <!--    1. 裝置資訊 -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
-            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:paddingTop="@dimen/subpageTextPaddingVertical"
+            android:textSize="@dimen/subpageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
             android:text="@string/settingFindDev_getInfo"/>
         <TextView
             android:id="@+id/setting_help_findDev_phoneInfo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:paddingVertical="5dp"
-            android:textSize="@dimen/settingpage_pageTextSize"
-            android:textColor="@color/settingpage_pageTextColor" />
+            android:textSize="@dimen/subpageTextSize"
+            android:textColor="@color/subpageTextColor" />
+
         <!--        divide line-->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/page_divideLineSize"
             android:background="@android:color/transparent"
             android:layout_marginHorizontal="@dimen/page_dividePadding"
@@ -62,11 +63,11 @@
 
         <!--    2. 內文描述 -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
-            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:paddingTop="@dimen/subpageTextPaddingVertical"
+            android:textSize="@dimen/subpageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
             android:text="@string/setting_menuRecommend_textText"/>
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -83,7 +84,7 @@
 
         <!--        divide line-->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/page_divideLineSize"
             android:background="@android:color/transparent"
             android:layout_marginHorizontal="@dimen/page_dividePadding"
@@ -91,11 +92,11 @@
 
         <!--    3. 加入圖片 -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/settingpage_pageTextPaddingVertical"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
-            android:textColor="@color/settingpage_pageTitleTextColor"
+            android:paddingTop="@dimen/subpageTextPaddingVertical"
+            android:textSize="@dimen/subpageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
             android:text="@string/setting_menuRecommend_addImageText"/>
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -124,7 +125,7 @@
 
         <!--        divide line-->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/page_divideLineSize"
             android:background="@android:color/transparent"
             android:layout_marginHorizontal="@dimen/page_dividePadding"
@@ -135,9 +136,10 @@
             android:id="@+id/setting_help_findDev_submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/settingpage_pageTextPaddingVertical"
-            android:textSize="@dimen/settingpage_pageButtonTextSize"
-            android:textColor="@color/settingpage_pageButtonTextColor"
+            android:layout_marginVertical="@dimen/subpageTextPaddingVertical"
+            android:backgroundTint="@color/subpageButtonColor"
+            android:textSize="@dimen/subpageButtonTextSize"
+            android:textColor="@color/subpageButtonTextColor"
             android:text="@string/setting_menuRecommend_submitText"/>
 
     </LinearLayout>

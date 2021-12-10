@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/settingpage_pageBackgroundColor" >
+    android:background="@color/subpageBackgroundColor" >
 
     <!--    AppBar Title-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/settingpage_appBarTitleTextColor"
-        android:textSize="@dimen/settingpage_appBarTitleTextSize"
-        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:textColor="@color/subpageAppBarTitleTextColor"
+        android:textSize="@dimen/subpageAppBarTitleTextSize"
+        android:paddingVertical="@dimen/subpageAppBarTitlePadding"
         android:text="@string/setting_menuAcknowledgments"/>
 
     <!--        divide line-->
@@ -58,23 +58,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_CodeSource"/>
         <TextView
             android:id="@+id/setting_menuAcknowledgments_GithubHyperLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_GithubName"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_CodeSource_"/>
     </LinearLayout>
 
@@ -88,23 +88,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_IconSource"/>
         <TextView
             android:id="@+id/setting_menuAcknowledgments_IconSourceHyperLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_IconSourceName"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/settingpage_pageTitleTextColor"
-            android:textSize="@dimen/settingpage_pageTitleTextSize"
+            android:textColor="@color/subpageTitleTextColor"
+            android:textSize="@dimen/subpageTitleTextSize"
             android:text="@string/setting_menuAcknowledgments_IconSource_"/>
     </LinearLayout>
 
@@ -113,8 +113,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/settingpage_pageTitleTextColor"
-        android:textSize="@dimen/settingpage_pageTitleTextSize"
+        android:textColor="@color/subpageTitleTextColor"
+        android:textSize="@dimen/subpageTitleTextSize"
         android:text="@string/setting_menuAcknowledgments_Copyright"/>
 
 </LinearLayout>

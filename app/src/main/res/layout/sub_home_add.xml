@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/settingpage_pageBackgroundColor"
+    android:background="@color/subpageBackgroundColor"
     android:focusable="true"
     android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/settingpage_appBarTitleTextColor"
-        android:textSize="@dimen/settingpage_appBarTitleTextSize"
-        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:textColor="@color/subpageAppBarTitleTextColor"
+        android:textSize="@dimen/subpageAppBarTitleTextSize"
+        android:paddingVertical="@dimen/subpageAppBarTitlePadding"
         android:text="@string/home_add_submitText"/>
 
     <!--        divide line-->
@@ -39,295 +39,252 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="@dimen/settingpage_pagePaddingHorizontal">
+            android:layout_marginHorizontal="@dimen/subpagePaddingHorizontal">
 
-            <!--    0. 日期 -->
+            <!--    1. 日期 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_dateText"/>
-                    <Button
-                        android:id="@+id/home_add_date"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_date"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_dateText"/>
+                <Button
+                    android:id="@+id/home_add_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_date"/>
             </LinearLayout>
 
-            <!--    1. 類型 -->
+            <!--    2. 類型 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_typeText"/>
-                    <RadioGroup
-                        android:id="@+id/home_add_typeRadio"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-                        <RadioButton
-                            android:id="@+id/home_add_income"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingEnd="@dimen/settingRecommend_typePadding"
-                            android:text="@string/home_add_incomeText"
-                            android:textColor="@color/settingpage_pageTextColor"
-                            android:textSize="@dimen/settingpage_pageTextSize" />
-                        <RadioButton
-                            android:id="@+id/home_add_expend"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingEnd="@dimen/settingRecommend_typePadding"
-                            android:text="@string/home_add_expendText"
-                            android:textColor="@color/settingpage_pageTextColor"
-                            android:textSize="@dimen/settingpage_pageTextSize"/>
-                        <RadioButton
-                            android:id="@+id/home_add_trans"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingEnd="@dimen/settingRecommend_typePadding"
-                            android:text="@string/home_add_transText"
-                            android:textColor="@color/settingpage_pageTextColor"
-                            android:textSize="@dimen/settingpage_pageTextSize"/>
-                    </RadioGroup>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_typeText"/>
+                <RadioGroup
+                    android:id="@+id/home_add_typeRadio"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/home_add_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/subpageRadioButtonPadding"
+                        android:text="@string/home_add_incomeText"
+                        android:textColor="@color/subpageTextColor"
+                        android:textSize="@dimen/subpageTextSize" />
+                    <RadioButton
+                        android:id="@+id/home_add_expend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/subpageRadioButtonPadding"
+                        android:text="@string/home_add_expendText"
+                        android:textColor="@color/subpageTextColor"
+                        android:textSize="@dimen/subpageTextSize"/>
+                    <RadioButton
+                        android:id="@+id/home_add_trans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/subpageRadioButtonPadding"
+                        android:text="@string/home_add_transText"
+                        android:textColor="@color/subpageTextColor"
+                        android:textSize="@dimen/subpageTextSize"/>
+                </RadioGroup>
             </LinearLayout>
 
-            <!--        2. 金額-->
+            <!--    3. 金額-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_moneyText"/>
-                    <Button
-                        android:id="@+id/home_add_money_cal"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_cal"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_moneyText"/>
+                <Button
+                    android:id="@+id/home_add_money_cal"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_cal"/>
             </LinearLayout>
 
-            <!--        3-1. (收支)帳戶-->
+            <!--        (收)帳戶-->
             <LinearLayout
-                android:id="@+id/home_add_accountSingleLayout"
+                android:id="@+id/home_add_accountINSingleLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_accountSingleText"/>
-                    <Button
-                        android:id="@+id/home_add_accountSingle"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_ac"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_accountSingleText"/>
+                <Button
+                    android:id="@+id/home_add_accountINSingle"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_ac"/>
             </LinearLayout>
 
-            <!--        3-1. (收)分類-->
+            <!--        (支)帳戶-->
+            <LinearLayout
+                android:id="@+id/home_add_accountEXSingleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_accountSingleText"/>
+                <Button
+                    android:id="@+id/home_add_accountEXSingle"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_ac"/>
+            </LinearLayout>
+
+            <!--        (收)分類-->
             <LinearLayout
                 android:id="@+id/home_add_classificationINLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_classificationText"/>
-                    <Button
-                        android:id="@+id/home_add_classificationIN"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_class"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_classificationText"/>
+                <Button
+                    android:id="@+id/home_add_classificationIN"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_class"/>
             </LinearLayout>
 
-            <!--        3-1. (支)分類-->
+            <!--        (支)分類-->
             <LinearLayout
                 android:id="@+id/home_add_classificationEXLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_classificationText"/>
-                    <Button
-                        android:id="@+id/home_add_classificationEX"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_class"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_classificationText"/>
+                <Button
+                    android:id="@+id/home_add_classificationEX"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_class"/>
             </LinearLayout>
 
-            <!--        3-1. (收支)成員-->
+            <!--        (收支)成員-->
             <LinearLayout
                 android:id="@+id/home_add_memberLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
-                        android:text="@string/home_add_memberText"/>
-                    <Button
-                        android:id="@+id/home_add_member"
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text="@string/home_add_init_member"/>
-                </LinearLayout>
-                <!--        divide line-->
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
+                    android:text="@string/home_add_memberText"/>
+                <Button
+                    android:id="@+id/home_add_member"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/subpageOutlinedButtonColor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/home_add_init_member"/>
             </LinearLayout>
 
-            <!--        3-2. (轉)帳戶to帳戶-->
+            <!--        (轉)帳戶to帳戶-->
             <LinearLayout
                 android:id="@+id/home_add_accountStartLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -338,17 +295,18 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                        android:textSize="@dimen/subpageTitleTextSize"
+                        android:textColor="@color/subpageTitleTextColor"
                         android:text="@string/home_add_accountStartText"/>
                     <Button
                         android:id="@+id/home_add_accountStart"
                         android:layout_width="0dp"
                         android:layout_weight="3"
                         android:layout_height="wrap_content"
+                        app:strokeColor="@color/subpageOutlinedButtonColor"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text=""/>
+                        android:text="@string/init_account_money_text"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -360,25 +318,19 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                        android:textSize="@dimen/settingpage_pageTitleTextSize"
-                        android:textColor="@color/settingpage_pageTitleTextColor"
+                        android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                        android:textSize="@dimen/subpageTitleTextSize"
+                        android:textColor="@color/subpageTitleTextColor"
                         android:text="@string/home_add_accountEndText"/>
                     <Button
                         android:id="@+id/home_add_accountEnd"
                         android:layout_width="0dp"
                         android:layout_weight="3"
                         android:layout_height="wrap_content"
+                        app:strokeColor="@color/subpageOutlinedButtonColor"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:text=""/>
+                        android:text="@string/init_account_money_text"/>
                 </LinearLayout>
-                <!--        divide line-->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/page_divideLineSize"
-                    android:background="@android:color/transparent"
-                    android:layout_marginHorizontal="@dimen/page_dividePadding"
-                    android:layout_marginTop="@dimen/page_dividePadding"/>
             </LinearLayout>
 
             <!--    4. 內文描述 -->
@@ -386,15 +338,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/page_dividePadding">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:paddingVertical="@dimen/home_pageTextPaddingVertical"
-                    android:textSize="@dimen/settingpage_pageTitleTextSize"
-                    android:textColor="@color/settingpage_pageTitleTextColor"
+                    android:paddingVertical="@dimen/home_addpageTextPaddingVertical"
+                    android:textSize="@dimen/subpageTitleTextSize"
+                    android:textColor="@color/subpageTitleTextColor"
                     android:text="@string/setting_menuRecommend_textText"/>
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -410,22 +363,16 @@
                         android:textColor="@android:color/black"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-            <!--        divide line-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/page_divideLineSize"
-                android:background="@android:color/transparent"
-                android:layout_marginHorizontal="@dimen/page_dividePadding"
-                android:layout_marginTop="@dimen/page_dividePadding"/>
 
             <!--    5. 提交按鈕-->
             <Button
                 android:id="@+id/home_add_submitButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/settingpage_pageTextPaddingVertical"
-                android:textSize="@dimen/settingpage_pageButtonTextSize"
-                android:textColor="@color/settingpage_pageButtonTextColor"
+                android:layout_marginVertical="@dimen/subpageTextPaddingVertical"
+                android:backgroundTint="@color/subpageButtonColor"
+                android:textSize="@dimen/subpageButtonTextSize"
+                android:textColor="@color/subpageButtonTextColor"
                 android:text="@string/home_add_submitText"/>
 
         </LinearLayout>

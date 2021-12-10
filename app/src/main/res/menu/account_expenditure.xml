@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/exac_money"
+        android:title="@string/init_account_money_text"
+        android:icon="@drawable/icon_account_money"/>
+
+    <item
+        android:id="@+id/exac_bank"
+        android:title="@string/init_account_bank_text"
+        android:icon="@drawable/icon_account_bank"/>
+
+    <item
+        android:id="@+id/exac_card"
+        android:title="@string/init_account_card_text"
+        android:icon="@drawable/icon_account_card"/>
+
+</menu>

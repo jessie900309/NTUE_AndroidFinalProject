@@ -19,8 +19,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/account_dialogEditTextMarginTop"
-        android:layout_marginHorizontal="@dimen/account_dialogEditTextMarginHorizontal"
+        android:layout_marginTop="@dimen/alertdialog_editTextMarginTop"
+        android:layout_marginHorizontal="@dimen/alertdialog_editTextMarginHorizontal"
         app:boxBackgroundColor="@color/EditTextBackgroundColor"
         android:inputType="number"
         android:hint="@string/init_account_money_text">
@@ -35,8 +35,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/account_dialogEditTextMarginTop"
-        android:layout_marginHorizontal="@dimen/account_dialogEditTextMarginHorizontal"
+        android:layout_marginTop="@dimen/alertdialog_editTextMarginTop"
+        android:layout_marginHorizontal="@dimen/alertdialog_editTextMarginHorizontal"
         app:boxBackgroundColor="@color/EditTextBackgroundColor"
         android:inputType="number"
         android:hint="@string/init_account_bank_text">
@@ -51,8 +51,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/account_dialogEditTextMarginTop"
-        android:layout_marginHorizontal="@dimen/account_dialogEditTextMarginHorizontal"
+        android:layout_marginTop="@dimen/alertdialog_editTextMarginTop"
+        android:layout_marginHorizontal="@dimen/alertdialog_editTextMarginHorizontal"
         app:boxBackgroundColor="@color/EditTextBackgroundColor"
         android:inputType="number"
         android:hint="@string/init_account_card_text">
@@ -65,9 +65,9 @@
 
     <Button
         android:id="@+id/edit_initAccountCardSubmitButton"
-        android:layout_width="@dimen/popup_width"
+        android:layout_width="@dimen/alertdialog_width"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/account_dialogEditTextMarginHorizontal"
+        android:layout_margin="@dimen/alertdialog_editTextMarginHorizontal"
         android:backgroundTint="@color/alertDialogTitleBackgroundColor"
         android:textColor="@color/alertDialogTitleTextColor"
         android:text="@string/account_editInitAccountNumber_submitButtonText"/>

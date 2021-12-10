@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/page_dividePadding"
-        android:paddingVertical="@dimen/subpage_verticalPadding"
+        android:paddingVertical="@dimen/mainpageFragmentPadding"
         android:scrollbarStyle="insideOverlay"
         android:scrollbars="vertical">
 

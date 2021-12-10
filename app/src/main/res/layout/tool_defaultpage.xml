@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/settingpage_pageBackgroundColor" >
+    android:background="@color/subpageBackgroundColor" >
 
     <!--    AppBar Title-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/settingpage_appBarTitleTextColor"
-        android:textSize="@dimen/settingpage_appBarTitleTextSize"
-        android:paddingVertical="@dimen/settingpage_appBarTitlePadding"
+        android:textColor="@color/subpageAppBarTitleTextColor"
+        android:textSize="@dimen/subpageAppBarTitleTextSize"
+        android:paddingVertical="@dimen/subpageAppBarTitlePadding"
         android:text="@string/setting_defaultPageTitle"/>
 
     <!--        divide line-->
@@ -30,8 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="@dimen/settingpage_pageTextSize"
-        android:textColor="@color/settingpage_pageTextColor"
+        android:textSize="@dimen/subpageTextSize"
+        android:textColor="@color/subpageTextColor"
         android:text="@string/setting_defaultPageText"/>
 
 
