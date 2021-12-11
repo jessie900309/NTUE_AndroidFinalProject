@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/subpageBackgroundColor">
+
+    <!--    AppBar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_bookkeepingAppBarHeight"
+        android:background="@color/home_bookkeepingAppBarTextColor">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="@dimen/home_bookkeepingAppBarPadding"
+            android:background="@color/home_bookkeepingAppBarColor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/home_bookkeepingAppBarTextSize"
+                android:textColor="@color/home_bookkeepingAppBarTextColor"
+                android:text="@string/home_keepBookText"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    todo 篩選鍵-->
+
+    <!--    TODO listview 顯示紀錄-->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/home_bookkeepListView"/>
+
+</LinearLayout>

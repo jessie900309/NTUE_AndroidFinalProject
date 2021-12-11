@@ -13,12 +13,98 @@
         android:foregroundGravity="center"
         android:src="@drawable/background_normal"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--    User Book-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="@android:color/black"
-        android:text="home" />
+        android:layout_gravity="top"
+        android:paddingVertical="@dimen/mainpageFragmentPadding"
+        android:orientation="vertical"
+        android:gravity="center">
+        <!--        App Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_appTitlePadding"/>
+        <ImageView
+            android:layout_width="@dimen/home_appTitleImageSize"
+            android:layout_height="@dimen/home_appTitleImageSize"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_title" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_appTitlePadding"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <!--        Bookkeep 收支-->
+            <ImageButton
+                android:id="@+id/homeButtonToBookkeep"
+                android:layout_width="@dimen/home_imageButtonSize"
+                android:layout_height="@dimen/home_imageButtonSize"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_home_bookkeep"/>
+            <TextView
+                android:layout_width="@dimen/home_imageButtonDivide"
+                android:layout_height="0dp"/>
+            <ImageButton
+                android:id="@+id/homeButtonToCalendar"
+                android:layout_width="@dimen/home_imageButtonSize"
+                android:layout_height="@dimen/home_imageButtonSize"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_home_calendar"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/home_imageButtonTextColor"
+                android:textSize="@dimen/home_imageButtonTextSize"
+                android:text="@string/home_keepBookText"/>
+
+            <TextView
+                android:layout_width="@dimen/home_imageButtonTextDivide"
+                android:layout_height="0dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <!--        Bookkeep 轉帳-->
+                <ImageButton
+                    android:id="@+id/homeButtonToTransBook"
+                    android:layout_width="@dimen/home_imageButtonSize"
+                    android:layout_height="@dimen/home_imageButtonSize"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_home_bookkeeptrans"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/home_imageButtonTextColor"
+                    android:textSize="@dimen/home_imageButtonTextSize"
+                    android:text="@string/home_transBookText"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="@dimen/home_imageButtonTextDivide"
+                android:layout_height="0dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/home_imageButtonTextColor"
+                android:textSize="@dimen/home_imageButtonTextSize"
+                android:text="@string/home_calendarText"/>
+        </LinearLayout>
+    </LinearLayout>
 
     <!--    FloatingActionButton-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton

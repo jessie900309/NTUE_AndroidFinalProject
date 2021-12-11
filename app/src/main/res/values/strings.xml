@@ -16,8 +16,12 @@
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>
 
-<!--    home page-->
-
+<!--     page-->
+    <!--    home主頁-->
+    <string name="home_keepBookText">收支本本</string>
+    <string name="home_transBookText">轉帳本本</string>
+    <string name="home_calendarText">日曆本本</string>
+    <!--    add 新增記帳紀錄-->
     <string name="home_add_submitText">記一筆!</string>
     <string name="home_add_dateText">日期</string>
     <string name="home_add_typeText">類型</string>
@@ -27,7 +31,7 @@
     <string name="home_add_moneyText">金額</string>
     <string name="home_add_accountSingleText">帳戶</string>
     <string name="home_add_classificationText">分類</string>
-    <string name="home_add_memberText">成員</string>
+    <string name="home_add_memberText">對象</string>
     <string name="home_add_accountStartText">從帳戶</string>
     <string name="home_add_accountEndText">到帳戶</string>
     <string name="home_add_init_date">(選擇)</string>
@@ -36,7 +40,6 @@
     <string name="home_add_init_class">其他</string>
     <string name="home_add_init_member">其他</string>
     <string name="home_add_formMsg">輸入有誤 QAQ</string>
-
     <!--    calculator String-->
     <string name="cal_initResult">0.0</string>
     <string name="cal_initSign"> </string>
@@ -45,9 +48,24 @@
     <string name="cal_msg_resultNumberUnderZero">數字需為正數</string>
     <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
     <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
+    <!--    bookkeeping 記帳履歷(收支)-->
+    <string name="home_bookkeepingItem_memberText">對象&#160;:&#160;</string>
+    <string name="home_bookkeepingItem_dateDefaultText">(YYYY-MM-DD)</string>
+    <string name="home_bookkeepingItem_classDefaultText">(分類)</string>
+    <string name="home_bookkeepingItem_moneyDefaultText">(金額)</string>
+    <string name="home_bookkeepingItem_memberDefaultText">(對象)</string>
+    <string name="home_bookkeepingItem_memoDefaultText">尚無內容。</string>
+    <!--    bookkeeping 記帳履歷(轉帳)-->
+    <string name="home_bookkeepingTransItem_transText">轉帳至&#160;</string>
+    <string name="home_bookkeepingTransItem_dateDefaultText">(YYYY-MM-DD)</string>
+    <string name="home_bookkeepingTransItem_acStartDefaultText">(來源帳戶)</string>
+    <string name="home_bookkeepingTransItem_moneyDefaultText">(金額)</string>
+    <string name="home_bookkeepingTransItem_acEndDefaultText">(目標帳戶)</string>
+    <string name="home_bookkeepingTransItem_memoDefaultText">尚無內容。</string>
+
 
 <!--    account page-->
-
+    <!--    account主頁-->
     <string name="account_initCoin">TWD</string>
     <string name="account_initSubCoin">TWD(負債)</string>
     <string name="account_initNetAssets">0.0</string>
@@ -60,7 +78,7 @@
     <string name="init_account_money_text">現金</string>
     <string name="init_account_bank_text">銀行</string>
     <string name="init_account_card_text">信用卡</string>
-
+    <!--    編輯初始dialog-->
     <string name="account_editInitAccountNumberText">編輯初始餘額</string>
     <string name="account_editInitAccountNumber_submitButtonText">確定</string>
 
@@ -70,8 +88,8 @@
     <string name="setting_basic">基本設定</string>
     <string name="setting_menuFixedIncomeText">固定收支</string>
     <string name="setting_menuFixedTransferText">固定轉帳</string>
-    <string name="setting_menuClassificationText">記帳類別</string>
-    <string name="setting_menuMemberText">成員</string>
+    <string name="setting_menuClassificationText">編輯記帳類別</string>
+    <string name="setting_menuMemberText">編輯記帳對象</string>
     <string name="setting_backup">資料備份</string>
     <string name="setting_menuUpdateCloud">上傳雲端</string>
     <string name="setting_menuOutputCSV">匯出CSV檔</string>

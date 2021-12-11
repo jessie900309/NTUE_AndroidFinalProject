@@ -67,7 +67,7 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tool_calculator, container, false);
+        View view = inflater.inflate(R.layout.tool_bottomsheet_calculator, container, false);
 
         showSign = (TextView) view.findViewById(R.id.cal_showSign);
         showResult = (TextView) view.findViewById(R.id.cal_showResult);

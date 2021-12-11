@@ -13,8 +13,10 @@
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/page_main.xml" value="0.152" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_account.xml" value="0.2" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_chart.xml" value="0.16019736842105264" />
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home.xml" value="0.176" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home_add.xml" value="0.264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home_bookkeep.xml" value="0.176" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_home_bookkeep_trans.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_ledger.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_note.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_setting.xml" value="0.18117559523809523" />
@@ -22,9 +24,13 @@
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_setting_help_acknowlegment.xml" value="0.176" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_setting_help_finddev.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/sub_setting_help_recommend.xml" value="0.2" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_bottomsheet_calculator.xml" value="0.1" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_calculator.xml" value="0.16019736842105264" />
-        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_defaultpage.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_defaultpage.xml" value="0.4" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_dialog_account_initnumber.xml" value="0.1" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_edit_init_account_number.xml" value="0.2" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_listview_bookkeeping.xml" value="0.2" />
+        <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/layout/tool_listview_bookkeeping_trans.xml" value="0.2" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/menu/account_expenditure.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/menu/account_income.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/zombie/AndroidStudioProjects/FinalProject/app/src/main/res/menu/classification_expenditure_type.xml" value="0.1" />

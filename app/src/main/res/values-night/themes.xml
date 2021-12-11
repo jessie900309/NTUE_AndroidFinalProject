@@ -13,10 +13,26 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialCalendarTheme">@style/ThemeOverlay.App.DatePicker</item>
     </style>
+
     <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
         <!-- Customize your theme here. -->
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/DatePickerColor</item>
+        <item name="colorSecondary">@color/DatePickerColor</item>
+<!--        <item name="android:headerBackground">@color/shrinePink300</item>-->
+<!--        <item name="android:dayOfWeekBackground">@color/black</item>-->
+<!--        <item name="android:dayOfWeekTextAppearance">@color/black</item>-->
+<!--        <item name="android:headerMonthTextAppearance">@color/black</item>-->
+<!--        <item name="android:headerDayOfMonthTextAppearance">@color/black</item>-->
+<!--        <item name="android:headerYearTextAppearance">@color/black</item>-->
+<!--        <item name="android:yearListSelectorColor">@color/black</item>-->
+<!--        <item name="android:calendarTextColor">@color/white</item>-->
+    </style>
+
 </resources>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@android:color/holo_purple"
+    android:background="@color/MainPageBackgroundColor"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 

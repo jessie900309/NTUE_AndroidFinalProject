@@ -125,7 +125,7 @@ public class SubpageAccount extends Fragment
     public void showPageNumber(){
         showNetAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber+dCardNowNumber)));
         showAllAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber)));
-        showDebt.setText(cardNowNumber);
+        showDebt.setText(cardNowNumber);//if cardNowNumber>0.0 則 show 0.0 black
         initAssets.setText(String.valueOf((dMoneyInitNumber+dBankInitNumber-dCardInitNumber)));
         showAccountMoney.setText(moneyNowNumber);
         showAccountBank.setText(bankNowNumber);

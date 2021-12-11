@@ -155,7 +155,7 @@ public class SubpageHomeAdd extends AppCompatActivity
     public void ExpendFromToSQL(){
         //TODO 存入資料庫
         //日期 datetime
-        //金額 calMoney
+        //金額 -calMoney
         //textMemo = textMemoInput.getText().toString()
         //accountSingleButton.getText().toString()
         //classificationEXButton.getText().toString()
@@ -169,6 +169,7 @@ public class SubpageHomeAdd extends AppCompatActivity
         //textMemo = textMemoInput.getText().toString();
         //accountStartButton.getText().toString()
         //accountEndButton.getText().toString()
+
     }
 
     //---------------------檢查表單選項------------------------
@@ -232,7 +233,7 @@ public class SubpageHomeAdd extends AppCompatActivity
         int year = calendar.get(Calendar.YEAR);//取得現在的日期年月日
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-        new DatePickerDialog(v.getContext(), new DatePickerDialog.OnDateSetListener() {
+        new DatePickerDialog(v.getContext(), R.style.ThemeOverlay_App_DatePicker,new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 String datetime = year + "-" + (month+1) + "-" + day;

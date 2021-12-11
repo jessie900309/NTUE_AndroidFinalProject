@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+<!--
+showBookItem_date
+showBookItem_class
+showBookItem_money
+showBookItem_member
+showBookItem_memo
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/home_bookkeepingItemTitlePadding">
+        <!--        date / class / money-->
+        <!--        money textColor (收支)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/home_bookkeepingItemTitlePadding"
+            android:background="@color/home_bookkeepingItem_titleTextBackgroundColor">
+            <TextView
+                android:id="@+id/showBookItem_date"
+                android:layout_width="@dimen/home_bookkeepingItemTitleWidthZero"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:layout_marginStart="@dimen/home_bookkeepingItemStartEndPadding"
+                android:textSize="@dimen/home_bookkeepingItem_dateTextSize"
+                android:textColor="@color/home_bookkeepingItem_titleTextColor"
+                android:text="@string/home_bookkeepingItem_dateDefaultText"/>
+            <TextView
+                android:id="@+id/showBookItem_class"
+                android:layout_width="@dimen/home_bookkeepingItemTitleWidthZero"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:textSize="@dimen/home_bookkeepingItem_classTextSize"
+                android:textColor="@color/home_bookkeepingItem_titleTextColor"
+                android:text="@string/home_bookkeepingItem_classDefaultText"/>
+            <TextView
+                android:id="@+id/showBookItem_money"
+                android:layout_width="@dimen/home_bookkeepingItemTitleWidthZero"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="end"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:layout_marginEnd="@dimen/home_bookkeepingItemStartEndPadding"
+                app:fontWeight="700"
+                android:textSize="@dimen/home_bookkeepingItem_numberTextSize"
+                android:textColor="@color/home_bookkeepingItem_titleTextColor"
+                android:text="@string/home_bookkeepingItem_moneyDefaultText"/>
+        </LinearLayout>
+        <!--        member-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/home_bookkeepingItem_contentTextBackgroundColor"
+            android:padding="@dimen/home_bookkeepingItemTitlePadding">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:layout_marginStart="@dimen/home_bookkeepingItemStartEndPadding"
+                android:textSize="@dimen/home_bookkeepingItem_memberTextSize"
+                android:textColor="@color/home_bookkeepingItem_contentTextColor"
+                android:text="@string/home_bookkeepingItem_memberText"/>
+            <TextView
+                android:id="@+id/showBookItem_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/home_bookkeepingItem_memberTextSize"
+                android:textColor="@color/home_bookkeepingItem_contentTextColor"
+                android:text="@string/home_bookkeepingItem_memberDefaultText"/>
+        </LinearLayout>
+        <!--        memo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/home_bookkeepingItem_contentTextBackgroundColor"
+            android:padding="@dimen/home_bookkeepingItemTitlePadding">
+            <TextView
+                android:id="@+id/showBookItem_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:layout_marginStart="@dimen/home_bookkeepingItemStartEndPadding"
+                android:layout_marginEnd="@dimen/home_bookkeepingItemStartEndPadding"
+                android:textSize="@dimen/home_bookkeepingItem_memoTextSize"
+                android:textColor="@color/home_bookkeepingItem_contentTextColor"
+                android:text="@string/home_bookkeepingItem_memoDefaultText"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -51,7 +51,7 @@ public class ToolEditInitAssets extends DialogFragment
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tool_edit_init_account_number, container, false);
+        View view = inflater.inflate(R.layout.tool_dialog_account_initnumber, container, false);
 
         moneyInput = (TextInputEditText) view.findViewById(R.id.edit_initAccountMoney);
         moneyInput.setText(moneyInit);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    default-->
 <!--    <color name="purple_200">#FFBB86FC</color>-->
     <color name="purple_200">#FF4f386b</color>
     <color name="purple_500">#FF6200EE</color>
@@ -8,10 +9,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<!--    shrine-->
+    <color name="shrinePink50">#FFFEEAE6</color>
+    <color name="shrinePink100">#FFFEDBD0</color>
+    <color name="shrinePink300">#FFFBB8AC</color>
+    <color name="shrinePink400">#FFEAA4A4</color>
+    <color name="shrineBrown600">#FF7D4F52</color>
+    <color name="shrineBrown900">#FF442B2D</color>
+    <color name="shrineSurfaceWhite">#FFFFFBFA</color>
+    <color name="shrineBackgroundWhite">#FFFFFFFF</color>
 
+
+
+<!--    Customize-->
     <color name="PrimartTextColor">#FF000000</color>
     <color name="SecondTextColor">#FF888888</color>
     <color name="EditTextBackgroundColor">#FFEEEEEE</color>
+    <color name="MainPageBackgroundColor">#FFCAA2DE</color>
+
+    <color name="DatePickerColor">#FFCAA2DE</color>
 
     <color name="moneyDecreaseTextColor">#FF930000</color>
     <color name="moneyIncreaseTextColor">#FF00A600</color>
@@ -28,6 +44,17 @@
     <color name="alertDialogTitleBackgroundColor">#FF5E005E</color>
     <color name="alertDialogBackgroundColor">#FFE9D6FF</color>
 
+<!--    home page-->
+    <!--    home主頁-->
+    <color name="home_imageButtonTextColor">#FF921AFF</color>
+    <!--    bookkeeping-->
+    <color name="home_bookkeepingAppBarColor">@color/shrinePink50</color>
+    <color name="home_bookkeepingAppBarTextColor">@color/purple_200</color>
+    <!--    bookkeeping-->
+    <color name="home_bookkeepingItem_titleTextBackgroundColor">@color/shrinePink100</color>
+    <color name="home_bookkeepingItem_titleTextColor">@color/shrineBrown600</color>
+    <color name="home_bookkeepingItem_contentTextBackgroundColor">@color/shrinePink300</color>
+    <color name="home_bookkeepingItem_contentTextColor">@color/shrineBrown900</color>
 
 <!--    calculator Color-->
     <!--    顯示格-->

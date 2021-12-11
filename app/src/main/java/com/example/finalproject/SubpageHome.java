@@ -21,13 +21,15 @@ public class SubpageHome extends Fragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.sub_home, container, false);
 
+        (view.findViewById(R.id.homeButtonToBookkeep)).setOnClickListener(this);
+        (view.findViewById(R.id.homeButtonToTransBook)).setOnClickListener(this);
+        (view.findViewById(R.id.homeButtonToCalendar)).setOnClickListener(this);
 
         floatingButton = view.findViewById(R.id.HomeFloatingButton);
-
-        //click
         floatingButton.setOnClickListener(this);
 
         return view;
@@ -35,12 +37,32 @@ public class SubpageHome extends Fragment
 
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.HomeFloatingButton){
+
+        try{
             Intent intent = new Intent();
-            intent.setClass(getActivity(), SubpageHomeAdd.class);
-            startActivity(intent);
-        } else {
-            //do nothing
+            switch (view.getId()){
+                case R.id.homeButtonToBookkeep:
+                    intent.setClass(getActivity(), SubpageHomeBookkeep.class);
+                    startActivity(intent);
+                    break;
+                case R.id.homeButtonToTransBook:
+                    intent.setClass(getActivity(), SubpageHomeBooktrans.class);
+                    startActivity(intent);
+                    break;
+                case R.id.homeButtonToCalendar: //todo 未開發功能(日曆顯示)
+                    intent.setClass(getActivity(), SubpageHomeCalendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.HomeFloatingButton:
+                    intent.setClass(getActivity(), SubpageHomeAdd.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    //do nothing
+            }
+        }catch (Exception e){
+            System.out.println("\n\n\n"+e+"\n\n\n");
         }
+
     }
 }
