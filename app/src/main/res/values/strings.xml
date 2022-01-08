@@ -82,6 +82,12 @@
     <string name="account_editInitAccountNumberText">編輯初始餘額</string>
     <string name="account_editInitAccountNumber_submitButtonText">確定</string>
 
+<!--    chart page-->
+    <string name="chart_moneyEnd">元</string>
+    <string name="chart_historyTitle_exTopMember">累計最高支出對象</string>
+    <string name="chart_historyTitle_exTopType">累計最高支出項目</string>
+    <string name="chart_historyTitle_inTopMember">累計最高收入對象</string>
+    <string name="chart_historyTitle_inTopType">累計最高收入項目</string>
 
 <!--    setting page-->
 

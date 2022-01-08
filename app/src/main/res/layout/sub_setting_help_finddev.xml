@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    android:background="@color/subpageBackgroundColor"
+    android:background="@drawable/background_normal"
     android:focusable="true"
     android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,7 +18,9 @@
         android:gravity="center"
         android:textColor="@color/subpageAppBarTitleTextColor"
         android:textSize="@dimen/subpageAppBarTitleTextSize"
-        android:paddingVertical="@dimen/subpageAppBarTitlePadding"
+
+        android:paddingTop="@dimen/subpageAppBarTitlePaddingTop"
+        android:paddingBottom="@dimen/subpageAppBarTitlePaddingBottom"
         android:text="@string/setting_menuFindDev"/>
 
     <!--        divide line-->

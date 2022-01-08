@@ -44,7 +44,8 @@
     <dimen name="subpageRadioButtonPadding">10dp</dimen>
     <!--    頁面文字與背景-->
     <dimen name="subpageAppBarTitleTextSize">24sp</dimen>
-    <dimen name="subpageAppBarTitlePadding">20dp</dimen>
+    <dimen name="subpageAppBarTitlePaddingTop">30dp</dimen>
+    <dimen name="subpageAppBarTitlePaddingBottom">20dp</dimen>
     <dimen name="subpagePaddingHorizontal">20dp</dimen>
     <dimen name="subpageTitleTextSize">16sp</dimen>
     <dimen name="subpageTextSize">14sp</dimen>
@@ -89,6 +90,9 @@
     <dimen name="account_listItemTextSize">20dp</dimen>
     <dimen name="account_listItemPadding">10dp</dimen>
 
+<!--    chart page Dimens-->
+    <dimen name="chart_itemTitleTextSize">20sp</dimen>
+    <dimen name="chart_itemValuePadding">10dp</dimen>
 
 <!--    setting page Dimens-->
     <!--    setting主頁-->
