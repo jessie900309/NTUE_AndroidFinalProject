@@ -68,7 +68,7 @@ public class SubpageSetting extends Fragment
                 case R.id.settings_basic_member:
                 case R.id.settings_backup_updateCloud:
                 case R.id.settings_backup_outputCSV:
-                    intent.setClass(getActivity(), ToolDevDefaultActivity.class);
+                    intent.setClass(getActivity(), DevToolDefaultActivity.class);
                     startActivity(intent);
                     break;
                 default:

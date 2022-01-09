@@ -56,7 +56,7 @@
         </activity>
 
         <!--        tool-->
-        <activity android:name=".ToolDevDefaultActivity"
+        <activity android:name=".DevToolDefaultActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

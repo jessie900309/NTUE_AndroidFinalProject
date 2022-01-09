@@ -355,7 +355,7 @@ public class SubpageHomeAdd extends AppCompatActivity
         new DatePickerDialog(v.getContext(), R.style.ThemeOverlay_App_DatePicker, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
-                String datetime = year + "-" + (month + 1) + "-" + day;
+                datetime = year + "-" + (month + 1) + "-" + day;
                 chooseDateButton.setText(datetime);
             }
         }, year, month, day).show();

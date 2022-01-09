@@ -89,6 +89,7 @@
             android:padding="@dimen/home_bookkeepingItemTitlePadding">
             <TextView
                 android:id="@+id/showTransBookItem_memo"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"

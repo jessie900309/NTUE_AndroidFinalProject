@@ -111,7 +111,7 @@ public class SubpageAccount extends Fragment
         if(view.getId()==R.id.AccountFloatingButton){
             //todo 新增帳戶
             Intent intent = new Intent();
-            intent.setClass(getActivity(), ToolDevDefaultActivity.class);
+            intent.setClass(getActivity(), DevToolDefaultActivity.class);
             startActivity(intent);
         }
     }

@@ -65,7 +65,7 @@ public class SubpageNote extends Fragment implements View.OnClickListener {
         if(view.getId()==R.id.NoteFloatingButton){
             //todo 新增記事
             Intent intent = new Intent();
-            intent.setClass(getActivity(), ToolDevDefaultActivity.class);
+            intent.setClass(getActivity(), DevToolDefaultActivity.class);
             startActivity(intent);
         }
     }
