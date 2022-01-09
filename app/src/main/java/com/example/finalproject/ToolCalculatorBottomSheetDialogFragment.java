@@ -123,7 +123,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     //-----------------------計算功能-----------------------
 
     //數字鍵
-    public void pressNumberButton(double pressNumber){
+    private void pressNumberButton(double pressNumber){
         try {
             if(!number1HasUsed){//number1不存在(第一輪運算未按下符號鍵)
                 // 更新number1
@@ -161,7 +161,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //符號鍵
-    public void pressSignButton(int pressFunct){
+    private void pressSignButton(int pressFunct){
         try {
             number1HasUsed = SignHasUsed = true;
             funct = pressFunct;
@@ -180,7 +180,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //等號:執行運算
-    public void pressEqualButton(){
+    private void pressEqualButton(){
         if(number1HasUsed){//number1存在
             try {
                 //存第二個數字
@@ -228,7 +228,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //檢查數值是否 >0 且 < 100 0000
-    public boolean checkValueNotOverflow(double value){
+    private boolean checkValueNotOverflow(double value){
         if(value>1000000.0 || value<0.0){//結果異常
             Toast.makeText(getActivity(), getString(R.string.cal_numberOverflow_msg), Toast.LENGTH_SHORT).show();
             return false;
@@ -238,7 +238,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //歸零
-    public void resetValue(){
+    private void resetValue(){
         number1 = number2 = result = 0.0; //lastResult不清除
         funct = 0;
         nowShowSign = "";
@@ -247,7 +247,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //提交
-    public void submitValue() {
+    private void submitValue() {
         try{
             //檢查結果是否可正常轉換為Double
             double DnowShowNumber = Double.parseDouble(nowShowNumber);
@@ -260,7 +260,7 @@ public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFr
     }
 
     //除錯用
-    public void getException(Exception e){
+    private void getException(Exception e){
         resetValue();
         Toast.makeText(getActivity(), getString(R.string.cal_errorSolve_msg), Toast.LENGTH_SHORT).show();
         DevToolDebug.catchException(e);

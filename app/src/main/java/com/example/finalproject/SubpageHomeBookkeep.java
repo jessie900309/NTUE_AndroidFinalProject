@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
@@ -11,7 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SubpageHomeBookkeep extends AppCompatActivity {
+public class SubpageHomeBookkeep extends AppCompatActivity
+        implements AdapterView.OnItemClickListener {
 
     // SQLite
     static final String dbName = "FinalProjectDB";
@@ -20,14 +23,27 @@ public class SubpageHomeBookkeep extends AppCompatActivity {
     Cursor cursor;
     SimpleCursorAdapter adapter;
 
+    // widget
+    ListView listView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sub_home_bookkeep);
 
         //widget
-        ListView listView = (ListView) findViewById(R.id.home_bookkeepListView);
+        listView = (ListView) findViewById(R.id.home_bookkeepListView);
 
+        showBookTable();
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        //TODO
+    }
+
+    private void showBookTable(){
         try {
             db = openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
             cursor = db.rawQuery("SELECT * FROM "+"BookKeep",null);
@@ -45,13 +61,12 @@ public class SubpageHomeBookkeep extends AppCompatActivity {
                         },
                         0);
                 listView.setAdapter(adapter);
+                listView.setOnItemClickListener(this);
             }
             db.close();
         } catch (Exception e){
             DevToolDebug.catchException(e);
         }
-
     }
-
 
 }

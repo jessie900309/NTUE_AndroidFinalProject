@@ -4,13 +4,16 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SubpageHomeBooktrans extends AppCompatActivity {
+public class SubpageHomeBooktrans extends AppCompatActivity
+        implements AdapterView.OnItemClickListener {
 
     // SQLite
     static final String dbName = "FinalProjectDB";
@@ -19,14 +22,28 @@ public class SubpageHomeBooktrans extends AppCompatActivity {
     Cursor cursor;
     SimpleCursorAdapter adapter;
 
+    // widget
+    ListView listView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sub_home_bookkeep_trans);
 
         //widget
-        ListView listView = (ListView) findViewById(R.id.home_bookkeepTransListView);
+        listView = (ListView) findViewById(R.id.home_bookkeepTransListView);
 
+        showTransTable();
+
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        //TODO
+    }
+
+    private void showTransTable(){
         try {
             db = openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
             cursor = db.rawQuery("SELECT * FROM "+"TransBook",null);
@@ -49,7 +66,6 @@ public class SubpageHomeBooktrans extends AppCompatActivity {
         } catch (Exception e){
             DevToolDebug.catchException(e);
         }
-
     }
 
 }

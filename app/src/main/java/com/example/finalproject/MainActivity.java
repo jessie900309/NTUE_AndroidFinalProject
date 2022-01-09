@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public ContentValues addDataToAccount(String accountName){
+    private ContentValues addDataToAccount(String accountName){
         ContentValues cv = new ContentValues(3);
         cv.put("accountName",accountName);
         cv.put("initNumber","0");

@@ -118,7 +118,7 @@ public class SubpageAccount extends Fragment
 
     //----------------------顯示數值-----------------------
 
-    public void initPageNumber(){
+    private void initPageNumber(){
         db = getActivity().openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
         Cursor cursor = db.rawQuery("SELECT * FROM "+"UserAccount",null);
         if(cursor.getCount()==0){
@@ -142,7 +142,7 @@ public class SubpageAccount extends Fragment
         db.close();
     }
 
-    public void showPageNumber(){
+    private void showPageNumber(){
 
         dMoneyInitNumber = Double.parseDouble(moneyInitNumber);
         dBankInitNumber = Double.parseDouble(bankInitNumber);
@@ -185,7 +185,7 @@ public class SubpageAccount extends Fragment
 
     }
 
-    public void updateInitAssets(){
+    private void updateInitAssets(){
 
         moneyInitNumber = String.valueOf(dMoneyInitNumber);
         bankInitNumber = String.valueOf(dBankInitNumber);
@@ -218,7 +218,7 @@ public class SubpageAccount extends Fragment
         db.close();
     }
 
-    public void countAllAssets(){
+    private void countAllAssets(){
         double countAll;
         if(dCardNowNumber>=0.0){
             countAll = dMoneyInitNumber+dBankInitNumber+dMoneyNowNumber+dBankNowNumber+dCardNowNumber;

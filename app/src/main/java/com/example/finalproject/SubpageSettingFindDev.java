@@ -88,7 +88,7 @@ public class SubpageSettingFindDev extends AppCompatActivity
 
     //---------------------------取得圖片---------------------------
 
-    public void findImage(){
+    private void findImage(){
         Intent intent = new Intent();//開啟Pictures畫面Type設定為image
         intent.setType("image/*");
         //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗讓您選取手機內圖檔
@@ -118,13 +118,13 @@ public class SubpageSettingFindDev extends AppCompatActivity
 
     //---------------------------關閉鍵盤---------------------------
 
-    public void closeKeyBoard(View v){
+    private void closeKeyBoard(View v){
         //(收起鍵盤) 取消焦點(收起輸入法)
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 
-    public void autoClickView(View view,float x,float y){
+    private void autoClickView(View view,float x,float y){
         long downTime = SystemClock.uptimeMillis();
         final MotionEvent downEvent = MotionEvent.obtain(downTime,downTime,MotionEvent.ACTION_DOWN,x,y,0);
         downTime += 10;
