@@ -125,7 +125,7 @@ public class SubpageHomeAdd extends AppCompatActivity
                 }
             } catch (Exception e) {
                 //其他錯誤，重新導向主頁
-                ToolDevDebug.catchException(e);
+                DevToolDebug.catchException(e);
             }
         } else if (view.getId() == R.id.home_add_date) {//選擇日期
             datePicker(view);
@@ -171,7 +171,7 @@ public class SubpageHomeAdd extends AppCompatActivity
             db.insert("BookKeep", null, cv);
             db.close();
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
         UpdateUserAccount(accountValue, calMoney);
@@ -200,7 +200,7 @@ public class SubpageHomeAdd extends AppCompatActivity
             db.insert("BookKeep", null, cv);
             db.close();
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
         UpdateUserAccount(accountValue, moneyValue);
@@ -226,7 +226,7 @@ public class SubpageHomeAdd extends AppCompatActivity
             db.insert("TransBook", null, cv);
             db.close();
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
         try {
@@ -262,7 +262,7 @@ public class SubpageHomeAdd extends AppCompatActivity
             }
             db.close();
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
         finish();
@@ -295,7 +295,7 @@ public class SubpageHomeAdd extends AppCompatActivity
             }
             db.close();
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
     }
 

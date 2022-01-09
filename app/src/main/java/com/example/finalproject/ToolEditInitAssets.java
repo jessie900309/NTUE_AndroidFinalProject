@@ -95,7 +95,7 @@ public class ToolEditInitAssets extends DialogFragment
                 }
 
             } catch (Exception e){
-                ToolDevDebug.catchException(e);
+                DevToolDebug.catchException(e);
                 dismiss();
             }
         }

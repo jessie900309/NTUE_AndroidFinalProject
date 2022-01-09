@@ -53,7 +53,7 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
             mCallback = (SubpageHomeAdd) activity;
         }
         catch (ClassCastException e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
             System.out.println("MyDialog"+"Activity doesn't implement the ISelectedData interface");
         }
     }
@@ -263,7 +263,7 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
     public void getException(Exception e){
         resetValue();
         Toast.makeText(getActivity(), getString(R.string.cal_errorSolve_msg), Toast.LENGTH_SHORT).show();
-        ToolDevDebug.catchException(e);
+        DevToolDebug.catchException(e);
     }
 
 }

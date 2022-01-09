@@ -75,7 +75,7 @@ public class SubpageSetting extends Fragment
                     //do nothing
             }
         } catch (Exception e) {
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
     }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             db.getWritableDatabase();
             db.close();
         } catch (Exception e){
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
         //帳戶創建
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             db.close();
         } catch (Exception e){
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
     }
 

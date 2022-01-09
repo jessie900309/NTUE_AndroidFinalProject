@@ -48,7 +48,7 @@ public class SubpageHomeBookkeep extends AppCompatActivity {
             }
             db.close();
         } catch (Exception e){
-            ToolDevDebug.catchException(e);
+            DevToolDebug.catchException(e);
         }
 
     }

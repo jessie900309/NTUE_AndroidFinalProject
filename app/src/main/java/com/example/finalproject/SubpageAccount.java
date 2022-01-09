@@ -90,7 +90,7 @@ public class SubpageAccount extends Fragment
                     dBankInitNumber = Double.parseDouble(data.getExtras().getString("bankText"));
                     dCardInitNumber = Double.parseDouble(data.getExtras().getString("cardText"));
                 }catch (Exception e){
-                    ToolDevDebug.catchException(e);
+                    DevToolDebug.catchException(e);
                     dMoneyInitNumber = dBankInitNumber = dCardInitNumber = 0.0;
                 }
 
