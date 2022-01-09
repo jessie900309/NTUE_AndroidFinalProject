@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent();
             intent.setClass(MainActivity.this,MainPageActivity.class);
             startActivity(intent);
+            finish();
 
             //if 有登入檔 MainPageActivity(main_page.xml)
 

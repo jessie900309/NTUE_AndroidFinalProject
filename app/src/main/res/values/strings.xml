@@ -20,7 +20,12 @@
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>
 
-    <string name="main_dialog_finishapp">確定結束App嗎 ( ˘･з･) ?</string>
+    <string name="main_dialog_finishapp">確定要離開了嗎 ( ˘･з･) ?</string>
+    <string name="main_dialog_finishappOK">不要</string>
+    <string name="main_dialog_finishappNO">當然不要啊</string>
+    <string name="main_dialog_finishappT">決定給我100分了嗎 ( ˘･з･) ?\n(我是謝妤婕 學號是110816032 )</string>
+    <string name="main_dialog_finishappOKT">好</string>
+    <string name="main_dialog_finishappNOT">當然好啊</string>
 
 <!--     page-->
     <!--    home主頁-->

@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogFragment
+public class ToolCalculatorBottomSheetDialogFragment extends BottomSheetDialogFragment
         implements View.OnClickListener {
 
     //todo 將數值轉為BidDecimal

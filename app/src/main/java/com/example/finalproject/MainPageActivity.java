@@ -12,6 +12,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainPageActivity extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
 
+    int SpecialCount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,8 @@ public class MainPageActivity extends AppCompatActivity
 
         ((BottomNavigationView) findViewById(R.id.MainNavigation)).setOnNavigationItemSelectedListener(this);
         ((BottomNavigationView) findViewById(R.id.MainNavigation)).setSelectedItemId(R.id.nav_home);//初始畫面
+
+        SpecialCount = 0;
 
     }
 
@@ -52,11 +56,25 @@ public class MainPageActivity extends AppCompatActivity
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-        if(event.getKeyCode()==KeyEvent.KEYCODE_BACK){
-            //TODO ToolFinishAppDialogFragment dialog = new ToolFinishAppDialogFragment();
+        if((event.getKeyCode()==KeyEvent.KEYCODE_BACK) && (event.getAction()==KeyEvent.ACTION_DOWN)){
+            SpecialCount++;
+            if(SpecialCount>3){
+                String dialogContent = getString(R.string.main_dialog_finishappT);
+                String dialogOK = getString(R.string.main_dialog_finishappOKT);
+                String dialogNO = getString(R.string.main_dialog_finishappNOT);
+                ToolFinishAppDialogFragment dialog = ToolFinishAppDialogFragment.newInstance(dialogContent,dialogOK,dialogNO,SpecialCount);
+                dialog.show(getSupportFragmentManager(), "dialog");
+            } else {
+                String dialogContent = getString(R.string.main_dialog_finishapp);
+                String dialogOK = getString(R.string.main_dialog_finishappOK);
+                String dialogNO = getString(R.string.main_dialog_finishappNO);
+                ToolFinishAppDialogFragment dialog = ToolFinishAppDialogFragment.newInstance(dialogContent,dialogOK,dialogNO,SpecialCount);
+                dialog.show(getSupportFragmentManager(), "dialog");
+            }
             return true;
         } else {
             return super.dispatchKeyEvent(event);
         }
     }
+
 }
