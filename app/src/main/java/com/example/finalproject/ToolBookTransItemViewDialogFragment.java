@@ -2,8 +2,6 @@ package com.example.finalproject;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-public class ToolBookTableItemDelDialogFragment extends DialogFragment
+public class ToolBookTransItemViewDialogFragment extends DialogFragment
         implements View.OnClickListener {
-
-    // SQLite
-    static final String dbName = "FinalProjectDB";
-    static final String tbName = "TransBook";
-    private static SQLiteDatabase db;
 
     // value
     String contentText,okText,noText;
@@ -28,8 +21,8 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
 
     //-----------------傳入預設數值-----------------
 
-    public static ToolBookTableItemDelDialogFragment newInstance(String contentText,String okText,String noText,int itemID) {
-        ToolBookTableItemDelDialogFragment fragment = new ToolBookTableItemDelDialogFragment();
+    public static ToolBookTransItemViewDialogFragment newInstance(String contentText,String okText,String noText,int itemID) {
+        ToolBookTransItemViewDialogFragment fragment = new ToolBookTransItemViewDialogFragment();
         Bundle args = new Bundle();
         //傳入參數
         args.putString("contentText", contentText);
@@ -72,47 +65,40 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
     @Override
     public void onClick(View view) {
         if(view.getId()==R.id.dialogCheckOK){
-            try {
-                //刪除資料
-                db = getActivity().openOrCreateDatabase(dbName, Context.MODE_PRIVATE, null);
-                db.delete(tbName,"_id="+itemID,null);
-                db.close();
-                //觸發刷新
-                done();
-            } catch (Exception e) {
-                DevToolDebug.catchException(e);
-            }
+            //神喵也不做
+        } else if (view.getId()==R.id.dialogCheckNO){
+            //觸發刪除確認
+            clickDelete();
         }
         dismiss();
     }
 
     //------------------回傳刷新---------------------
 
-    public ToolBookTableItemDelDialogFragment.InterfaceCommunicator interfaceCommunicator;
+    public ToolBookTransItemViewDialogFragment.InterfaceCommunicator interfaceCommunicator;
 
     public interface InterfaceCommunicator {
-        void sendValue(String value);
+        void sendDelValue(String value);
     }
 
-    private SubpageHomeBookkeep mCallback;
+    private SubpageHomeBooktrans mCallback;
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mCallback = (SubpageHomeBookkeep) activity;
+            mCallback = (SubpageHomeBooktrans) activity;
         }
         catch (ClassCastException e) {
             DevToolDebug.catchException(e);
         }
     }
 
-    private void done() {
+    private void clickDelete(){
         try{
-            mCallback.sendValue("200");
+            mCallback.sendDelValue("400");
         }catch (Exception e){
             DevToolDebug.catchException(e);
         }
     }
-
 }

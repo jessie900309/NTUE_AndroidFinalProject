@@ -28,6 +28,9 @@
         </activity>
 
         <!--        home-->
+        <activity android:name=".SubpageHomeAdd"
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".SubpageHomeBookkeep"
             android:screenOrientation="portrait">
         </activity>
@@ -35,9 +38,6 @@
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".SubpageHomeCalendar"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".SubpageHomeAdd"
             android:screenOrientation="portrait">
         </activity>
 

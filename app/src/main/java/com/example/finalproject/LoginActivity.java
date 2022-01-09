@@ -12,7 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
+public class LoginActivity extends AppCompatActivity
+        implements View.OnClickListener, View.OnTouchListener {
 
     //優先檢查是否已存在帳號
     //若有則登入->導向mainpage

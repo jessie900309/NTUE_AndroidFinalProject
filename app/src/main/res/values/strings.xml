@@ -60,8 +60,7 @@
     <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
     <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
     <!--    bookkeeping 記帳履歷-->
-    <string name="home_bookkeepingAction_ViewText">詳細</string>
-    <string name="home_bookkeepingAction_EditText">編輯</string>
+    <string name="home_bookkeepingAction_ViewText">朕知道了(=^･ｪ･^=)</string>
     <string name="home_bookkeepingAction_DelText">刪除</string>
     <string name="delItemAlertText">確定要刪除嗎?\n</string>
     <string name="delItemAlertOK">確定</string>

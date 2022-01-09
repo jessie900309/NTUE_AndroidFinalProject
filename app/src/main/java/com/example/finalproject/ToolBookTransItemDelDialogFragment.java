@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-public class ToolBookTableItemDelDialogFragment extends DialogFragment
+public class ToolBookTransItemDelDialogFragment extends DialogFragment
         implements View.OnClickListener {
 
     // SQLite
@@ -25,11 +25,10 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
     // value
     String contentText,okText,noText;
     int itemID;
-
     //-----------------傳入預設數值-----------------
 
-    public static ToolBookTableItemDelDialogFragment newInstance(String contentText,String okText,String noText,int itemID) {
-        ToolBookTableItemDelDialogFragment fragment = new ToolBookTableItemDelDialogFragment();
+    public static ToolBookTransItemDelDialogFragment newInstance(String contentText,String okText,String noText,int itemID) {
+        ToolBookTransItemDelDialogFragment fragment = new ToolBookTransItemDelDialogFragment();
         Bundle args = new Bundle();
         //傳入參數
         args.putString("contentText", contentText);
@@ -88,19 +87,19 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
 
     //------------------回傳刷新---------------------
 
-    public ToolBookTableItemDelDialogFragment.InterfaceCommunicator interfaceCommunicator;
+    public ToolBookTransItemDelDialogFragment.InterfaceCommunicator interfaceCommunicator;
 
     public interface InterfaceCommunicator {
         void sendValue(String value);
     }
 
-    private SubpageHomeBookkeep mCallback;
+    private SubpageHomeBooktrans mCallback;
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mCallback = (SubpageHomeBookkeep) activity;
+            mCallback = (SubpageHomeBooktrans) activity;
         }
         catch (ClassCastException e) {
             DevToolDebug.catchException(e);
@@ -114,5 +113,6 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
             DevToolDebug.catchException(e);
         }
     }
-
 }
+
+
