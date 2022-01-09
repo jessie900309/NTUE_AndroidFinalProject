@@ -71,7 +71,7 @@ public class SubpageAccount extends Fragment
     @Override
     public boolean onLongClick(View view) {
         if(view.getId()==R.id.account_initAssets){
-            ToolEditInitAssets dialog = ToolEditInitAssets.newInstance(moneyInitNumber,bankInitNumber,cardInitNumber);
+            ToolEditAssetsDialogFragment dialog = ToolEditAssetsDialogFragment.newInstance(moneyInitNumber,bankInitNumber,cardInitNumber);
             dialog.setTargetFragment(this, 200);
             dialog.show(getFragmentManager(), "dialog");
         }

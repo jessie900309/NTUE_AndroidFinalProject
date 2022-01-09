@@ -16,7 +16,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class ToolEditInitAssets extends DialogFragment
+public class ToolEditAssetsDialogFragment extends DialogFragment
         implements View.OnClickListener {
 
     //widget
@@ -26,8 +26,8 @@ public class ToolEditInitAssets extends DialogFragment
 
     //-----------------傳入預設數值-----------------
 
-    public static ToolEditInitAssets newInstance(String moneyInit,String bankInit,String cardInit) {
-        ToolEditInitAssets fragment = new ToolEditInitAssets();
+    public static ToolEditAssetsDialogFragment newInstance(String moneyInit,String bankInit,String cardInit) {
+        ToolEditAssetsDialogFragment fragment = new ToolEditAssetsDialogFragment();
         Bundle args = new Bundle();
         //傳入參數
         args.putString("moneyInit", moneyInit);
