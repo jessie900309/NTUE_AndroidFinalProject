@@ -24,7 +24,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class SubpageSettingRecommend extends AppCompatActivity
         implements View.OnTouchListener,View.OnClickListener,RadioGroup.OnCheckedChangeListener {
@@ -61,15 +60,21 @@ public class SubpageSettingRecommend extends AppCompatActivity
     public void onClick(View view) {
         if(view.getId()==R.id.setting_help_recommend_submitButton){
             try {
-                //todo 整理
                 getRecommendType();
-                recommendText = recommendInput.getText().toString();
-                //img
-                //addImageButton
                 //上傳
-                System.out.println("\n\n\nrecommendType: "+recommendType);
-                System.out.println("\n\n\nrecommendText: "+recommendText);
-
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"s110816032@stu.ntue.edu.tw"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[OuO]傳送資料給開發者 - "+recommendType);
+                emailIntent.putExtra(Intent.EXTRA_TEXT   , phoneInfoText+"\n"+recommendText);
+                //todo addImageButton
+                try {
+                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                    finish();
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(SubpageSettingRecommend.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                }
             } catch (Exception e){
                 //其他錯誤，重新導向主頁
             }
@@ -85,9 +90,8 @@ public class SubpageSettingRecommend extends AppCompatActivity
     //---------------------------取得圖片---------------------------
 
     private void findImage(){
-        Intent intent = new Intent();//開啟Pictures畫面Type設定為image
+        Intent intent = new Intent();
         intent.setType("image/*");
-        //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗讓您選取手機內圖檔
         intent.setAction(Intent.ACTION_GET_CONTENT);
         //取得相片後返回本畫面
         startActivityForResult(intent, 1);

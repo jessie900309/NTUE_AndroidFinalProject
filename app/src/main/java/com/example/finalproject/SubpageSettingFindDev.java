@@ -67,13 +67,19 @@ public class SubpageSettingFindDev extends AppCompatActivity
     public void onClick(View view) {
         if(view.getId()==R.id.setting_help_findDev_submitButton){
             try {
-                //todo 整理
-                //phoneInfoText
-                //findDevText = findDevInput.getText().toString();
-                //img
-                //addImageButton
-                //上傳
-                System.out.println("\n\n\nrecommendText: "+findDevText);
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"s110816032@stu.ntue.edu.tw"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[OuO]傳送資料給開發者");
+                emailIntent.putExtra(Intent.EXTRA_TEXT   , phoneInfoText+"\n"+findDevText);
+                //todo addImageButton
+                try {
+                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                    finish();
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(SubpageSettingFindDev.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                }
             } catch (Exception e){
                 //其他錯誤，重新導向主頁
             }
@@ -89,7 +95,7 @@ public class SubpageSettingFindDev extends AppCompatActivity
     private void findImage(){
         Intent intent = new Intent();//開啟Pictures畫面Type設定為image
         intent.setType("image/*");
-        //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗讓您選取手機內圖檔
+        //使用Intent.ACTION_GET_CONTENT這個Action 會開啟選取圖檔視窗 選取手機內圖檔
         intent.setAction(Intent.ACTION_GET_CONTENT);
         //取得相片後返回本畫面
         startActivityForResult(intent, 1);
