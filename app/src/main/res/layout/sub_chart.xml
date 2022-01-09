@@ -10,18 +10,42 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:foregroundGravity="center"
-        android:src="@drawable/background_normal"/>
+        android:src="@drawable/background_normal" />
 
-    <!--    Chart-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginHorizontal="@dimen/page_dividePadding"
-        android:gravity="center"
         android:orientation="vertical"
-        android:paddingVertical="@dimen/mainpageFragmentPadding">
-
+        android:gravity="center"
+        android:layout_marginTop="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/chart1"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/chart1"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/chart2"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/chart2"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="\n聽說多按幾次返回鍵就會...\n"/>
     </LinearLayout>
+
+
+
 
 </RelativeLayout>

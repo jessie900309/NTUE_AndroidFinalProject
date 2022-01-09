@@ -96,7 +96,7 @@ public class ToolBookTransItemViewDialogFragment extends DialogFragment
 
     private void clickDelete(){
         try{
-            mCallback.sendDelValue("400");
+            mCallback.sendDelValue("deltrans");
         }catch (Exception e){
             DevToolDebug.catchException(e);
         }

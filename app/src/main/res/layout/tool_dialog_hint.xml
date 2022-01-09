@@ -42,7 +42,7 @@
             android:id="@+id/dialogCheckNO"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/alertdialog_actionButtonMargin"
             android:backgroundTint="@color/alertDialogTitleBackgroundColor"
             android:textColor="@color/alertDialogTitleTextColor"

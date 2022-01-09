@@ -19,6 +19,7 @@ public class SubpageHomeBooktrans extends AppCompatActivity
 
     // SQLite
     static final String dbName = "FinalProjectDB";
+    static final String tbName = "TransBook";
     static final String[] FROM = new String[] {"date","money","accountStart","accountEnd","memo"};
     private static SQLiteDatabase db;
     Cursor cursor;
@@ -49,9 +50,10 @@ public class SubpageHomeBooktrans extends AppCompatActivity
     private void showTransTable(){
         try {
             db = openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
-            cursor = db.rawQuery("SELECT * FROM "+"TransBook",null);
+            cursor = db.rawQuery("SELECT * FROM "+tbName,null);
             if(cursor.getCount()==0){
                 System.out.println("BookKeep cursor.getCount()==0");
+                listView.setVisibility(View.INVISIBLE);
             } else {
                 System.out.println("BookKeep cursor.getCount() = "+cursor.getCount());
                 adapter = new SimpleCursorAdapter(this,
@@ -78,6 +80,7 @@ public class SubpageHomeBooktrans extends AppCompatActivity
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         cursor.moveToPosition(i);
         selectID = cursor.getInt(0);
+        System.out.println("selectID"+selectID);
         datetime = cursor.getString(1);
         money = cursor.getString(2);
         accountStart = cursor.getString(3);
@@ -103,14 +106,14 @@ public class SubpageHomeBooktrans extends AppCompatActivity
 
     @Override
     public void sendValue(String returnValue) {
-        if(returnValue.equals("200")){
+        if(returnValue.equals("deltransdone")){
             showTransTable();
         }
     }
 
     @Override
     public void sendDelValue(String returnValue) {
-        if(returnValue.equals("400")){
+        if(returnValue.equals("deltrans")){
             checkToDelete();
         }
     }

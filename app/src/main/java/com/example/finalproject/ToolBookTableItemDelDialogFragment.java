@@ -19,7 +19,7 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
 
     // SQLite
     static final String dbName = "FinalProjectDB";
-    static final String tbName = "TransBook";
+    static final String tbName = "BookKeep";
     private static SQLiteDatabase db;
 
     // value
@@ -73,6 +73,7 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
     public void onClick(View view) {
         if(view.getId()==R.id.dialogCheckOK){
             try {
+                System.out.println("del dialogCheckOK");
                 //刪除資料
                 db = getActivity().openOrCreateDatabase(dbName, Context.MODE_PRIVATE, null);
                 db.delete(tbName,"_id="+itemID,null);
@@ -109,7 +110,7 @@ public class ToolBookTableItemDelDialogFragment extends DialogFragment
 
     private void done() {
         try{
-            mCallback.sendValue("200");
+            mCallback.sendValue("del");
         }catch (Exception e){
             DevToolDebug.catchException(e);
         }

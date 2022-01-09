@@ -19,6 +19,7 @@ public class SubpageHomeBookkeep extends AppCompatActivity
 
     // SQLite
     static final String dbName = "FinalProjectDB";
+    static final String tbName = "BookKeep";
     static final String[] FROM = new String[] {"date","money","account","classification","member","memo"};
     private static SQLiteDatabase db;
     Cursor cursor;
@@ -48,9 +49,10 @@ public class SubpageHomeBookkeep extends AppCompatActivity
     private void showBookTable(){
         try {
             db = openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
-            cursor = db.rawQuery("SELECT * FROM "+"BookKeep",null);
+            cursor = db.rawQuery("SELECT * FROM "+tbName,null);
             if(cursor.getCount()==0){
                 System.out.println("BookKeep cursor.getCount()==0");
+                listView.setVisibility(View.INVISIBLE);
             } else {
                 System.out.println("BookKeep cursor.getCount() = "+cursor.getCount());
                 adapter = new SimpleCursorAdapter(this,
@@ -77,6 +79,7 @@ public class SubpageHomeBookkeep extends AppCompatActivity
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         cursor.moveToPosition(i);
         selectID = cursor.getInt(0);
+        System.out.println("selectID"+selectID);
         datetime = cursor.getString(1);
         money = cursor.getString(2);
         account = cursor.getString(3);
@@ -104,8 +107,9 @@ public class SubpageHomeBookkeep extends AppCompatActivity
 
     @Override
     public void sendValue(String returnValue) {
-        if(returnValue.equals("200")){
+        if(returnValue.equals("del")){
             showBookTable();
+            System.out.println("del done back");
         }
     }
 
@@ -113,6 +117,7 @@ public class SubpageHomeBookkeep extends AppCompatActivity
     public void sendDelValue(String returnValue) {
         if(returnValue.equals("400")){
             checkToDelete();
+            System.out.println("choose del");
         }
     }
 
