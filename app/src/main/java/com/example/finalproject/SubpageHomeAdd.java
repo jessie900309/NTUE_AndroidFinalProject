@@ -1,7 +1,10 @@
 package com.example.finalproject;
 
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.MenuItem;
@@ -26,10 +29,15 @@ public class SubpageHomeAdd extends AppCompatActivity
         implements View.OnClickListener, View.OnTouchListener,
         RadioGroup.OnCheckedChangeListener,ToolCalculatorBottomSheetDialogFragment.InterfaceCommunicator {
 
+    // SQLite
+    static final String dbName = "FinalProjectDB";
+    private static SQLiteDatabase db;
+
+    // widget
     View pageBackground;
     RadioGroup DataTypeGroup;
     TextInputEditText textMemoInput;
-    String dataType,textMemo;
+    String dataType;
     Button chooseDateButton,calMoneyButton;
     int nowYear,nowMonth,nowDay;
     String datetime,calMoney;
@@ -115,7 +123,7 @@ public class SubpageHomeAdd extends AppCompatActivity
                 }
             } catch (Exception e){
                 //其他錯誤，重新導向主頁
-                System.out.println("\n\n\n"+e+"\n\n\n");
+                ToolDevDebug.catchException(e);
             }
         } else if(view.getId()==R.id.home_add_date){//選擇日期
             datePicker(view);
@@ -140,36 +148,164 @@ public class SubpageHomeAdd extends AppCompatActivity
         }
     }
 
-    //---------------------儲存至資料庫------------------------
+    //---------------------TODO 儲存至資料庫------------------------
 
     public void IncomeFromToSQL(){
-        //TODO 存入資料庫
+
         //日期 datetime
         //金額 calMoney
-        //textMemo = textMemoInput.getText().toString()
-        //accountSingleButton.getText().toString()
-        //classificationINButton.getText().toString()
-        //memberButton.getText().toString()
+        String accountValue = accountSingleINButton.getText().toString();
+        String classificationValue = classificationINButton.getText().toString();
+        String memberValue = memberButton.getText().toString();
+        String memoValue = textMemoInput.getText().toString();
+
+        //記帳
+        try {
+            ContentValues cv = new ContentValues(6);
+            cv.put("date",datetime);
+            cv.put("money",calMoney);
+            cv.put("account",accountValue);
+            cv.put("classification",classificationValue);
+            cv.put("member",memberValue);
+            cv.put("memo",memoValue);
+            SQLiteDatabase db = openOrCreateDatabase("FinalProjectDB",Context.MODE_PRIVATE,null);
+            db.insert("BookKeep",null,cv);
+            db.close();
+        } catch (Exception e){
+            ToolDevDebug.catchException(e);
+        }
+
+        UpdateUserAccount(accountValue,calMoney);
+
+        finish();
+
     }
 
     public void ExpendFromToSQL(){
-        //TODO 存入資料庫
+
         //日期 datetime
-        //金額 -calMoney
-        //textMemo = textMemoInput.getText().toString()
-        //accountSingleButton.getText().toString()
-        //classificationEXButton.getText().toString()
-        //memberButton.getText().toString()
+        String moneyValue = "-"+calMoney;//金額 -calMoney
+        String accountValue = accountSingleEXButton.getText().toString();
+        String classificationValue = classificationEXButton.getText().toString();
+        String memberValue = memberButton.getText().toString();
+        String memoValue = textMemoInput.getText().toString();
+
+        try {
+            ContentValues cv = new ContentValues(6);
+            cv.put("date",datetime);
+            cv.put("money",moneyValue);
+            cv.put("account",accountValue);
+            cv.put("classification",classificationValue);
+            cv.put("member",memberValue);
+            cv.put("memo",memoValue);
+            SQLiteDatabase db = openOrCreateDatabase("FinalProjectDB",Context.MODE_PRIVATE,null);
+            db.insert("BookKeep",null,cv);
+            db.close();
+        } catch (Exception e){
+            ToolDevDebug.catchException(e);
+        }
+
+        UpdateUserAccount(accountValue,moneyValue);
+
+        finish();
+
     }
 
     public void TransFromToSQL(){
-        //TODO 存入資料庫
+
         //日期 datetime
         //金額 calMoney
-        //textMemo = textMemoInput.getText().toString();
-        //accountStartButton.getText().toString()
-        //accountEndButton.getText().toString()
+        String accountStartValue = accountStartButton.getText().toString();
+        String accountEndValue = accountEndButton.getText().toString();
+        String memoValue = textMemoInput.getText().toString();
 
+        try {
+            ContentValues cv = new ContentValues(5);
+            cv.put("date",datetime);
+            cv.put("money",calMoney);
+            cv.put("accountStart",accountStartValue);
+            cv.put("accountEnd",accountEndValue);
+            cv.put("memo",memoValue);
+            SQLiteDatabase db = openOrCreateDatabase("FinalProjectDB",Context.MODE_PRIVATE,null);
+            db.insert("TransBook",null,cv);
+            db.close();
+        } catch (Exception e){
+            ToolDevDebug.catchException(e);
+        }
+
+        try {
+            SQLiteDatabase db = openOrCreateDatabase("FinalProjectDB",Context.MODE_PRIVATE,null);
+            Cursor cursor = db.rawQuery("SELECT * FROM "+"UserAccount",null);
+
+            if(cursor.getCount()==0){
+                System.out.println("cursor.getCount()==0");
+            } else {
+                System.out.println("\n\n總共有"+cursor.getCount()+"筆資料\n\n"); //always 3
+                cursor.moveToFirst();//移到第1筆資料
+                do{//逐筆讀出資料
+                    int id = cursor.getInt(0);//id
+                    String name = cursor.getString(1);//accountName
+                    String initV = cursor.getString(2);//initNumber
+                    String nowV = cursor.getString(3);//nowNumber
+                    if(name.equals(accountStartValue)){//讀到轉出錢錢的帳戶
+                        //更新現在數值: 讀到的nowNumber - calMoney
+                        double newNowNumber = Double.parseDouble(nowV) - Double.parseDouble(calMoney);
+                        ContentValues cv = new ContentValues(3);
+                        cv.put("accountName",name);
+                        cv.put("initNumber",initV);
+                        cv.put("nowNumber",String.valueOf(newNowNumber));
+                        db.update("UserAccount",cv,"_id="+id,null);
+                    } else if(name.equals(accountEndValue)){//讀到轉入錢錢的帳戶
+                        //更新現在數值: 讀到的nowNumber + calMoney
+                        double newNowNumber = Double.parseDouble(nowV) + Double.parseDouble(calMoney);
+                        ContentValues cv = new ContentValues(3);
+                        cv.put("accountName",name);
+                        cv.put("initNumber",initV);
+                        cv.put("nowNumber",String.valueOf(newNowNumber));
+                        db.update("UserAccount",cv,"_id="+id,null);
+                    }
+                }while(cursor.moveToNext());//有一下筆就繼續迴圈 = 3
+            }
+            db.close();
+        } catch (Exception e){
+            ToolDevDebug.catchException(e);
+        }
+
+        finish();
+
+    }
+
+    public void UpdateUserAccount(String accountName,String AddNewValue){//更新帳戶餘額(收入或支出)
+        try {
+            db = openOrCreateDatabase(dbName,Context.MODE_PRIVATE,null);
+            Cursor cursor = db.rawQuery("SELECT * FROM "+"UserAccount",null);
+
+            if(cursor.getCount()==0){
+                System.out.println("cursor.getCount()==0");
+            } else {
+                System.out.println("\n\n總共有"+cursor.getCount()+"筆資料\n\n"); //always 3
+
+                cursor.moveToFirst();//移到第1筆資料
+                do{//逐筆讀出資料
+                    int itemid = cursor.getInt(0);//id
+                    String name = cursor.getString(1);//accountName
+                    String initV = cursor.getString(2);//initNumber
+                    String nowV = cursor.getString(3);//nowNumber
+                    if(name.equals(accountName)){//讀到這次記帳的帳戶
+                        //更新現在數值: 讀到的nowNumber + AddNewValue
+                        double newNowNumber = Double.parseDouble(nowV) + Double.parseDouble(AddNewValue);
+                        ContentValues cv = new ContentValues(3);
+                        cv.put("accountName",name);
+                        cv.put("initNumber",initV);
+                        cv.put("nowNumber",String.valueOf(newNowNumber));
+                        db.update("UserAccount",cv,"_id="+itemid,null);
+                    }
+                }while(cursor.moveToNext());//有一下筆就繼續迴圈 = 3
+            }
+            db.close();
+        } catch (Exception e){
+            ToolDevDebug.catchException(e);
+        }
     }
 
     //---------------------檢查表單選項------------------------

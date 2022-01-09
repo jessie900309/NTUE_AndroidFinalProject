@@ -19,6 +19,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogFragment
         implements View.OnClickListener {
 
+    //todo 將數值轉為BidDecimal
+
     //數字顯示
     TextView showResult;
     String nowShowNumber = "0.0";
@@ -51,7 +53,7 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
             mCallback = (SubpageHomeAdd) activity;
         }
         catch (ClassCastException e) {
-            System.out.println("\n\n\n"+e+"\n\n\n");
+            ToolDevDebug.catchException(e);
             System.out.println("MyDialog"+"Activity doesn't implement the ISelectedData interface");
         }
     }

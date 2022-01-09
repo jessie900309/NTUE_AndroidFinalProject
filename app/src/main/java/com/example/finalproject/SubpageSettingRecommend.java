@@ -144,10 +144,10 @@ public class SubpageSettingRecommend extends AppCompatActivity
                 phoneInfo.setVisibility(View.VISIBLE);
                 try {
                     phoneInfoText =
-                            "手機廠商："+SystemUtil.getDeviceBrand()+"\n"+
-                                    "手機型號："+SystemUtil.getSystemModel()+"\n"+
-                                    "系統語言："+SystemUtil.getSystemLanguage()+"\n"+
-                                    "Android系統版本號："+SystemUtil.getSystemVersion()+"\n";
+                            "手機廠商："+ToolSystemUtil.getDeviceBrand()+"\n"+
+                            "手機型號："+ToolSystemUtil.getSystemModel()+"\n"+
+                            "系統語言："+ToolSystemUtil.getSystemLanguage()+"\n"+
+                            "Android系統版本號："+ToolSystemUtil.getSystemVersion()+"\n";
                 } catch (Exception e){
                     Toast.makeText(this, getString(R.string.settingFindDev_getInfo_msg), Toast.LENGTH_SHORT).show();
                     phoneInfoText = "";

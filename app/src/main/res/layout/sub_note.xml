@@ -12,18 +12,72 @@
         android:foregroundGravity="center"
         android:src="@drawable/background_normal"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="@android:color/black"
-        android:text="note" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="資料庫檔案路徑 :"/>
+        <TextView
+            android:id="@+id/note_showPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text=""/>
+        <!--    div-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="資料庫分頁大小 :"/>
+        <TextView
+            android:id="@+id/note_showSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text=""/>
+        <!--    div-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="資料量上限 :"/>
+        <TextView
+            android:id="@+id/note_showLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text=""/>
+        <!--    div-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/AccountFloatingButton"
+        android:id="@+id/NoteFloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
+        android:visibility="invisible"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/purple_200"
         app:rippleColor="@android:color/darker_gray"

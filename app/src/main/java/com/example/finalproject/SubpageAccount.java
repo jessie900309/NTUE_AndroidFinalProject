@@ -1,7 +1,12 @@
 package com.example.finalproject;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.SyncStateContract;
 import android.view.LayoutInflater;
@@ -16,6 +21,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class SubpageAccount extends Fragment
         implements View.OnClickListener,View.OnLongClickListener {
 
+    // SQLite
+    static final String dbName = "FinalProjectDB";
+    private static SQLiteDatabase db;
+
+    // widget
     TextView showNetAssets;
     TextView showAllAssets,showDebt,initAssets;
     TextView showAccountMoney,showAccountBank,showAccountCard;
@@ -47,10 +57,8 @@ public class SubpageAccount extends Fragment
         showAccountBank = (TextView) view.findViewById(R.id.account_show_account_bank);
         showAccountCard = (TextView) view.findViewById(R.id.account_show_account_card);
 
-        //todo 新增帳戶
         floatingButton = view.findViewById(R.id.AccountFloatingButton);
         floatingButton.setOnClickListener(this);
-        floatingButton.setVisibility(View.GONE);
 
         initPageNumber();
         showPageNumber();
@@ -80,6 +88,7 @@ public class SubpageAccount extends Fragment
                     dBankInitNumber = Double.parseDouble(data.getExtras().getString("bankText"));
                     dCardInitNumber = Double.parseDouble(data.getExtras().getString("cardText"));
                 }catch (Exception e){
+                    ToolDevDebug.catchException(e);
                     dMoneyInitNumber = 0.0;
                     dBankInitNumber = 0.0;
                     dCardInitNumber = 0.0;
@@ -113,23 +122,65 @@ public class SubpageAccount extends Fragment
     //----------------------顯示數值-----------------------
 
     public void initPageNumber(){
-        //TODO read 資料庫 -> TextView setText("")
-        dMoneyInitNumber = 0.0; moneyInitNumber = String.valueOf(dMoneyInitNumber);
-        dBankInitNumber = 0.0;  bankInitNumber = String.valueOf(dBankInitNumber);
-        dCardInitNumber = 0.0;  cardInitNumber = String.valueOf(dCardInitNumber);
-        dMoneyNowNumber = 0.0;  moneyNowNumber = String.valueOf(dMoneyNowNumber);
-        dBankNowNumber = 0.0;   bankNowNumber = String.valueOf(dBankNowNumber);
-        dCardNowNumber = 0.0;   cardNowNumber = String.valueOf(dCardNowNumber);
+        db = getActivity().openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+"UserAccount",null);
+        if(cursor.getCount()==0){
+            System.out.println("cursor.getCount()==0");
+        } else {
+            System.out.println("\n\n總共有"+cursor.getCount()+"筆資料\n\n"); //always 3
+            cursor.moveToFirst();//移到第1筆資料
+            do{//逐筆讀出資料
+                int itemid = cursor.getInt(0);//id
+                String name = cursor.getString(1);//accountName
+                String initV = cursor.getString(2);//initNumber
+                String nowV = cursor.getString(3);//nowNumber
+                if(name.equals(getString(R.string.init_account_money_text))){
+                    moneyInitNumber = initV; moneyNowNumber = nowV;
+                } else if(name.equals(getString(R.string.init_account_bank_text))){
+                    bankInitNumber = initV;  bankNowNumber = nowV;
+                } else if(name.equals(getString(R.string.init_account_card_text))){
+                    cardInitNumber = initV;  cardNowNumber = nowV;
+                }
+            }while(cursor.moveToNext());//有一下筆就繼續迴圈 = 3
+        }
+        db.close();
     }
 
     public void showPageNumber(){
+
+        dMoneyInitNumber = Double.parseDouble(moneyInitNumber);
+        dBankInitNumber = Double.parseDouble(bankInitNumber);
+        dCardInitNumber = Double.parseDouble(cardInitNumber);
+        dMoneyNowNumber = Double.parseDouble(moneyNowNumber);
+        dBankNowNumber = Double.parseDouble(bankNowNumber);
+        dCardNowNumber = Double.parseDouble(cardNowNumber);
+
         showNetAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber+dCardNowNumber)));
         showAllAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber)));
-        showDebt.setText(cardNowNumber);//if cardNowNumber>0.0 則 show 0.0 black
+        showDebt.setText(cardNowNumber);
         initAssets.setText(String.valueOf((dMoneyInitNumber+dBankInitNumber-dCardInitNumber)));
         showAccountMoney.setText(moneyNowNumber);
         showAccountBank.setText(bankNowNumber);
         showAccountCard.setText(cardNowNumber);
+
+        if (dMoneyNowNumber >= 0.0){
+            showAccountMoney.setTextColor(Color.parseColor("#FF00A600"));
+        } else {
+            showAccountMoney.setTextColor(Color.parseColor("#FF930000"));
+        }
+
+        if (dBankNowNumber >= 0.0){
+            showAccountBank.setTextColor(Color.parseColor("#FF00A600"));
+        } else {
+            showAccountBank.setTextColor(Color.parseColor("#FF930000"));
+        }
+
+        if (dCardNowNumber >= 0.0){
+            showAccountCard.setTextColor(Color.parseColor("#FF00A600"));
+        } else {
+            showAccountCard.setTextColor(Color.parseColor("#FF930000"));
+        }
+
     }
 
 }

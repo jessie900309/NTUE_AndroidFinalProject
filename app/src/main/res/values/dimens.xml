@@ -64,9 +64,12 @@
     <!--    add 新增記帳紀錄-->
     <dimen name="home_addpageTextPaddingVertical">10dp</dimen>
     <!--    bookkeeping 記帳履歷-->
-    <dimen name="home_bookkeepingAppBarPadding">5dp</dimen>
+    <dimen name="home_bookkeepingAppBarPadding">20dp</dimen>
     <dimen name="home_bookkeepingAppBarHeight">60dp</dimen>
     <dimen name="home_bookkeepingAppBarTextSize">28sp</dimen>
+    <dimen name="home_bookkeepButtonPadding">5dp</dimen>
+    <dimen name="home_bookkeepButtonPaddingHorizontal">20dp</dimen>
+    <dimen name="home_bookkeepingListViewPadding">20dp</dimen>
     <!--    bookkeeping Item 記帳履歷-->
     <dimen name="home_bookkeepingItemPadding">2dp</dimen>
     <dimen name="home_bookkeepingItemTitlePadding">5dp</dimen>

@@ -7,14 +7,6 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-<!--
-showBookItem_date
-showBookItem_class
-showBookItem_money
-showBookItem_member
-showBookItem_memo
--->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,6 +54,30 @@ showBookItem_memo
                 android:textSize="@dimen/home_bookkeepingItem_numberTextSize"
                 android:textColor="@color/home_bookkeepingItem_titleTextColor"
                 android:text="@string/home_bookkeepingItem_moneyDefaultText"/>
+        </LinearLayout>
+        <!--        account-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/home_bookkeepingItem_contentTextBackgroundColor"
+            android:padding="@dimen/home_bookkeepingItemTitlePadding">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/home_bookkeepingItemPadding"
+                android:layout_marginStart="@dimen/home_bookkeepingItemStartEndPadding"
+                android:textSize="@dimen/home_bookkeepingItem_memberTextSize"
+                android:textColor="@color/home_bookkeepingItem_contentTextColor"
+                android:text="@string/home_bookkeepingItem_accountText"/>
+            <TextView
+                android:id="@+id/showBookItem_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/home_bookkeepingItem_memberTextSize"
+                android:textColor="@color/home_bookkeepingItem_contentTextColor"
+                android:text="@string/home_bookkeepingItem_accountDefaultText"/>
         </LinearLayout>
         <!--        member-->
         <LinearLayout

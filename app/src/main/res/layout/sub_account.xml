@@ -245,7 +245,7 @@
                     android:paddingBottom="@dimen/account_listItemPadding"
                     android:paddingEnd="@dimen/page_dividePadding"
                     android:textSize="@dimen/account_assetsTextSize"
-                    android:textColor="@color/moneyIncreaseTextColor"
+                    android:textColor="@color/black"
                     android:text="@string/account_initDataNumber"/>
                 <!--                銀行number-->
                 <TextView
@@ -257,33 +257,20 @@
                     android:paddingBottom="@dimen/account_listItemPadding"
                     android:paddingEnd="@dimen/page_dividePadding"
                     android:textSize="@dimen/account_assetsTextSize"
-                    android:textColor="@color/moneyIncreaseTextColor"
+                    android:textColor="@color/black"
                     android:text="@string/account_initDataNumber"/>
                 <!--                信用卡number-->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/account_show_account_card"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:orientation="horizontal"
                     android:gravity="center"
                     android:paddingBottom="@dimen/account_listItemPadding"
-                    android:paddingEnd="@dimen/page_dividePadding">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="@dimen/account_assetsTextSize"
-                        android:textColor="@color/moneyDecreaseTextColor"
-                        android:text="-"/>
-                    <TextView
-                        android:id="@+id/account_show_account_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="@dimen/account_assetsTextSize"
-                        android:textColor="@color/moneyDecreaseTextColor"
-                        android:text="@string/account_initDataNumber"/>
-                </LinearLayout>
+                    android:paddingEnd="@dimen/page_dividePadding"
+                    android:textSize="@dimen/account_assetsTextSize"
+                    android:textColor="@color/black"
+                    android:text="@string/account_initDataNumber"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -294,6 +281,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
+        android:visibility="invisible"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/purple_200"
         app:rippleColor="@android:color/darker_gray"

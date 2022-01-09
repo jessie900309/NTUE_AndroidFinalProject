@@ -2,7 +2,11 @@ package com.example.finalproject;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +23,11 @@ import com.google.android.material.textfield.TextInputEditText;
 public class ToolEditInitAssets extends DialogFragment
         implements View.OnClickListener {
 
+    // SQLite
+    static final String dbName = "FinalProjectDB";
+    private static SQLiteDatabase db;
+
+    //widget
     TextInputEditText moneyInput,bankInput,cardInput;
     String moneyInit,bankInit,cardInit;
     String moneyText,bankText,cardText;
@@ -71,9 +80,6 @@ public class ToolEditInitAssets extends DialogFragment
             moneyText = moneyInput.getText().toString();
             bankText = bankInput.getText().toString();
             cardText = cardInput.getText().toString();
-            //System.out.println("moneyText"+moneyText);
-            //System.out.println("bankText"+bankText);
-            //System.out.println("cardText"+cardText);
             try{
                 double DmoneyText = Double.parseDouble(moneyText);
                 double DbankText = Double.parseDouble(bankText);
@@ -89,11 +95,18 @@ public class ToolEditInitAssets extends DialogFragment
                     getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
                     dismiss();
                 }
-            }catch (Exception e){
-                //System.out.println("\n\n\n"+e+"\n\n\n");
+
+//                UpdateUserAccount(,moneyText);
+//                UpdateUserAccount(,bankText);
+//                UpdateUserAccount(,cardText);
+
+            } catch (Exception e){
+                ToolDevDebug.catchException(e);
                 dismiss();
             }
         }
     }
+
+
 
 }

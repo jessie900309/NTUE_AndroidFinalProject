@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -50,5 +51,13 @@ public class MainPageActivity extends AppCompatActivity
         return false;
     }
 
-
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if(event.getKeyCode()==KeyEvent.KEYCODE_BACK){
+            //
+            return true;
+        } else {
+            return super.dispatchKeyEvent(event);
+        }
+    }
 }

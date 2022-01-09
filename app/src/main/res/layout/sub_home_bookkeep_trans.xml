@@ -4,34 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/subpageBackgroundColor">
+    android:background="@drawable/background_normal">
 
     <!--    AppBar-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/home_bookkeepingAppBarHeight"
-        android:background="@color/home_bookkeepingAppBarTextColor">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_margin="@dimen/home_bookkeepingAppBarPadding"
-            android:background="@color/home_bookkeepingAppBarColor">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/home_bookkeepingAppBarTextSize"
-                android:textColor="@color/home_bookkeepingAppBarTextColor"
-                android:text="@string/home_transBookText"/>
-        </LinearLayout>
+        android:paddingTop="@dimen/home_bookkeepingAppBarPadding"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/home_bookkeepingAppBarTextSize"
+            android:textColor="@color/home_bookkeepingAppBarTextColor"
+            android:text="@string/home_transBookText"/>
     </LinearLayout>
 
-    <!--    TODO listview 顯示紀錄-->
+    <!--    listview 顯示紀錄-->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:paddingHorizontal="@dimen/home_bookkeepingListViewPadding"
         android:id="@+id/home_bookkeepTransListView"/>
+
+    <!--    TODO do-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/home_bookkeepingAppBarPadding"
+        android:paddingHorizontal="@dimen/home_bookkeepButtonPaddingHorizontal"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/home_bookkeepButtonPadding"
+            android:backgroundTint="@color/shrineBrown600"
+            android:textColor="@color/shrinePink100"
+            android:text="view"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/home_bookkeepButtonPadding"
+            android:backgroundTint="@color/shrineBrown600"
+            android:textColor="@color/shrinePink100"
+            android:text="edit"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/home_bookkeepButtonPadding"
+            android:backgroundTint="@color/shrineBrown600"
+            android:textColor="@color/shrinePink100"
+            android:text="del"/>
+    </LinearLayout>
 
 </LinearLayout>

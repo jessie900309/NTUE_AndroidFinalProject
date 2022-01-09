@@ -49,10 +49,12 @@
     <string name="cal_errorSolve_msg">有點不對勁QAQ\n已清除計算紀錄</string>
     <string name="cal_numberOverflow_msg">數目不得小於零或大於一百萬</string>
     <!--    bookkeeping 記帳履歷(收支)-->
+    <string name="home_bookkeepingItem_accountText">帳戶&#160;:&#160;</string>
     <string name="home_bookkeepingItem_memberText">對象&#160;:&#160;</string>
     <string name="home_bookkeepingItem_dateDefaultText">(YYYY-MM-DD)</string>
     <string name="home_bookkeepingItem_classDefaultText">(分類)</string>
     <string name="home_bookkeepingItem_moneyDefaultText">(金額)</string>
+    <string name="home_bookkeepingItem_accountDefaultText">(帳戶)</string>
     <string name="home_bookkeepingItem_memberDefaultText">(對象)</string>
     <string name="home_bookkeepingItem_memoDefaultText">尚無內容。</string>
     <!--    bookkeeping 記帳履歷(轉帳)-->

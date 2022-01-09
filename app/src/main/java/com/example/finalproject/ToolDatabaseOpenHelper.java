@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class ToolDataBaseHelper extends SQLiteOpenHelper {
+public class ToolDatabaseOpenHelper extends SQLiteOpenHelper {
 
     private final static int _DataBaseVersion = 1; //<-- 版本
     private final static String _DataBaseName = "FinalProjectDB";  //<-- db name
@@ -15,29 +15,31 @@ public class ToolDataBaseHelper extends SQLiteOpenHelper {
     private final static String _BookTableName = "BookKeep";
     private final static String _TransTableName = "TransBook";
 
-    public ToolDataBaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public ToolDatabaseOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, _DataBaseName, factory, _DataBaseVersion);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-        //create UserAccount Table
+        //create UserAccount Table (1+3)
+        //允許更新，不允許新增或刪除
         String createUserAccount = "CREATE TABLE IF NOT EXISTS " +
                 _AccountTableName +
                 "(" +
-                "id integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                 "accountName varchar(60), " +
                 "initNumber varchar(60), " +
                 "nowNumber varchar(60)" +
                 ")";
         sqLiteDatabase.execSQL(createUserAccount);
+        System.out.println("sqLiteDatabase.execSQL(createUserAccount);");
 
-        //create BookKeep Table
+        //create BookKeep Table (1+6)
         String createBookKeep = "CREATE TABLE IF NOT EXISTS " +
                 _BookTableName +
                 "(" +
-                "id integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                 "date varchar(60)," +
                 "money varchar(60)," +
                 "account varchar(60)," +
@@ -46,12 +48,13 @@ public class ToolDataBaseHelper extends SQLiteOpenHelper {
                 "memo varchar(600)" +
                 ")";
         sqLiteDatabase.execSQL(createBookKeep);
+        System.out.println("sqLiteDatabase.execSQL(createBookKeep);");
 
-        //create TransBook Table
+        //create TransBook Table (1+5)
         String createTransBook = "CREATE TABLE IF NOT EXISTS " +
                 _TransTableName +
                 "(" +
-                "id integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                 "date varchar(60)," +
                 "money varchar(60)," +
                 "accountStart varchar(60)," +
@@ -59,6 +62,7 @@ public class ToolDataBaseHelper extends SQLiteOpenHelper {
                 "memo varchar(600)" +
                 ")";
         sqLiteDatabase.execSQL(createTransBook);
+        System.out.println("sqLiteDatabase.execSQL(createTransBook);");
 
     }
 

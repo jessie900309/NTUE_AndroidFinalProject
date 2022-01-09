@@ -75,7 +75,7 @@ public class SubpageSetting extends Fragment
                     //do nothing
             }
         } catch (Exception e) {
-            System.out.println("\n\n\n"+e+"\n\n\n");
+            ToolDevDebug.catchException(e);
         }
 
     }
