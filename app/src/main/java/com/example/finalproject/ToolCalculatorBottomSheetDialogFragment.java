@@ -263,7 +263,7 @@ public class ToolCalculatorBottomSheetDialogFragment  extends BottomSheetDialogF
     public void getException(Exception e){
         resetValue();
         Toast.makeText(getActivity(), getString(R.string.cal_errorSolve_msg), Toast.LENGTH_SHORT).show();
-        System.out.println("\n\n\n" + e.toString() + "\n\n\n");
+        ToolDevDebug.catchException(e);
     }
 
 }

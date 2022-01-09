@@ -83,26 +83,23 @@ public class SubpageAccount extends Fragment
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 200) {
             if (resultCode == Activity.RESULT_OK) {
+
+                //接收更新後的數值
                 try{
                     dMoneyInitNumber = Double.parseDouble(data.getExtras().getString("moneyText"));
                     dBankInitNumber = Double.parseDouble(data.getExtras().getString("bankText"));
                     dCardInitNumber = Double.parseDouble(data.getExtras().getString("cardText"));
                 }catch (Exception e){
                     ToolDevDebug.catchException(e);
-                    dMoneyInitNumber = 0.0;
-                    dBankInitNumber = 0.0;
-                    dCardInitNumber = 0.0;
+                    dMoneyInitNumber = dBankInitNumber = dCardInitNumber = 0.0;
                 }
-                moneyInitNumber = String.valueOf(dMoneyInitNumber);
-                bankInitNumber = String.valueOf(dBankInitNumber);
-                cardInitNumber = String.valueOf(dCardInitNumber);
+
+                //將數值寫入資料庫
+                updateInitAssets();
+
+                //更新畫面
                 showPageNumber();
-                if ((dMoneyInitNumber+dBankInitNumber-dCardInitNumber)>=0.0){
-                    initAssets.setTextColor(getResources().getColor(R.color.moneyIncreaseTextColor));
-                } else {
-                    initAssets.setTextColor(getResources().getColor(R.color.moneyDecreaseTextColor));
-                }
-                //TODO 資料庫更新初始餘額
+
             }
         }
     }
@@ -114,7 +111,7 @@ public class SubpageAccount extends Fragment
         if(view.getId()==R.id.AccountFloatingButton){
             //todo 新增帳戶
             Intent intent = new Intent();
-            intent.setClass(getActivity(), ToolDefaultActivity.class);
+            intent.setClass(getActivity(), ToolDevDefaultActivity.class);
             startActivity(intent);
         }
     }
@@ -127,9 +124,8 @@ public class SubpageAccount extends Fragment
         if(cursor.getCount()==0){
             System.out.println("cursor.getCount()==0");
         } else {
-            System.out.println("\n\n總共有"+cursor.getCount()+"筆資料\n\n"); //always 3
-            cursor.moveToFirst();//移到第1筆資料
-            do{//逐筆讀出資料
+            cursor.moveToFirst();
+            do{
                 int itemid = cursor.getInt(0);//id
                 String name = cursor.getString(1);//accountName
                 String initV = cursor.getString(2);//initNumber
@@ -141,7 +137,7 @@ public class SubpageAccount extends Fragment
                 } else if(name.equals(getString(R.string.init_account_card_text))){
                     cardInitNumber = initV;  cardNowNumber = nowV;
                 }
-            }while(cursor.moveToNext());//有一下筆就繼續迴圈 = 3
+            }while(cursor.moveToNext());
         }
         db.close();
     }
@@ -155,32 +151,85 @@ public class SubpageAccount extends Fragment
         dBankNowNumber = Double.parseDouble(bankNowNumber);
         dCardNowNumber = Double.parseDouble(cardNowNumber);
 
-        showNetAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber+dCardNowNumber)));
-        showAllAssets.setText(String.valueOf((dMoneyNowNumber+dBankNowNumber)));
-        showDebt.setText(cardNowNumber);
-        initAssets.setText(String.valueOf((dMoneyInitNumber+dBankInitNumber-dCardInitNumber)));
-        showAccountMoney.setText(moneyNowNumber);
-        showAccountBank.setText(bankNowNumber);
-        showAccountCard.setText(cardNowNumber);
+        //淨資產 全部相加
+        showNetAssets.setText(String.valueOf(dMoneyInitNumber+dBankInitNumber+dCardInitNumber+dMoneyNowNumber+dBankNowNumber+dCardNowNumber));
+        //總資產 只看正的
+        countAllAssets();
+        //負債 只看負的
+        showDebt.setText(String.valueOf(dCardInitNumber+dCardNowNumber));
+        //初始相加
+        initAssets.setText(String.valueOf(dMoneyInitNumber+dBankInitNumber+dCardInitNumber));
+        //初始+後來的總和
+        showAccountMoney.setText(String.valueOf(dMoneyInitNumber+dMoneyNowNumber));
+        showAccountBank.setText(String.valueOf(dBankInitNumber+dBankNowNumber));
+        showAccountCard.setText(String.valueOf(dCardInitNumber+dCardNowNumber));
 
-        if (dMoneyNowNumber >= 0.0){
+        if ((dMoneyInitNumber+dMoneyNowNumber) >= 0.0){
             showAccountMoney.setTextColor(Color.parseColor("#FF00A600"));
         } else {
             showAccountMoney.setTextColor(Color.parseColor("#FF930000"));
         }
 
-        if (dBankNowNumber >= 0.0){
+        if ((dBankInitNumber+dBankNowNumber) >= 0.0){
             showAccountBank.setTextColor(Color.parseColor("#FF00A600"));
         } else {
             showAccountBank.setTextColor(Color.parseColor("#FF930000"));
         }
 
-        if (dCardNowNumber >= 0.0){
+        if ((dCardInitNumber+dCardNowNumber) >= 0.0){
             showAccountCard.setTextColor(Color.parseColor("#FF00A600"));
+            showDebt.setText("0.0");
         } else {
             showAccountCard.setTextColor(Color.parseColor("#FF930000"));
         }
 
+    }
+
+    public void updateInitAssets(){
+
+        moneyInitNumber = String.valueOf(dMoneyInitNumber);
+        bankInitNumber = String.valueOf(dBankInitNumber);
+        cardInitNumber = String.valueOf(dCardInitNumber);
+
+        db = getActivity().openOrCreateDatabase(dbName, Context.MODE_PRIVATE,null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+"UserAccount",null);
+        if(cursor.getCount()==0){
+            System.out.println("cursor.getCount()==0");
+        } else {
+            cursor.moveToFirst();
+            do{
+                int itemid = cursor.getInt(0);//id
+                String name = cursor.getString(1);//accountName
+                String initV = cursor.getString(2);//initNumber
+                String nowV = cursor.getString(3);//nowNumber
+                ContentValues cv = new ContentValues(3);
+                cv.put("accountName",name);
+                cv.put("nowNumber",nowV);
+                if(name.equals(getString(R.string.init_account_money_text))){
+                    cv.put("initNumber",moneyInitNumber);
+                } else if(name.equals(getString(R.string.init_account_bank_text))){
+                    cv.put("initNumber",bankInitNumber);
+                } else if(name.equals(getString(R.string.init_account_card_text))){
+                    cv.put("initNumber","-"+cardInitNumber);
+                }
+                db.update("UserAccount",cv,"_id="+itemid,null);
+            }while(cursor.moveToNext());
+        }
+        db.close();
+    }
+
+    public void countAllAssets(){
+        double countAll;
+        if(dCardNowNumber>=0.0){
+            countAll = dMoneyInitNumber+dBankInitNumber+dMoneyNowNumber+dBankNowNumber+dCardNowNumber;
+        } else {
+            countAll = dMoneyInitNumber+dBankInitNumber+dMoneyNowNumber+dBankNowNumber;
+        }
+        if(countAll>=0.0){
+            showAllAssets.setText(String.valueOf(countAll));
+        } else {
+            showAllAssets.setText("0.0");
+        }
     }
 
 }

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/alertDialogBackgroundColor"
+    android:layout_margin="@dimen/alertdialog_dialogMargin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alertdialog_titleHeight"
+        android:gravity="center"
+        android:background="@color/alertDialogTitleBackgroundColor"
+        android:textColor="@color/alertDialogTitleTextColor"
+        android:text="@string/SystemDialogTitle"/>
+
+    <TextView
+        android:id="@+id/dialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_width="@dimen/alertdialog_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/alertdialog_actionButtonMargin"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/dialogCheckOK"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/alertdialog_actionButtonMargin"
+            android:backgroundTint="@color/alertDialogTitleBackgroundColor"
+            android:textColor="@color/alertDialogTitleTextColor"
+            android:text="@string/SystemDialogO"/>
+        <Button
+            android:id="@+id/dialogCheckNO"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/alertdialog_actionButtonMargin"
+            android:backgroundTint="@color/alertDialogTitleBackgroundColor"
+            android:textColor="@color/alertDialogTitleTextColor"
+            android:text="@string/SystemDialogX"/>
+    </LinearLayout>
+
+</LinearLayout>

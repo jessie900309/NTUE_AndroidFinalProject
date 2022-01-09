@@ -2,11 +2,7 @@ package com.example.finalproject;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +18,6 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class ToolEditInitAssets extends DialogFragment
         implements View.OnClickListener {
-
-    // SQLite
-    static final String dbName = "FinalProjectDB";
-    private static SQLiteDatabase db;
 
     //widget
     TextInputEditText moneyInput,bankInput,cardInput;
@@ -67,6 +59,7 @@ public class ToolEditInitAssets extends DialogFragment
         bankInput = (TextInputEditText) view.findViewById(R.id.edit_initAccountBank);
         bankInput.setText(bankInit);
         cardInput = (TextInputEditText) view.findViewById(R.id.edit_initAccountCard);
+        cardInit = cardInit.replace("-", "");
         cardInput.setText(cardInit);
 
         ((Button) view.findViewById(R.id.edit_initAccountCardSubmitButton)).setOnClickListener(this);
@@ -76,14 +69,19 @@ public class ToolEditInitAssets extends DialogFragment
 
     @Override
     public void onClick(View view) {
+
         if(view.getId()==R.id.edit_initAccountCardSubmitButton){
+
             moneyText = moneyInput.getText().toString();
             bankText = bankInput.getText().toString();
             cardText = cardInput.getText().toString();
+
             try{
+
                 double DmoneyText = Double.parseDouble(moneyText);
                 double DbankText = Double.parseDouble(bankText);
                 double DcardText = Double.parseDouble(cardText);
+
                 if ((DmoneyText<0.0)||(DbankText<0.0)||(DcardText<0.0)){
                     Toast.makeText(getActivity(),getString(R.string.cal_numberOverflow_msg),Toast.LENGTH_SHORT).show();
                 } else {
@@ -96,17 +94,11 @@ public class ToolEditInitAssets extends DialogFragment
                     dismiss();
                 }
 
-//                UpdateUserAccount(,moneyText);
-//                UpdateUserAccount(,bankText);
-//                UpdateUserAccount(,cardText);
-
             } catch (Exception e){
                 ToolDevDebug.catchException(e);
                 dismiss();
             }
         }
     }
-
-
 
 }

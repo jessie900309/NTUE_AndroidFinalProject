@@ -52,10 +52,10 @@ public class SubpageSettingFindDev extends AppCompatActivity
         //show 裝置資訊
         try {
             phoneInfoText =
-                    "手機廠商："+ToolSystemUtil.getDeviceBrand()+"\n"+
-                    "手機型號："+ToolSystemUtil.getSystemModel()+"\n"+
-                    "系統語言："+ToolSystemUtil.getSystemLanguage()+"\n"+
-                    "Android系統版本號："+ToolSystemUtil.getSystemVersion()+"\n";
+                    "手機廠商："+ToolDevSystemUtil.getDeviceBrand()+"\n"+
+                    "手機型號："+ToolDevSystemUtil.getSystemModel()+"\n"+
+                    "系統語言："+ToolDevSystemUtil.getSystemLanguage()+"\n"+
+                    "Android系統版本號："+ToolDevSystemUtil.getSystemVersion()+"\n";
         } catch (Exception e){
             Toast.makeText(this, getString(R.string.settingFindDev_getInfo_msg), Toast.LENGTH_SHORT).show();
             phoneInfoText = "";

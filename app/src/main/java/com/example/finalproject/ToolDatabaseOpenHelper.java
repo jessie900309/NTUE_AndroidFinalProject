@@ -33,7 +33,6 @@ public class ToolDatabaseOpenHelper extends SQLiteOpenHelper {
                 "nowNumber varchar(60)" +
                 ")";
         sqLiteDatabase.execSQL(createUserAccount);
-        System.out.println("sqLiteDatabase.execSQL(createUserAccount);");
 
         //create BookKeep Table (1+6)
         String createBookKeep = "CREATE TABLE IF NOT EXISTS " +
@@ -48,7 +47,6 @@ public class ToolDatabaseOpenHelper extends SQLiteOpenHelper {
                 "memo varchar(600)" +
                 ")";
         sqLiteDatabase.execSQL(createBookKeep);
-        System.out.println("sqLiteDatabase.execSQL(createBookKeep);");
 
         //create TransBook Table (1+5)
         String createTransBook = "CREATE TABLE IF NOT EXISTS " +
@@ -62,7 +60,6 @@ public class ToolDatabaseOpenHelper extends SQLiteOpenHelper {
                 "memo varchar(600)" +
                 ")";
         sqLiteDatabase.execSQL(createTransBook);
-        System.out.println("sqLiteDatabase.execSQL(createTransBook);");
 
     }
 

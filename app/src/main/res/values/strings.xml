@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">FinalProject</string>
 
-<!--    opening page String-->
+    <string name="SystemDialogTitle">! ! ! 提示 ! ! !</string>
+    <string name="SystemDialogO">確定</string>
+    <string name="SystemDialogX">取消</string>
+
+    <!--    opening page String-->
     <string name="op_startAppButtonText">start</string>
 
 <!--    login page String-->
@@ -15,6 +19,8 @@
     <string name="main_menu_3">Home</string>
     <string name="main_menu_4">Chart</string>
     <string name="main_menu_5">Setting</string>
+
+    <string name="main_dialog_finishapp">確定結束App嗎 ( ˘･з･) ?</string>
 
 <!--     page-->
     <!--    home主頁-->
@@ -83,6 +89,7 @@
     <!--    編輯初始dialog-->
     <string name="account_editInitAccountNumberText">編輯初始餘額</string>
     <string name="account_editInitAccountNumber_submitButtonText">確定</string>
+    <string name="account_editInit_card_text">信用卡(負債)</string>
 
 <!--    chart page-->
     <string name="chart_moneyEnd">元</string>

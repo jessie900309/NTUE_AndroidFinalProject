@@ -4,6 +4,7 @@
 <!--    alertdialog-->
     <dimen name="alertdialog_titleHeight">60dp</dimen>
     <dimen name="alertdialog_dialogMargin">0dp</dimen>
+    <dimen name="alertdialog_actionButtonMargin">10dp</dimen>
     <dimen name="alertdialog_editTextMarginTop">10dp</dimen>
     <dimen name="alertdialog_editTextMarginHorizontal">20dp</dimen>
     <dimen name="alertdialog_width">300dp</dimen>

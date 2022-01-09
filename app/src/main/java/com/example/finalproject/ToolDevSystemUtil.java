@@ -2,7 +2,7 @@ package com.example.finalproject;
 
 import java.util.Locale;
 
-public class ToolSystemUtil {
+public class ToolDevSystemUtil {
 
     //當前手機系統語言
     public static String getSystemLanguage() {
@@ -35,3 +35,4 @@ public class ToolSystemUtil {
 //    }
 
 }
+
