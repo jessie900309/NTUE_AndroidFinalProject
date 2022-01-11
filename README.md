@@ -1,4 +1,4 @@
-# NTUE_JavaFinalProjct
+# NTUE_AndroidFinalProjct
 
 ###### tags: `NTUE_SchoolHomework`
 
@@ -12,7 +12,28 @@
 | 資料庫資訊，本來要弄記事本的 |  帳戶資產統計，看看是不是又赤字了  | 主頁，主要的記帳功能都在這 | 圖表顯示，啊我是說圖片啦哈哈 |  設定以外的其他功能 |
 |<img src="https://i.imgur.com/yR5tTzo.jpg" width="144" height="304" />|<img src="https://i.imgur.com/JSev580.jpg" width="144" height="304" />|<img src="https://i.imgur.com/AtGYiqP.jpg" width="144" height="304" />|<img src="https://i.imgur.com/zfCrtVh.jpg" width="144" height="304" />|<img src="https://i.imgur.com/SBEPwbc.jpg" width="144" height="304" />|
 
+#### SQLite 資料庫設計
 
+```
+FinalProjectDB─┬── UserAccount(帳戶清單)─┬── _id
+               │                        ├── accountName(帳戶名稱)
+               │                        ├── initNumber(初始餘額)
+               │                        ├── nowNumber(每次記帳改動的總和)
+               │                        └── 備註:只可更新不可新增或刪除
+               ├── BookKeep(收支帳本)────┬── _id
+               │                        ├── date
+               │                        ├── money
+               │                        ├── account
+               │                        ├── classification
+               │                        ├── member
+               │                        └── memo
+               └── TransBook(轉帳帳本)───┬── _id
+                                        ├── date
+                                        ├── money
+                                        ├── accountStart(轉出錢錢的帳戶)
+                                        ├── accountEnd(得到錢錢的帳戶)
+                                        └── memo
+```
 
 #### res/drawable
 
